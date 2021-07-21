@@ -18,7 +18,15 @@ START
 01 'JAN' 2020 /
 
 WELLDIMS
-10 30 /
+10 1 /
+
+PARALLEL
+4 /
+
+CPR
+
+MESSAGES
+12*100000 /
 
 -- Specification of geometry of computational grid (location of grid block corners), and of rock properties (porosity, absolute permeability, etc.) in each grid block.
 GRID
@@ -33,9 +41,7 @@ GRID
 -- a useful trick: EQUALS 'DX' 20 to set the whole array to be equal to 20m
 
 TOPS 
-100*3000 100*3020 100*3040 100*3060 100*3080
-100*3100 100*3120 100*3140 100*3160 100*3180
-/
+100*3000 /
 
 DXV
 10*20 /
@@ -45,6 +51,7 @@ DZ
 1000*20 /
 -- OPTIONALLY you can set values on certain boxes adding the following arguments IX1-IX2 JY1-JY2 KZ1-KZ2
 -- Example: TOPS  7020  1   9   2   2   1   1  
+
 EQUALS 
    -- 'DX'   20 /
    -- 'DY'   20 /
@@ -82,19 +89,21 @@ SWOF
 
 PVTW
 -- Pref  Bref     Cw      Vw   (dVw/dp)/Vw
-   200   1.00341  3.0D-6  0.96  0          /
+   300   1.00341  4.0D-5  0.50  0          /
 
 ROCK
 -- Pref (barsa)   Crock (1/bar)    C_R matrix (1/bar)
-   250 		  1*               /
+   350 		  1*               /
 
 -- you may specify densities using DENSITY keyword
+DENSITY
+600 1000 1 /
 
 -- Initial conditions
 SOLUTION
 
 EQUIL
-3000 300 3180 0 3000 0 0 0 5 /
+2000 500 3250 0 2000 0 0 0 5 /
 
 
 

@@ -40,12 +40,12 @@
                                                                    $$$$$   $$$   $$$$$  $$$  $       $$$   $$$$$    $$$   $$$    $$$ 
  
  Version =  2010.1
- Arch    =  PC WINDOWS (32 bit)
+ Arch    =  PC WINDOWS (32 bit) (Intel MPI)
 Annex    | Modification date    | Update date          | baseline             
 =====    | =================    | ===========          | ========             
-ECLIPSE  | 28-MAY-2010 11:36:49 | 28-MAY-2010 20:43:29 | S:\2010.1_w22
-system   | 27-MAY-2010 16:14:43 | 28-MAY-2010 20:45:05 | S:\2010.1_w22
-utility  | 28-MAY-2010 11:56:05 | 28-MAY-2010 20:45:06 | S:\2010.1_w22
+ECLIPSE  | 28-MAY-2010 11:36:49 | 28-MAY-2010 22:59:08 | S:\2010.1_w22
+system   | 27-MAY-2010 16:14:43 | 28-MAY-2010 23:00:37 | S:\2010.1_w22
+utility  | 28-MAY-2010 11:56:05 | 28-MAY-2010 23:00:38 | S:\2010.1_w22
  
 
 1
@@ -72,7 +72,15 @@ utility  | 28-MAY-2010 11:56:05 | 28-MAY-2010 20:45:06 | S:\2010.1_w22
  0: 01 'JAN' 2020 /
  0: 
  0: WELLDIMS
- 0: 10 30 /
+ 0: 10 1 /
+ 0: 
+ 0: PARALLEL
+ 0: 4 /
+ 0: 
+ 0: CPR
+ 0: 
+ 0: MESSAGES
+ 0: 12*100000 /
  0: 
  0: -- Specification of geometry of computational grid (location of grid block corners), and of rock properties (porosity, absolute perm
  0: GRID
@@ -87,9 +95,7 @@ utility  | 28-MAY-2010 11:56:05 | 28-MAY-2010 20:45:06 | S:\2010.1_w22
  0: -- a useful trick: EQUALS 'DX' 20 to set the whole array to be equal to 20m
  0: 
  0: TOPS
- 0: 100*3000 100*3020 100*3040 100*3060 100*3080
- 0: 100*3100 100*3120 100*3140 100*3160 100*3180
- 0: /
+ 0: 100*3000 /
  0: 
  0: DXV
  0: 10*20 /
@@ -99,6 +105,7 @@ utility  | 28-MAY-2010 11:56:05 | 28-MAY-2010 20:45:06 | S:\2010.1_w22
  0: 1000*20 /
  0: -- OPTIONALLY you can set values on certain boxes adding the following arguments IX1-IX2 JY1-JY2 KZ1-KZ2
  0: -- Example: TOPS  7020  1   9   2   2   1   1
+ 0: 
  0: EQUALS
  0:    -- 'DX'   20 /
  0:    -- 'DY'   20 /
@@ -136,16 +143,24 @@ utility  | 28-MAY-2010 11:56:05 | 28-MAY-2010 20:45:06 | S:\2010.1_w22
  0: 
  0: PVTW
  0: -- Pref  Bref     Cw      Vw   (dVw/dp)/Vw
- 0:    200   1.00341  3.0D-6  0.96  0          /
+ 0:    300   1.00341  4.0D-5  0.50  0          /
  0: 
  0: ROCK
  0: -- Pref (barsa)   Crock (1/bar)    C_R matrix (1/bar)
- 0:    250 		  1*               /
+ 0:    350 		  1*               /
  0: 
  0: -- you may specify densities using DENSITY keyword
+ 0: DENSITY
+ 0: 600 1000 1 /
  0: 
  0: -- Initial conditions
  0: SOLUTION
+ 0: 
+ 0: EQUIL
+ 0: 2000 500 3250 0 2000 0 0 0 5 /
+ 0: 
+ 0: 
+ 0: 
  0: 
  0: -- Simulation schedule
  0: SCHEDULE
@@ -159,24 +174,44 @@ utility  | 28-MAY-2010 11:56:05 | 28-MAY-2010 20:45:06 | S:\2010.1_w22
      6 READING METRIC  
      7 READING START   
      8 READING WELLDIMS
-     9 READING GRID    
+     9 READING PARALLEL
+    10 READING CPR     
+
+ @--MESSAGE  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           CHECKING FOR LICENSES                                           
+
+ @--WARNING  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           CPR SOLVER IS NOT AVAILABLE IN ECLIPSE 100                      
+    11 READING MESSAGES
+    12 READING GRID    
 
  @--MESSAGE  AT TIME        0.0   DAYS    ( 1-JAN-2020):
  @           CHECKING FOR LICENSES                                           
 
  @--MESSAGE  AT TIME        0.0   DAYS    ( 1-JAN-2020):
  @           THE MEMORY REQUIRED TO PROCESS THE GRID SECTION IS              
- @               394964 BYTES                                                
+ @               140740 BYTES   PROCESSOR   1                                
+ @               166868 BYTES   PROCESSOR   2                                
+ @               140740 BYTES   PROCESSOR   3                                
+ @               140740 BYTES   PROCESSOR   4                                
 
  @--WARNING  AT TIME        0.0   DAYS    ( 1-JAN-2020):
  @           SPURIOUS DATA BEFORE TOPS     KEYWORD                           
  @            -- this is equivelant to DX 1000 20                            
-    10 READING TOPS    
-    11 READING DXV     
-    12 READING DYV     
-    13 READING DZ      
-    14 READING EQUALS  
-    15 READING PROPS   
+    13 READING TOPS    
+
+ @--WARNING  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @                    900 VALUES NOT DEFINED IN BOX (  1- 10,  1- 10,  1- 10)
+ @           OF KEYWORD TOPS                                                 
+    14 READING DXV     
+    15 READING DYV     
+    16 READING DZ      
+    17 READING EQUALS  
+    18 READING PROPS   
+
+ @--MESSAGE  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           UNSPECIFIED TOPS VALUES OBTAINED BY ADDING DZ                   
+ @           TO TOPS VALUE FOR LAYER ABOVE                                   
 
  @--MESSAGE  AT TIME        0.0   DAYS    ( 1-JAN-2020):
  @           NEITHER OLDTRAN,OLDTRANR NOR NEWTRAN SPECIFIED                  
@@ -191,31 +226,1080 @@ utility  | 28-MAY-2010 11:56:05 | 28-MAY-2010 20:45:06 | S:\2010.1_w22
 
  @--MESSAGE  AT TIME        0.0   DAYS    ( 1-JAN-2020):
  @           THE MEMORY REQUIRED TO PROCESS THE SOLUTION SECTION IS          
- @                 1434 KBYTES                                               
+ @               748384 BYTES   PROCESSOR   1                                
+ @               785712 BYTES   PROCESSOR   2                                
+ @               854112 BYTES   PROCESSOR   3                                
+ @               748384 BYTES   PROCESSOR   4                                
 
  @--MESSAGE  AT TIME        0.0   DAYS    ( 1-JAN-2020):
- @              58612 CHARACTER VARIABLES USED                               
-    16 READING SWOF    
-    17 READING PVTW    
-    18 READING ROCK    
-    19 READING SOLUTION
+ @              59603 CHARACTER VARIABLES USED                               
+    19 READING SWOF    
+    20 READING PVTW    
+    21 READING ROCK    
+    22 READING DENSITY 
+    23 READING SOLUTION
 
  @--  ERROR  AT TIME        0.0   DAYS    ( 1-JAN-2020):
  @           OIL PVT DATA NOT SPECIFIED                                      
+    24 READING EQUIL   
+    25 READING SCHEDULE
 
- @--  ERROR  AT TIME        0.0   DAYS    ( 1-JAN-2020):
- @           FLUID SURFACE DENSITIES HAVE NOT BEEN SPECIFIED -               
- @           USE EITHER KEYWORD  DENSITY  OR  GRAVITY                        
-    20 READING SCHEDULE
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           OIL   PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2012.1  METRES  AND    2024.2  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.76065E+01   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
 
- @--  ERROR  AT TIME        0.0   DAYS    ( 1-JAN-2020):
- @           INSUFFICIENT DATA TO DEFINE INITIAL SOLUTION                    
-    21 READING END     
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           OIL   PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2036.4  METRES  AND    2048.5  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.76065E+01   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           OIL   PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2060.6  METRES  AND    2072.7  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.76065E+01   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           OIL   PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2084.8  METRES  AND    2097.0  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.76065E+01   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           OIL   PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2109.1  METRES  AND    2121.2  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.76065E+01   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           OIL   PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2133.3  METRES  AND    2145.5  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.76065E+01   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           OIL   PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2157.6  METRES  AND    2169.7  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.76065E+01   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           OIL   PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2181.8  METRES  AND    2193.9  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.76065E+01   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           OIL   PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2206.1  METRES  AND    2218.2  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.76065E+01   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           OIL   PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2230.3  METRES  AND    2242.4  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.76065E+01   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           OIL   PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2254.5  METRES  AND    2266.7  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.76065E+01   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           OIL   PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2278.8  METRES  AND    2290.9  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.76065E+01   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           OIL   PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2303.0  METRES  AND    2315.2  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.76065E+01   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           OIL   PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2327.3  METRES  AND    2339.4  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.76065E+01   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           OIL   PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2351.5  METRES  AND    2363.6  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.76065E+01   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           OIL   PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2375.8  METRES  AND    2387.9  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.76065E+01   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           OIL   PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2400.0  METRES  AND    2412.1  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.76065E+01   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           OIL   PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2424.2  METRES  AND    2436.4  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.76065E+01   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           OIL   PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2448.5  METRES  AND    2460.6  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.76065E+01   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           OIL   PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2472.7  METRES  AND    2484.8  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.76065E+01   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           OIL   PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2497.0  METRES  AND    2509.1  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.76065E+01   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           OIL   PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2521.2  METRES  AND    2533.3  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.76065E+01   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           OIL   PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2545.5  METRES  AND    2557.6  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.76065E+01   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           OIL   PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2569.7  METRES  AND    2581.8  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.76065E+01   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           OIL   PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2593.9  METRES  AND    2606.1  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.76065E+01   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           OIL   PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2618.2  METRES  AND    2630.3  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.76065E+01   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           OIL   PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2642.4  METRES  AND    2654.5  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.76065E+01   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           OIL   PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2666.7  METRES  AND    2678.8  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.76065E+01   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           OIL   PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2690.9  METRES  AND    2703.0  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.76065E+01   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           OIL   PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2715.2  METRES  AND    2727.3  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.76065E+01   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           OIL   PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2739.4  METRES  AND    2751.5  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.76065E+01   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           OIL   PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2763.6  METRES  AND    2775.8  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.76065E+01   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           OIL   PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2787.9  METRES  AND    2800.0  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.76065E+01   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           OIL   PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2812.1  METRES  AND    2824.2  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.76065E+01   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           OIL   PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2836.4  METRES  AND    2848.5  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.76065E+01   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           OIL   PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2860.6  METRES  AND    2872.7  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.76065E+01   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           OIL   PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2884.8  METRES  AND    2897.0  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.76065E+01   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           OIL   PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2909.1  METRES  AND    2921.2  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.76065E+01   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           OIL   PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2933.3  METRES  AND    2945.5  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.76065E+01   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           OIL   PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2957.6  METRES  AND    2969.7  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.76065E+01   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           OIL   PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2981.8  METRES  AND    2993.9  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.76065E+01   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           OIL   PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              3006.1  METRES  AND    3018.2  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.76065E+01   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           OIL   PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              3030.3  METRES  AND    3042.4  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.76065E+01   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           OIL   PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              3054.5  METRES  AND    3066.7  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.76065E+01   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           OIL   PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              3078.8  METRES  AND    3090.9  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.76065E+01   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           OIL   PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              3103.0  METRES  AND    3115.2  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.76065E+01   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           OIL   PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              3127.3  METRES  AND    3139.4  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.76065E+01   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           OIL   PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              3151.5  METRES  AND    3163.6  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.76065E+01   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           OIL   PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              3175.8  METRES  AND    3187.9  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.76065E+01   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              3250.0  METRES  AND    3187.9  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.32031E+20   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              3187.9  METRES  AND    3175.8  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.31030E+20   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              3175.8  METRES  AND    3163.6  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.30061E+20   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              3163.6  METRES  AND    3151.5  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.29121E+20   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              3151.5  METRES  AND    3139.4  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.28211E+20   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              3139.4  METRES  AND    3127.3  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.27330E+20   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              3127.3  METRES  AND    3115.2  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.26476E+20   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              3115.2  METRES  AND    3103.0  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.25648E+20   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              3103.0  METRES  AND    3090.9  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.24847E+20   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              3090.9  METRES  AND    3078.8  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.24070E+20   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              3078.8  METRES  AND    3066.7  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.23318E+20   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              3066.7  METRES  AND    3054.5  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.22589E+20   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              3054.5  METRES  AND    3042.4  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.21883E+20   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              3042.4  METRES  AND    3030.3  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.21200E+20   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              3030.3  METRES  AND    3018.2  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.20537E+20   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              3018.2  METRES  AND    3006.1  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.19895E+20   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              3006.1  METRES  AND    2993.9  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.19274E+20   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2993.9  METRES  AND    2981.8  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.18671E+20   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2981.8  METRES  AND    2969.7  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.18088E+20   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2969.7  METRES  AND    2957.6  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.17523E+20   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2957.6  METRES  AND    2945.5  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.16975E+20   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2945.5  METRES  AND    2933.3  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.16444E+20   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2933.3  METRES  AND    2921.2  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.15931E+20   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2921.2  METRES  AND    2909.1  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.15433E+20   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2909.1  METRES  AND    2897.0  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.14950E+20   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2897.0  METRES  AND    2884.8  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.14483E+20   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2884.8  METRES  AND    2872.7  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.14031E+20   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2872.7  METRES  AND    2860.6  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.13592E+20   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2860.6  METRES  AND    2848.5  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.13167E+20   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2848.5  METRES  AND    2836.4  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.12756E+20   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2836.4  METRES  AND    2824.2  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.12357E+20   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2824.2  METRES  AND    2812.1  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.11971E+20   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2812.1  METRES  AND    2800.0  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.11597E+20   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2800.0  METRES  AND    2787.9  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.11235E+20   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2787.9  METRES  AND    2775.8  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.10884E+20   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2775.8  METRES  AND    2763.6  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.10543E+20   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2763.6  METRES  AND    2751.5  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.10214E+20   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2751.5  METRES  AND    2739.4  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.98948E+19   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2739.4  METRES  AND    2727.3  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.95856E+19   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2727.3  METRES  AND    2715.2  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.92860E+19   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2715.2  METRES  AND    2703.0  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.89959E+19   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2703.0  METRES  AND    2690.9  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.87147E+19   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2690.9  METRES  AND    2678.8  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.84424E+19   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2678.8  METRES  AND    2666.7  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.81786E+19   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2666.7  METRES  AND    2654.5  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.79230E+19   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2654.5  METRES  AND    2642.4  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.76754E+19   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2642.4  METRES  AND    2630.3  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.74355E+19   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2630.3  METRES  AND    2618.2  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.72032E+19   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2618.2  METRES  AND    2606.1  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.69781E+19   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2606.1  METRES  AND    2593.9  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.67600E+19   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2593.9  METRES  AND    2581.8  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.65488E+19   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2581.8  METRES  AND    2569.7  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.63441E+19   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2569.7  METRES  AND    2557.6  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.61459E+19   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2557.6  METRES  AND    2545.5  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.59538E+19   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2545.5  METRES  AND    2533.3  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.57678E+19   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2533.3  METRES  AND    2521.2  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.55875E+19   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2521.2  METRES  AND    2509.1  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.54129E+19   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2509.1  METRES  AND    2497.0  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.52437E+19   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2497.0  METRES  AND    2484.8  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.50799E+19   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2484.8  METRES  AND    2472.7  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.49211E+19   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2472.7  METRES  AND    2460.6  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.47673E+19   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2460.6  METRES  AND    2448.5  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.46184E+19   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2448.5  METRES  AND    2436.4  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.44740E+19   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2436.4  METRES  AND    2424.2  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.43342E+19   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2424.2  METRES  AND    2412.1  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.41988E+19   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2412.1  METRES  AND    2400.0  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.40676E+19   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2400.0  METRES  AND    2387.9  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.39405E+19   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2387.9  METRES  AND    2375.8  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.38173E+19   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2375.8  METRES  AND    2363.6  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.36980E+19   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2363.6  METRES  AND    2351.5  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.35825E+19   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2351.5  METRES  AND    2339.4  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.34705E+19   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2339.4  METRES  AND    2327.3  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.33621E+19   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2327.3  METRES  AND    2315.2  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.32570E+19   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2315.2  METRES  AND    2303.0  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.31552E+19   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2303.0  METRES  AND    2290.9  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.30566E+19   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2290.9  METRES  AND    2278.8  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.29611E+19   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2278.8  METRES  AND    2266.7  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.28686E+19   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2266.7  METRES  AND    2254.5  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.27789E+19   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2254.5  METRES  AND    2242.4  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.26921E+19   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2242.4  METRES  AND    2230.3  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.26080E+19   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2230.3  METRES  AND    2218.2  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.25265E+19   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2218.2  METRES  AND    2206.1  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.24475E+19   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2206.1  METRES  AND    2193.9  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.23710E+19   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2193.9  METRES  AND    2181.8  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.22969E+19   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2181.8  METRES  AND    2169.7  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.22251E+19   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2169.7  METRES  AND    2157.6  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.21556E+19   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2157.6  METRES  AND    2145.5  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.20882E+19   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2145.5  METRES  AND    2133.3  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.20230E+19   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2133.3  METRES  AND    2121.2  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.19598E+19   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2121.2  METRES  AND    2109.1  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.18985E+19   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2109.1  METRES  AND    2097.0  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.18392E+19   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2097.0  METRES  AND    2084.8  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.17817E+19   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2084.8  METRES  AND    2072.7  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.17260E+19   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2072.7  METRES  AND    2060.6  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.16721E+19   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2060.6  METRES  AND    2048.5  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.16199E+19   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2048.5  METRES  AND    2036.4  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.15692E+19   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2036.4  METRES  AND    2024.2  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.15202E+19   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2024.2  METRES  AND    2012.1  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.14727E+19   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              2012.1  METRES  AND    2000.0  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.14267E+19   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           WATER PRESSURE IN EQUILIBRATION CALCULATION BETWEEN DEPTHS      
+ @              3250.0  METRES  AND    3200.0  METRES  HAS NOT CONVERGED.    
+ @           CONVERGENCE ERROR =   0.32031E+20   BARS  .                     
+ @           THE CURRENT NUMBER (  100 ) OF DEPTH NODES IN THE               
+ @           EQUILIBRATION CALCULATION IS TOO SMALL.                         
+
+ @--WARNING  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           OIL IS DENSER THAN WATER WITHIN THE RESERVOIR                   
+ @           IN EQUILIBRATION REGION  1.  CHECK SURFACE                      
+ @           DENSITIES, FORMATION VOLUME FACTORS, RS, RV.                    
+ @           THE PROBLEM OCCURS AT DEPTH    3200.0000                        
+ @           OIL   PRESSURE =  -0.2000E+21                                   
+ @           WATER PRESSURE =   0.9930E+21                                   
+    26 READING END     
 
  Error summary 
  Comments               1
- Warnings               1
- Problems               0
- Errors                 3
+ Warnings               7
+ Problems             149
+ Errors                 1
  Bugs                   0
- Final cpu       0.03 elapsed       0.03
+ Final cpu       0.34 elapsed       0.34
