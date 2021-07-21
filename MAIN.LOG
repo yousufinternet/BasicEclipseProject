@@ -1,0 +1,69 @@
+     1 READING RUNSPEC
+     2 READING TITLE
+     3 READING DIMENS
+     4 READING OIL
+     5 READING WATER
+     6 READING METRIC
+     7 READING START
+     8 READING WELLDIMS
+     9 READING GRID
+
+ @--MESSAGE  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           CHECKING FOR LICENSES
+
+ @--MESSAGE  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           THE MEMORY REQUIRED TO PROCESS THE GRID SECTION IS
+ @               394964 BYTES
+
+ @--WARNING  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           SPURIOUS DATA BEFORE TOPS     KEYWORD
+ @            -- this is equivelant to DX 1000 20
+    10 READING TOPS
+    11 READING DXV
+    12 READING DYV
+    13 READING DZ
+    14 READING EQUALS
+    15 READING PROPS
+
+ @--MESSAGE  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           NEITHER OLDTRAN,OLDTRANR NOR NEWTRAN SPECIFIED
+ @           BLOCK CENTRE TRANSMISSIBILITIES TO BE CALCULATED
+ @           USING  OLDTRAN
+
+ @--COMMENT  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           NO NON-NEIGHBOUR CONNECTIONS FOUND
+
+ @--MESSAGE  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           NUMBER OF ACTIVE CELLS IS 1000
+
+ @--MESSAGE  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           THE MEMORY REQUIRED TO PROCESS THE SOLUTION SECTION IS
+ @                 1434 KBYTES
+
+ @--MESSAGE  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @              58612 CHARACTER VARIABLES USED
+    16 READING SWOF
+    17 READING PVTW
+    18 READING ROCK
+    19 READING SOLUTION
+
+ @--  ERROR  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           OIL PVT DATA NOT SPECIFIED
+
+ @--  ERROR  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           FLUID SURFACE DENSITIES HAVE NOT BEEN SPECIFIED -
+ @           USE EITHER KEYWORD  DENSITY  OR  GRAVITY
+    20 READING SCHEDULE
+
+ @--  ERROR  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           INSUFFICIENT DATA TO DEFINE INITIAL SOLUTION
+    21 READING END
+
+ Error summary
+ Comments               1
+ Warnings               1
+ Problems               0
+ Errors                 3
+ Bugs                   0
+ Final cpu       0.03 elapsed       0.03
+

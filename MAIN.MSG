@@ -1,0 +1,47 @@
+<eclipse>
+<message source="eclrun" date="" time="0">
+Executing ECLIPSE on pc system with  architecture named yusuf-dell
+</message>
+<message source="eclrun" date="" time="0">
+Process ID is 272
+</message>
+<message date="1/1/2020" time="0.00000000000000">
+ CHECKING FOR LICENSES                                                   
+</message>
+<message date="1/1/2020" time="0.00000000000000">
+ THE MEMORY REQUIRED TO PROCESS THE GRID SECTION IS                      
+     394964 BYTES                                                        
+</message>
+<warning date="1/1/2020" time="0.00000000000000">
+ SPURIOUS DATA BEFORE TOPS     KEYWORD                                   
+  -- this is equivelant to DX 1000 20                                    
+</warning>
+<message date="1/1/2020" time="0.00000000000000">
+ NEITHER OLDTRAN,OLDTRANR NOR NEWTRAN SPECIFIED                          
+ BLOCK CENTRE TRANSMISSIBILITIES TO BE CALCULATED                        
+ USING  OLDTRAN                                                          
+</message>
+<comment date="1/1/2020" time="0.00000000000000">
+ NO NON-NEIGHBOUR CONNECTIONS FOUND                                      
+</comment>
+<message date="1/1/2020" time="0.00000000000000">
+ NUMBER OF ACTIVE CELLS IS 1000                                          
+</message>
+<message date="1/1/2020" time="0.00000000000000">
+ THE MEMORY REQUIRED TO PROCESS THE SOLUTION SECTION IS                  
+       1434 KBYTES                                                       
+</message>
+<message date="1/1/2020" time="0.00000000000000">
+    58612 CHARACTER VARIABLES USED                                       
+</message>
+<error date="1/1/2020" time="0.00000000000000">
+ OIL PVT DATA NOT SPECIFIED                                              
+</error>
+<error date="1/1/2020" time="0.00000000000000">
+ FLUID SURFACE DENSITIES HAVE NOT BEEN SPECIFIED -                       
+ USE EITHER KEYWORD  DENSITY  OR  GRAVITY                                
+</error>
+<error date="1/1/2020" time="0.00000000000000">
+ INSUFFICIENT DATA TO DEFINE INITIAL SOLUTION                            
+</error>
+</eclipse>

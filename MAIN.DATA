@@ -1,0 +1,103 @@
+-- Title, problem dimensions, switches, phases present, components
+RUNSPEC
+TITLE
+    YUSUF PROJ
+
+-- No. of blocks
+DIMENS
+3*10 /
+
+-- Phases
+OIL
+
+WATER
+
+METRIC
+
+START
+01 'JAN' 2020 /
+
+WELLDIMS
+10 30 /
+
+-- Specification of geometry of computational grid (location of grid block corners), and of rock properties (porosity, absolute permeability, etc.) in each grid block.
+GRID
+
+ -- this is equivelant to DX 1000 20
+-- DXV
+-- 10*20 \
+-- DYV
+-- 10*20 \ -- this is equivelant to DY 1000*20
+-- DZ
+-- 1000*20 \
+-- a useful trick: EQUALS 'DX' 20 to set the whole array to be equal to 20m
+
+TOPS 
+100*3000 100*3020 100*3040 100*3060 100*3080
+100*3100 100*3120 100*3140 100*3160 100*3180
+/
+
+DXV
+10*20 /
+DYV
+10*20 /
+DZ
+1000*20 /
+-- OPTIONALLY you can set values on certain boxes adding the following arguments IX1-IX2 JY1-JY2 KZ1-KZ2
+-- Example: TOPS  7020  1   9   2   2   1   1  
+EQUALS 
+   -- 'DX'   20 /
+   -- 'DY'   20 /
+   -- 'DZ'   20 /
+   'PORO' 0.3 /
+   'PERMX' 300 /
+   'PERMY' 300 /
+   'PERMZ' 30 /
+/
+
+-- EDIT section optional for modifications to calculated pore volumes, grid block center depths and transmissibilities
+
+-- tables of props
+PROPS
+
+-- SWFN
+-- --Sw    Krw    Pcow
+-- 0.22    0.0    7.0
+-- 0.3     0.0    4.0
+-- 0.5     0.24   2.5
+-- 0.8     0.65   1.0
+-- 0.9     0.83   0.5
+-- 1.0     1.00   0.0
+
+SWOF
+-- SW    Krw   Krow   Pco
+   0.22  0.00  1.00   7.00
+   0.30	 0.07  0.40   4.00
+   0.40	 0.15  0.125  3.00
+   0.50  1*    0.0649 1*
+   0.60	 0.33  0.0048 2.00
+   0.80  0.65  0.00   1.00
+   0.90	 0.83  0.00   1*
+   1.00	 1.00  0.00   0.00 /
+
+PVTW
+-- Pref  Bref     Cw      Vw   (dVw/dp)/Vw
+   200   1.00341  3.0D-6  0.96  0          /
+
+ROCK
+-- Pref (barsa)   Crock (1/bar)    C_R matrix (1/bar)
+   250 		  1*               /
+
+-- you may specify densities using DENSITY keyword
+
+-- Initial conditions
+SOLUTION
+
+EQUIL
+3000 300 3180 0 3000 0 0 0 5 /
+
+
+
+
+-- Simulation schedule
+SCHEDULE

@@ -1,0 +1,221 @@
+
+
+
+ $$$$$   $$$   $      $$$  $$$$    $$$   $$$$$     $    $$$    $$$ 
+ $      $   $  $       $   $   $  $   $  $        $$   $   $  $   $
+ $      $      $       $   $   $  $      $         $   $   $  $   $
+ $$$$   $      $       $   $$$$    $$$   $$$$      $   $   $  $   $
+ $      $      $       $   $          $  $         $   $   $  $   $
+ $      $   $  $       $   $      $   $  $         $   $   $  $   $
+ $$$$$   $$$   $$$$$  $$$  $       $$$   $$$$$    $$$   $$$    $$$ 
+
+
+
+                       $$$$$   $$$   $      $$$  $$$$    $$$   $$$$$     $    $$$    $$$ 
+                       $      $   $  $       $   $   $  $   $  $        $$   $   $  $   $
+                       $      $      $       $   $   $  $      $         $   $   $  $   $
+                       $$$$   $      $       $   $$$$    $$$   $$$$      $   $   $  $   $
+                       $      $      $       $   $          $  $         $   $   $  $   $
+                       $      $   $  $       $   $      $   $  $         $   $   $  $   $
+                       $$$$$   $$$   $$$$$  $$$  $       $$$   $$$$$    $$$   $$$    $$$ 
+
+
+
+                                             $$$$$   $$$   $      $$$  $$$$    $$$   $$$$$     $    $$$    $$$ 
+                                             $      $   $  $       $   $   $  $   $  $        $$   $   $  $   $
+                                             $      $      $       $   $   $  $      $         $   $   $  $   $
+                                             $$$$   $      $       $   $$$$    $$$   $$$$      $   $   $  $   $
+                                             $      $      $       $   $          $  $         $   $   $  $   $
+                                             $      $   $  $       $   $      $   $  $         $   $   $  $   $
+                                             $$$$$   $$$   $$$$$  $$$  $       $$$   $$$$$    $$$   $$$    $$$ 
+
+
+
+                                                                   $$$$$   $$$   $      $$$  $$$$    $$$   $$$$$     $    $$$    $$$ 
+                                                                   $      $   $  $       $   $   $  $   $  $        $$   $   $  $   $
+                                                                   $      $      $       $   $   $  $      $         $   $   $  $   $
+                                                                   $$$$   $      $       $   $$$$    $$$   $$$$      $   $   $  $   $
+                                                                   $      $      $       $   $          $  $         $   $   $  $   $
+                                                                   $      $   $  $       $   $      $   $  $         $   $   $  $   $
+                                                                   $$$$$   $$$   $$$$$  $$$  $       $$$   $$$$$    $$$   $$$    $$$ 
+ 
+ Version =  2010.1
+ Arch    =  PC WINDOWS (32 bit)
+Annex    | Modification date    | Update date          | baseline             
+=====    | =================    | ===========          | ========             
+ECLIPSE  | 28-MAY-2010 11:36:49 | 28-MAY-2010 20:43:29 | S:\2010.1_w22
+system   | 27-MAY-2010 16:14:43 | 28-MAY-2010 20:45:05 | S:\2010.1_w22
+utility  | 28-MAY-2010 11:56:05 | 28-MAY-2010 20:45:06 | S:\2010.1_w22
+ 
+
+1
+
+ ******** ECHO OF INPUT DATA FOR RUN MAIN
+
+ 0: -- Title, problem dimensions, switches, phases present, components
+ 0: RUNSPEC
+ 0: TITLE
+ 0:     YUSUF PROJ
+ 0: 
+ 0: -- No. of blocks
+ 0: DIMENS
+ 0: 3*10 /
+ 0: 
+ 0: -- Phases
+ 0: OIL
+ 0: 
+ 0: WATER
+ 0: 
+ 0: METRIC
+ 0: 
+ 0: START
+ 0: 01 'JAN' 2020 /
+ 0: 
+ 0: WELLDIMS
+ 0: 10 30 /
+ 0: 
+ 0: -- Specification of geometry of computational grid (location of grid block corners), and of rock properties (porosity, absolute perm
+ 0: GRID
+ 0: 
+ 0:  -- this is equivelant to DX 1000 20
+ 0: -- DXV
+ 0: -- 10*20 \
+ 0: -- DYV
+ 0: -- 10*20 \ -- this is equivelant to DY 1000*20
+ 0: -- DZ
+ 0: -- 1000*20 \
+ 0: -- a useful trick: EQUALS 'DX' 20 to set the whole array to be equal to 20m
+ 0: 
+ 0: TOPS
+ 0: 100*3000 100*3020 100*3040 100*3060 100*3080
+ 0: 100*3100 100*3120 100*3140 100*3160 100*3180
+ 0: /
+ 0: 
+ 0: DXV
+ 0: 10*20 /
+ 0: DYV
+ 0: 10*20 /
+ 0: DZ
+ 0: 1000*20 /
+ 0: -- OPTIONALLY you can set values on certain boxes adding the following arguments IX1-IX2 JY1-JY2 KZ1-KZ2
+ 0: -- Example: TOPS  7020  1   9   2   2   1   1
+ 0: EQUALS
+ 0:    -- 'DX'   20 /
+ 0:    -- 'DY'   20 /
+ 0:    -- 'DZ'   20 /
+ 0:    'PORO' 0.3 /
+ 0:    'PERMX' 300 /
+ 0:    'PERMY' 300 /
+ 0:    'PERMZ' 30 /
+ 0: /
+ 0: 
+ 0: -- EDIT section optional for modifications to calculated pore volumes, grid block center depths and transmissibilities
+ 0: 
+ 0: -- tables of props
+ 0: PROPS
+ 0: 
+ 0: -- SWFN
+ 0: -- --Sw    Krw    Pcow
+ 0: -- 0.22    0.0    7.0
+ 0: -- 0.3     0.0    4.0
+ 0: -- 0.5     0.24   2.5
+ 0: -- 0.8     0.65   1.0
+ 0: -- 0.9     0.83   0.5
+ 0: -- 1.0     1.00   0.0
+ 0: 
+ 0: SWOF
+ 0: -- SW    Krw   Krow   Pco
+ 0:    0.22  0.00  1.00   7.00
+ 0:    0.30	 0.07  0.40   4.00
+ 0:    0.40	 0.15  0.125  3.00
+ 0:    0.50  1*    0.0649 1*
+ 0:    0.60	 0.33  0.0048 2.00
+ 0:    0.80  0.65  0.00   1.00
+ 0:    0.90	 0.83  0.00   1*
+ 0:    1.00	 1.00  0.00   0.00 /
+ 0: 
+ 0: PVTW
+ 0: -- Pref  Bref     Cw      Vw   (dVw/dp)/Vw
+ 0:    200   1.00341  3.0D-6  0.96  0          /
+ 0: 
+ 0: ROCK
+ 0: -- Pref (barsa)   Crock (1/bar)    C_R matrix (1/bar)
+ 0:    250 		  1*               /
+ 0: 
+ 0: -- you may specify densities using DENSITY keyword
+ 0: 
+ 0: -- Initial conditions
+ 0: SOLUTION
+ 0: 
+ 0: -- Simulation schedule
+ 0: SCHEDULE
+
+ ******** END OF INPUT DATA FOR RUN MAIN
+     1 READING RUNSPEC 
+     2 READING TITLE   
+     3 READING DIMENS  
+     4 READING OIL     
+     5 READING WATER   
+     6 READING METRIC  
+     7 READING START   
+     8 READING WELLDIMS
+     9 READING GRID    
+
+ @--MESSAGE  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           CHECKING FOR LICENSES                                           
+
+ @--MESSAGE  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           THE MEMORY REQUIRED TO PROCESS THE GRID SECTION IS              
+ @               394964 BYTES                                                
+
+ @--WARNING  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           SPURIOUS DATA BEFORE TOPS     KEYWORD                           
+ @            -- this is equivelant to DX 1000 20                            
+    10 READING TOPS    
+    11 READING DXV     
+    12 READING DYV     
+    13 READING DZ      
+    14 READING EQUALS  
+    15 READING PROPS   
+
+ @--MESSAGE  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           NEITHER OLDTRAN,OLDTRANR NOR NEWTRAN SPECIFIED                  
+ @           BLOCK CENTRE TRANSMISSIBILITIES TO BE CALCULATED                
+ @           USING  OLDTRAN                                                  
+
+ @--COMMENT  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           NO NON-NEIGHBOUR CONNECTIONS FOUND                              
+
+ @--MESSAGE  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           NUMBER OF ACTIVE CELLS IS 1000                                  
+
+ @--MESSAGE  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           THE MEMORY REQUIRED TO PROCESS THE SOLUTION SECTION IS          
+ @                 1434 KBYTES                                               
+
+ @--MESSAGE  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @              58612 CHARACTER VARIABLES USED                               
+    16 READING SWOF    
+    17 READING PVTW    
+    18 READING ROCK    
+    19 READING SOLUTION
+
+ @--  ERROR  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           OIL PVT DATA NOT SPECIFIED                                      
+
+ @--  ERROR  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           FLUID SURFACE DENSITIES HAVE NOT BEEN SPECIFIED -               
+ @           USE EITHER KEYWORD  DENSITY  OR  GRAVITY                        
+    20 READING SCHEDULE
+
+ @--  ERROR  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           INSUFFICIENT DATA TO DEFINE INITIAL SOLUTION                    
+    21 READING END     
+
+ Error summary 
+ Comments               1
+ Warnings               1
+ Problems               0
+ Errors                 3
+ Bugs                   0
+ Final cpu       0.03 elapsed       0.03
