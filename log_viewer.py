@@ -7,6 +7,7 @@ import datetime
 
 from itertools import groupby
 from functools import partial
+import numpy as np
 import pandas as pd
 from PyQt5 import QtWidgets, QtGui, QtCore, Qt
 
@@ -59,6 +60,16 @@ class toolButtonHover(QtWidgets.QToolButton):
         super().enterEvent(event)
 
 
+def extract_date(m):
+    try:
+        date = re.search(r'DAYS\s*\((.*)\)', m.splitlines()[0]).group(1)
+        return datetime.datetime.strptime(
+                date.replace('JLY', 'JUL'), '%d-%b-%Y').date()
+    except AttributeError:
+        print(m)
+        return np.nan
+
+
 def read_input_file():
     with open(sys.argv[1], 'r') as f_obj:
         input_file = f_obj.read()
@@ -77,9 +88,7 @@ def read_input_file():
     # types = [input_file[i][3:] for i in range(0, len(input_file), 2)]
     # messages = [input_file[x] for x in range(1, len(input_file), 2)]
     types = [m.split()[0] for m in input_file]
-    dates = [re.search(r'DAYS\s*\((.*)\)', m.splitlines()[0]).group(1) for m in input_file]
-    dates = [datetime.datetime.strptime(
-        date.replace('JLY', 'JUL'), '%d-%b-%Y').date() for date in dates]
+    dates = [extract_date(m) for m in input_file]
     messages = ['\n'.join(l.lstrip('@').strip('*').strip() for l in m.splitlines()[1:]) for m in input_file]
     messages = ['\n'.join(l for l in m.splitlines() if l) for m in messages]
     df = pd.DataFrame({'Date': dates, 'Type': types, 'Message': messages})

@@ -9,8 +9,9 @@ DIMENS
 
 -- Phases
 OIL
-
 WATER
+GAS
+DISGAS
 
 METRIC
 
@@ -18,20 +19,12 @@ START
 01 'JAN' 2020 /
 
 WELLDIMS
-10 1 /
-
-PARALLEL
-4 /
-
-CPR
-
-MESSAGES
-12*100000 /
+50 30 4 20 /
 
 -- Specification of geometry of computational grid (location of grid block corners), and of rock properties (porosity, absolute permeability, etc.) in each grid block.
 GRID
 
- -- this is equivelant to DX 1000 20
+-- this is equivelant to DX 1000 20
 -- DXV
 -- 10*20 \
 -- DYV
@@ -41,7 +34,9 @@ GRID
 -- a useful trick: EQUALS 'DX' 20 to set the whole array to be equal to 20m
 
 TOPS 
-100*3000 /
+100*3000 100*3020 100*3040 100*3060 100*3080
+100*3100 100*3120 100*3140 100*3160 100*3180
+/
 
 DXV
 10*20 /
@@ -51,7 +46,6 @@ DZ
 1000*20 /
 -- OPTIONALLY you can set values on certain boxes adding the following arguments IX1-IX2 JY1-JY2 KZ1-KZ2
 -- Example: TOPS  7020  1   9   2   2   1   1  
-
 EQUALS 
    -- 'DX'   20 /
    -- 'DY'   20 /
@@ -67,6 +61,98 @@ EQUALS
 -- tables of props
 PROPS
 
+SWFN
+
+  0.22  0     7
+  0.3   0.07  4
+  0.4   0.15  3
+  0.5   0.24  2.5
+  0.6   0.33  2
+  0.8   0.65  1
+  0.9   0.83  0.5
+  1     1     0      /
+
+SGFN
+
+  0     0       0
+  0.04  0       0.2
+  0.1   0.022   0.5
+  0.2   0.1     1
+  0.3   0.24    1.5
+  0.4   0.34    2
+  0.5   0.42    2.5
+  0.6   0.5     3
+  0.7   0.8125  3.5
+  0.78  1       3.9    /
+
+SOF3
+
+0        0         0
+0.2      0         0
+0.38     0.00432   0
+0.4      0.0048    0.004
+0.48     0.05288   0.02
+0.5      0.0649    0.036
+0.58     0.11298   0.1
+0.6      0.125     0.146
+0.68     0.345     0.33
+0.7      0.4       0.42
+0.74     0.7       0.6
+0.78     1         1          /
+
+PVTW
+3000  1.00341  3.0D-6  0.96  0  /
+
+ROCK
+3600    4.0D-6   /
+
+DENSITY
+45   63.02   0.0702  /
+
+PVDG
+ 400  5.9   0.013
+ 800  2.95  0.0135
+1200  1.96  0.014
+1600  1.47  0.0145
+2000  1.18  0.015
+2400  0.98  0.0155
+2800  0.84  0.016
+3200  0.74  0.0165
+3600  0.65  0.017
+4000  0.59  0.0175
+4400  0.54  0.018
+4800  0.49  0.0185
+5200  0.45  0.019
+5600  0.42  0.0195 /
+
+PVTO
+   0.165      400   1.012    1.17  /
+   0.335      800   1.0255   1.14  /
+   0.500     1200   1.038    1.11  /
+   0.665     1600   1.051    1.08  /
+   0.828     2000   1.063    1.06  /
+   0.985     2400   1.075    1.03  /
+   1.130     2800   1.087    1.00  /
+   1.270     3200   1.0985   0.98  /
+   1.390     3600   1.11     0.95  /
+   1.500     4000   1.12     0.94  /
+   1.600     4400   1.13     0.92  /
+   1.676     4800   1.14     0.91  /
+   1.750     5200   1.148    0.9   /
+   1.810     5600   1.155    0.89
+             6000   1.1504   0.89
+             6400   1.1458   0.89
+             6800   1.1412   0.89
+             7200   1.1367   0.89  /
+/
+
+RPTPROPS
+   -- PROPS Reporting Options
+-- 
+'PVTO' 'PVDO' 'PVTW' 'PVTG' 'PVDG' 'DENSITY' 'GRAVITY' 'SDENSITY' 'ROCK' 
+'ROCKTAB' 
+/
+
 -- SWFN
 -- --Sw    Krw    Pcow
 -- 0.22    0.0    7.0
@@ -76,37 +162,52 @@ PROPS
 -- 0.9     0.83   0.5
 -- 1.0     1.00   0.0
 
-SWOF
--- SW    Krw   Krow   Pco
-   0.22  0.00  1.00   7.00
-   0.30	 0.07  0.40   4.00
-   0.40	 0.15  0.125  3.00
-   0.50  1*    0.0649 1*
-   0.60	 0.33  0.0048 2.00
-   0.80  0.65  0.00   1.00
-   0.90	 0.83  0.00   1*
-   1.00	 1.00  0.00   0.00 /
+-- SWOF
+-- -- SW    Krw   Krow   Pco
+--    0.22  0.00  1.00   7.00
+--    0.30	 0.07  0.40   4.00
+--    0.40	 0.15  0.125  3.00
+--    0.50  1*    0.0649 1*
+--    0.60	 0.33  0.0048 2.00
+--    0.80  0.65  0.00   1.00
+--    0.90	 0.83  0.00   1*
+--    1.00	 1.00  0.00   0.00 /
 
-PVTW
--- Pref  Bref     Cw      Vw   (dVw/dp)/Vw
-   300   1.00341  4.0D-5  0.50  0          /
+-- PVTW
+-- -- Pref  Bref     Cw      Vw   (dVw/dp)/Vw
+--    200   1.00341  3.0D-6  0.96  0          /
 
-ROCK
--- Pref (barsa)   Crock (1/bar)    C_R matrix (1/bar)
-   350 		  1*               /
+-- ROCK
+-- -- Pref (barsa)   Crock (1/bar)    C_R matrix (1/bar)
+--    250 		  1*               /
 
--- you may specify densities using DENSITY keyword
-DENSITY
-600 1000 1 /
+-- -- you may specify densities using DENSITY keyword
 
 -- Initial conditions
 SOLUTION
 
 EQUIL
-2000 500 3250 0 2000 0 0 0 5 /
-
-
-
+3000 300 3180 0 3000 0 0 0 5 /
 
 -- Simulation schedule
 SCHEDULE
+
+-- WELSPECS -- introduce well
+WELSPECS
+  -- Well Name    Group Name  Location (I,J) BHP Depth  Pref. Phase  Drainage Radius
+  "YP1-001"     "Prod-GRP"         1 1           1*         'OIL'        -1   /
+  "YP1-002"     "Prod-GRP"         1 3           1*         'OIL'        -1   /
+  "YP1-003"     "Prod-GRP"         1 8           1*         'OIL'        -1   /
+  "YP1-004"     "Prod-GRP"         3 1           1*         'OIL'        -1   /
+  "YP1-005"     "Prod-GRP"         3 3           1*         'OIL'        -1   /
+  "YP1-006"     "Prod-GRP"         3 8           1*         'OIL'        -1   /
+  "YP1-007"     "Prod-GRP"         8 1           1*         'OIL'        -1   /
+  "YP1-008"     "Prod-GRP"         8 3           1*         'OIL'        -1   /
+  "YP1-009"     "Prod-GRP"         8 8           1*         'OIL'        -1   /
+  /
+
+  COMPDAT
+--  WELL    -LOCATION-  OPEN/  SAT  CONN  BORE
+--  NAME    I  J K1-K2  SHUT   TAB  FACT  DIAM
+  'YP1*'    0  0 2  8   'OPEN'  0     0    0.15 /
+  /
