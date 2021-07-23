@@ -1,4 +1,7 @@
 <eclipse>
+<error source="eclrun" date="" time="0">
+Unable to locate Intel MPI installation folder on this machine (chip='default', system='pc', --arch='auto'). See troubleshooting section of the ECLRUN manual for more details.
+</error>
 <message source="eclrun" date="" time="0">
 Executing ECLIPSE on pc system with  architecture named yusufs-lenovo using ilmpi communications
 </message>
