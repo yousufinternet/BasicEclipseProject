@@ -21,6 +21,9 @@ START
 WELLDIMS
 50 30 4 20 /
 
+PARALLEL
+  4 /
+
 -- Specification of geometry of computational grid (location of grid block corners), and of rock properties (porosity, absolute permeability, etc.) in each grid block.
 GRID
 
@@ -188,6 +191,25 @@ EQUIL
 3000 300 3180 0 3000 0 0 0 5 /
 
 -- Simulation schedule
+SUMMARY
+
+FOPR
+
+GOPR
+
+WOPR
+
+FLPR
+
+GLPR
+
+WLPR
+
+RUNSUM
+
+RPTSMRY
+  1 /
+  
 SCHEDULE
 
 RPTSCHED
