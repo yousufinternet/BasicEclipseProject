@@ -13,7 +13,7 @@ WATER
 GAS
 DISGAS
 
-METRIC
+FIELD
 
 START
 01 'JAN' 2020 /
@@ -34,8 +34,8 @@ GRID
 -- a useful trick: EQUALS 'DX' 20 to set the whole array to be equal to 20m
 
 TOPS 
-100*3000 100*3020 100*3040 100*3060 100*3080
-100*3100 100*3120 100*3140 100*3160 100*3180
+100*6000 100*6020 100*6040 100*6060 100*6080
+100*6100 100*6120 100*6140 100*6160 100*6180
 /
 
 DXV
@@ -62,7 +62,6 @@ EQUALS
 PROPS
 
 SWFN
-
   0.22  0     7
   0.3   0.07  4
   0.4   0.15  3
@@ -73,7 +72,6 @@ SWFN
   1     1     0      /
 
 SGFN
-
   0     0       0
   0.04  0       0.2
   0.1   0.022   0.5
@@ -101,10 +99,10 @@ SOF3
 0.78     1         1          /
 
 PVTW
-3000  1.00341  3.0D-6  0.96  0  /
+6000  1.00341  3.0D-6  0.96  0  /
 
 ROCK
-3600    4.0D-6   /
+6600    4.0D-6   /
 
 DENSITY
 45   63.02   0.0702  /
@@ -192,22 +190,43 @@ EQUIL
 -- Simulation schedule
 SCHEDULE
 
+RPTSCHED
+'SOIL' 'RESTART=1' 'FIP=1' 'WELLS=2' 'SUMMARY=2' 'CPU=2' 'WELSPECS'  /
+
 -- WELSPECS -- introduce well
 WELSPECS
   -- Well Name    Group Name  Location (I,J) BHP Depth  Pref. Phase  Drainage Radius
-  "YP1-001"     "Prod-GRP"         1 1           1*         'OIL'        -1   /
-  "YP1-002"     "Prod-GRP"         1 3           1*         'OIL'        -1   /
-  "YP1-003"     "Prod-GRP"         1 8           1*         'OIL'        -1   /
-  "YP1-004"     "Prod-GRP"         3 1           1*         'OIL'        -1   /
-  "YP1-005"     "Prod-GRP"         3 3           1*         'OIL'        -1   /
-  "YP1-006"     "Prod-GRP"         3 8           1*         'OIL'        -1   /
-  "YP1-007"     "Prod-GRP"         8 1           1*         'OIL'        -1   /
-  "YP1-008"     "Prod-GRP"         8 3           1*         'OIL'        -1   /
-  "YP1-009"     "Prod-GRP"         8 8           1*         'OIL'        -1   /
-  /
+'YP1-001'     'Prod-GRP'         1 1           1*         'OIL'        -1.0   /
+-- 'YP1-002'     'Prod-GRP'         1 3           1*         'OIL'        -1.0   /
+'YP1-003'     'Prod-GRP'         1 8           1*         'OIL'        -1.0   /
+-- 'YP1-004'     'Prod-GRP'         3 1           1*         'OIL'        -1.0   /
+'YP1-005'     'Prod-GRP'         3 3           1*         'OIL'        -1.0   /
+'YP1-006'     'Prod-GRP'         3 8           1*         'OIL'        -1.0   /
+'YP1-007'     'Prod-GRP'         8 1           1*         'OIL'        -1.0   /
+-- 'YP1-008'     'Prod-GRP'         8 3           1*         'OIL'        -1.0   /
+'YP1-009'     'Prod-GRP'         8 8           1*         'OIL'        -1.0   /
+/
 
-  COMPDAT
 --  WELL    -LOCATION-  OPEN/  SAT  CONN  BORE
 --  NAME    I  J K1-K2  SHUT   TAB  FACT  DIAM
-  'YP1*'    0  0 2  8   'OPEN'  0     0    0.15 /
+COMPDAT
+  'YP1-???'    0  0 2  8   'OPEN'  0     0    0.15 /
+/
+
+WCONPROD
+--  WELL    OPEN/  CNTL   OIL   WATER  GAS   LIQU  VOID  BHP
+--  NAME    SHUT   MODE   RATE  RATE   RATE  RATE  RATE
+  'YP1-???'   'OPEN' 'ORAT'  1000  4*                       1000 /
   /
+
+
+TSTEP
+  10000 /
+
+WCONPROD
+--  WELL    OPEN/  CNTL   OIL   WATER  GAS   LIQU  VOID  BHP
+--  NAME    SHUT   MODE   RATE  RATE   RATE  RATE  RATE
+  'YP1-???'   'OPEN' 'ORAT'  1000  4*                       1000 /
+  /
+
+END

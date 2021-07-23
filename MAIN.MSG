@@ -1,9 +1,9 @@
 <eclipse>
 <message source="eclrun" date="" time="0">
-Executing ECLIPSE on pc system with  architecture named yusuf-dell
+Executing ECLIPSE on pc system with  architecture named yusufs-lenovo
 </message>
 <message source="eclrun" date="" time="0">
-Process ID is 272
+Process ID is 280
 </message>
 <message date="1/1/2020" time="0.00000000000000">
  CHECKING FOR LICENSES                                                   
@@ -30,10 +30,216 @@ Process ID is 272
 <message date="1/1/2020" time="0.00000000000000">
     58943 CHARACTER VARIABLES USED                                       
 </message>
-<warning date="1/1/2020" time="0.00000000000000">
- SPURIOUS DATA BEFORE END      KEYWORD                                   
-   COMPDAT                                                               
-   'YP1*'    0  0 2  8   'OPEN'  0     0    0.15 /                       
-   /                                                                     
+<message date="1/1/2020" time="0.00000000000000">
+ DRSDT KEYWORD HAS NOT BEEN ENTERED, SO THE                              
+ MAXIMUM GAS RE-SOLUTION RATE IS DEFAULTED TO INFINITY.                  
+</message>
+<message date="1/1/2020" time="0.00000000000000">
+ ******************************************                              
+ * WELL YP1-001  HAS CHANGED TO           *                              
+ * CONTROL BY BOTTOM HOLE PRESSURE        *                              
+ * FROM TIME      0.00   DAYS  .          *                              
+ ******************************************                              
+</message>
+<message date="1/1/2020" time="0.00000000000000">
+ ******************************************                              
+ * WELL YP1-003  HAS CHANGED TO           *                              
+ * CONTROL BY BOTTOM HOLE PRESSURE        *                              
+ * FROM TIME      0.00   DAYS  .          *                              
+ ******************************************                              
+</message>
+<message date="1/1/2020" time="0.00000000000000">
+ ******************************************                              
+ * WELL YP1-005  HAS CHANGED TO           *                              
+ * CONTROL BY BOTTOM HOLE PRESSURE        *                              
+ * FROM TIME      0.00   DAYS  .          *                              
+ ******************************************                              
+</message>
+<message date="1/1/2020" time="0.00000000000000">
+ ******************************************                              
+ * WELL YP1-006  HAS CHANGED TO           *                              
+ * CONTROL BY BOTTOM HOLE PRESSURE        *                              
+ * FROM TIME      0.00   DAYS  .          *                              
+ ******************************************                              
+</message>
+<message date="1/1/2020" time="0.00000000000000">
+ ******************************************                              
+ * WELL YP1-007  HAS CHANGED TO           *                              
+ * CONTROL BY BOTTOM HOLE PRESSURE        *                              
+ * FROM TIME      0.00   DAYS  .          *                              
+ ******************************************                              
+</message>
+<message date="1/1/2020" time="0.00000000000000">
+ ******************************************                              
+ * WELL YP1-009  HAS CHANGED TO           *                              
+ * CONTROL BY BOTTOM HOLE PRESSURE        *                              
+ * FROM TIME      0.00   DAYS  .          *                              
+ ******************************************                              
+</message>
+<warning date="5/1/2020" time="4.00000000000000">
+ THE RESERVOIR PRESSURE IS TOO LOW FOR WELL YP1-001                      
+ TO PRODUCE AT THE REQUIRED BOTTOM HOLE PRESSURE                         
 </warning>
+<message date="5/1/2020" time="4.00000000000000">
+ WELL YP1-001  CANNOT OPERATE UNDER THE CURRENT                          
+ RESERVOIR CONDITIONS IN NON-LINEAR ITERATION   1.                       
+ ITS IPR IS    Q(P)  =  A  -  BHP * B ,   WHERE:                         
+ A(O,W,G) =   0.0000E+00  7.6687E+04  0.0000E+00                         
+ B(O,W,G) =   0.0000E+00  7.6687E+01  0.0000E+00 .                       
+ LAST CONVERGED SOLUTION:                                                
+     ORAT        WRAT        GRAT        BHP         THP                 
+   0.0000E+00  8.2824E-01  0.0000E+00  1.0000E+03  0.0000E+00            
+ THE WELL IS   SHUT  FOR THE ITERATION.                                  
+</message>
+<warning date="5/1/2020" time="4.00000000000000">
+ THE RESERVOIR PRESSURE IS TOO LOW FOR WELL YP1-003                      
+ TO PRODUCE AT THE REQUIRED BOTTOM HOLE PRESSURE                         
+</warning>
+<message date="5/1/2020" time="4.00000000000000">
+ WELL YP1-003  CANNOT OPERATE UNDER THE CURRENT                          
+ RESERVOIR CONDITIONS IN NON-LINEAR ITERATION   1.                       
+ ITS IPR IS    Q(P)  =  A  -  BHP * B ,   WHERE:                         
+ A(O,W,G) =   0.0000E+00  7.6687E+04  0.0000E+00                         
+ B(O,W,G) =   0.0000E+00  7.6687E+01  0.0000E+00 .                       
+ LAST CONVERGED SOLUTION:                                                
+     ORAT        WRAT        GRAT        BHP         THP                 
+   0.0000E+00  1.0493E+00  0.0000E+00  1.0000E+03  0.0000E+00            
+ THE WELL IS   SHUT  FOR THE ITERATION.                                  
+</message>
+<warning date="5/1/2020" time="4.00000000000000">
+ THE RESERVOIR PRESSURE IS TOO LOW FOR WELL YP1-005                      
+ TO PRODUCE AT THE REQUIRED BOTTOM HOLE PRESSURE                         
+</warning>
+<message date="5/1/2020" time="4.00000000000000">
+ WELL YP1-005  CANNOT OPERATE UNDER THE CURRENT                          
+ RESERVOIR CONDITIONS IN NON-LINEAR ITERATION   1.                       
+ ITS IPR IS    Q(P)  =  A  -  BHP * B ,   WHERE:                         
+ A(O,W,G) =   0.0000E+00  7.6687E+04  0.0000E+00                         
+ B(O,W,G) =   0.0000E+00  7.6687E+01  0.0000E+00 .                       
+ LAST CONVERGED SOLUTION:                                                
+     ORAT        WRAT        GRAT        BHP         THP                 
+   0.0000E+00  1.3379E+00  0.0000E+00  1.0000E+03  0.0000E+00            
+ THE WELL IS   SHUT  FOR THE ITERATION.                                  
+</message>
+<warning date="5/1/2020" time="4.00000000000000">
+ THE RESERVOIR PRESSURE IS TOO LOW FOR WELL YP1-006                      
+ TO PRODUCE AT THE REQUIRED BOTTOM HOLE PRESSURE                         
+</warning>
+<message date="5/1/2020" time="4.00000000000000">
+ WELL YP1-006  CANNOT OPERATE UNDER THE CURRENT                          
+ RESERVOIR CONDITIONS IN NON-LINEAR ITERATION   1.                       
+ ITS IPR IS    Q(P)  =  A  -  BHP * B ,   WHERE:                         
+ A(O,W,G) =   0.0000E+00  7.6687E+04  0.0000E+00                         
+ B(O,W,G) =   0.0000E+00  7.6687E+01  0.0000E+00 .                       
+ LAST CONVERGED SOLUTION:                                                
+     ORAT        WRAT        GRAT        BHP         THP                 
+   0.0000E+00  1.3259E+00  0.0000E+00  1.0000E+03  0.0000E+00            
+ THE WELL IS   SHUT  FOR THE ITERATION.                                  
+</message>
+<message date="5/1/2020" time="4.00000000000000">
+ ****************************************************************        
+ * WELL YP1-001  IS  SHUT   AT TIME       4.00   DAYS   BECAUSE *        
+ * IT CANNOT OPERATE AT CURRENT RESERVOIR CONDITIONS.           *        
+ ****************************************************************        
+</message>
+<message date="5/1/2020" time="4.00000000000000">
+ ****************************************************************        
+ * WELL YP1-003  IS  SHUT   AT TIME       4.00   DAYS   BECAUSE *        
+ * IT CANNOT OPERATE AT CURRENT RESERVOIR CONDITIONS.           *        
+ ****************************************************************        
+</message>
+<message date="5/1/2020" time="4.00000000000000">
+ ****************************************************************        
+ * WELL YP1-005  IS  SHUT   AT TIME       4.00   DAYS   BECAUSE *        
+ * IT CANNOT OPERATE AT CURRENT RESERVOIR CONDITIONS.           *        
+ ****************************************************************        
+</message>
+<message date="5/1/2020" time="4.00000000000000">
+ ****************************************************************        
+ * WELL YP1-006  IS  SHUT   AT TIME       4.00   DAYS   BECAUSE *        
+ * IT CANNOT OPERATE AT CURRENT RESERVOIR CONDITIONS.           *        
+ ****************************************************************        
+</message>
+<warning date="14/1/2020" time="13.00000000000000">
+ THE RESERVOIR PRESSURE IS TOO LOW FOR WELL YP1-009                      
+ TO PRODUCE AT THE REQUIRED BOTTOM HOLE PRESSURE                         
+</warning>
+<message date="14/1/2020" time="13.00000000000000">
+ WELL YP1-009  CANNOT OPERATE UNDER THE CURRENT                          
+ RESERVOIR CONDITIONS IN NON-LINEAR ITERATION   1.                       
+ ITS IPR IS    Q(P)  =  A  -  BHP * B ,   WHERE:                         
+ A(O,W,G) =   0.0000E+00  7.6687E+04  0.0000E+00                         
+ B(O,W,G) =   0.0000E+00  7.6687E+01  0.0000E+00 .                       
+ LAST CONVERGED SOLUTION:                                                
+     ORAT        WRAT        GRAT        BHP         THP                 
+  -2.6075E-19  1.1743E-02  0.0000E+00  1.0000E+03  0.0000E+00            
+ THE WELL IS   SHUT  FOR THE ITERATION.                                  
+</message>
+<message date="14/1/2020" time="13.00000000000000">
+ ****************************************************************        
+ * WELL YP1-009  IS  SHUT   AT TIME      13.00   DAYS   BECAUSE *        
+ * IT CANNOT OPERATE AT CURRENT RESERVOIR CONDITIONS.           *        
+ ****************************************************************        
+</message>
+<warning date="30/12/2020" time="364.00000000000000">
+ THE RESERVOIR PRESSURE IS TOO LOW FOR WELL YP1-007                      
+ TO PRODUCE AT THE REQUIRED BOTTOM HOLE PRESSURE                         
+</warning>
+<message date="30/12/2020" time="364.00000000000000">
+ WELL YP1-007  CANNOT OPERATE UNDER THE CURRENT                          
+ RESERVOIR CONDITIONS IN NON-LINEAR ITERATION   0.                       
+ ITS IPR IS    Q(P)  =  A  -  BHP * B ,   WHERE:                         
+ A(O,W,G) =   0.0000E+00  7.6687E+04  0.0000E+00                         
+ B(O,W,G) =   0.0000E+00  7.6687E+01  0.0000E+00 .                       
+ LAST CONVERGED SOLUTION:                                                
+     ORAT        WRAT        GRAT        BHP         THP                 
+   0.0000E+00  7.2221E-06  0.0000E+00  1.0000E+03  0.0000E+00            
+ THE WELL IS   SHUT  FOR THE ITERATION.                                  
+</message>
+<message date="30/12/2020" time="364.00000000000000">
+ WELL YP1-007  IS REVIVED FOR ITERATION   1                              
+</message>
+<warning date="30/12/2021" time="729.00000000000000">
+ THE RESERVOIR PRESSURE IS TOO LOW FOR WELL YP1-007                      
+ TO PRODUCE AT THE REQUIRED BOTTOM HOLE PRESSURE                         
+</warning>
+<message date="30/12/2021" time="729.00000000000000">
+ WELL YP1-007  CANNOT OPERATE UNDER THE CURRENT                          
+ RESERVOIR CONDITIONS IN NON-LINEAR ITERATION   0.                       
+ ITS IPR IS    Q(P)  =  A  -  BHP * B ,   WHERE:                         
+ A(O,W,G) =   0.0000E+00  7.6685E+04  0.0000E+00                         
+ B(O,W,G) =   0.0000E+00  7.6687E+01  0.0000E+00 .                       
+ LAST CONVERGED SOLUTION:                                                
+     ORAT        WRAT        GRAT        BHP         THP                 
+   0.0000E+00  1.7597E-04  0.0000E+00  1.0000E+03  0.0000E+00            
+ THE WELL IS   SHUT  FOR THE ITERATION.                                  
+</message>
+<message date="30/12/2021" time="729.00000000000000">
+ WELL YP1-007  IS REVIVED FOR ITERATION   1                              
+</message>
+<warning date="30/12/2021" time="729.00000000000000">
+ THE RESERVOIR PRESSURE IS TOO LOW FOR WELL YP1-007                      
+ TO PRODUCE AT THE REQUIRED BOTTOM HOLE PRESSURE                         
+</warning>
+<message date="30/12/2021" time="729.00000000000000">
+ WELL YP1-007  CANNOT OPERATE UNDER THE CURRENT                          
+ RESERVOIR CONDITIONS IN NON-LINEAR ITERATION   1.                       
+ ITS IPR IS    Q(P)  =  A  -  BHP * B ,   WHERE:                         
+ A(O,W,G) =   0.0000E+00  7.6687E+04  0.0000E+00                         
+ B(O,W,G) =   0.0000E+00  7.6687E+01  0.0000E+00 .                       
+ LAST CONVERGED SOLUTION:                                                
+     ORAT        WRAT        GRAT        BHP         THP                 
+   0.0000E+00  0.0000E+00  0.0000E+00  7.0998E+02  0.0000E+00            
+ THE WELL IS   SHUT  FOR THE ITERATION.                                  
+</message>
+<message date="30/12/2021" time="729.00000000000000">
+ ****************************************************************        
+ * WELL YP1-007  IS  SHUT   AT TIME     729.00   DAYS   BECAUSE *        
+ * IT CANNOT OPERATE AT CURRENT RESERVOIR CONDITIONS.           *        
+ ****************************************************************        
+</message>
+<message date="19/5/2047" time="10000.00000000000000">
+ FAIL-SAFE RESTART FILE WRITTEN   REPORT     1                           
+ RESTART INCLUDES FLUIDS IN PLACE                                        
+</message>
 </eclipse>
