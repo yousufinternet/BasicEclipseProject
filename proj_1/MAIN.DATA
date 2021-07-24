@@ -37,8 +37,8 @@ GRID
 -- a useful trick: EQUALS 'DX' 20 to set the whole array to be equal to 20m
 
 TOPS 
-100*6000 100*6020 100*6040 100*6060 100*6080
-100*6100 100*6120 100*6140 100*6160 100*6180
+100*7000 100*7020 100*7040 100*7060 100*7080
+100*7100 100*7120 100*7140 100*7160 100*7180
 /
 
 DXV
@@ -59,6 +59,9 @@ EQUALS
    'PERMZ' 30 /
 /
 
+
+RPTGRID
+/
 -- EDIT section optional for modifications to calculated pore volumes, grid block center depths and transmissibilities
 
 -- tables of props
@@ -246,17 +249,170 @@ COMPDAT
 WCONPROD
 --  WELL    OPEN/  CNTL   OIL   WATER  GAS   LIQU  VOID  BHP
 --  NAME    SHUT   MODE   RATE  RATE   RATE  RATE  RATE
-  'YP1-???'   'OPEN' 'ORAT'  1000  4*                       3000 /
+  'YP1-???'   'OPEN' 'ORAT'  1000  4*                       1000 /
   /
 
 
 TSTEP
-  10000 /
+  100 /
 
 WCONPROD
 --  WELL    OPEN/  CNTL   OIL   WATER  GAS   LIQU  VOID  BHP
 --  NAME    SHUT   MODE   RATE  RATE   RATE  RATE  RATE
-  'YP1-???'   'OPEN' 'ORAT'  1000  4*                       3000 /
+  'YP1-???'   'OPEN' 'ORAT'  1000  4*                       1000 /
+  /
+
+TSTEP
+  100 /
+
+WCONPROD
+--  WELL    OPEN/  CNTL   OIL   WATER  GAS   LIQU  VOID  BHP
+--  NAME    SHUT   MODE   RATE  RATE   RATE  RATE  RATE
+  'YP1-???'   'OPEN' 'ORAT'  1000  4*                       1000 /
+  /
+
+TSTEP
+  100 /
+
+WCONPROD
+--  WELL    OPEN/  CNTL   OIL   WATER  GAS   LIQU  VOID  BHP
+--  NAME    SHUT   MODE   RATE  RATE   RATE  RATE  RATE
+  'YP1-???'   'OPEN' 'ORAT'  1000  4*                       1000 /
+  /
+
+TSTEP
+  100 /
+
+WCONPROD
+--  WELL    OPEN/  CNTL   OIL   WATER  GAS   LIQU  VOID  BHP
+--  NAME    SHUT   MODE   RATE  RATE   RATE  RATE  RATE
+  'YP1-???'   'OPEN' 'ORAT'  1000  4*                       1000 /
+  /
+
+TSTEP
+  100 /
+
+WCONPROD
+--  WELL    OPEN/  CNTL   OIL   WATER  GAS   LIQU  VOID  BHP
+--  NAME    SHUT   MODE   RATE  RATE   RATE  RATE  RATE
+  'YP1-???'   'OPEN' 'ORAT'  1000  4*                       1000 /
+  /
+
+TSTEP
+  100 /
+
+WCONPROD
+--  WELL    OPEN/  CNTL   OIL   WATER  GAS   LIQU  VOID  BHP
+--  NAME    SHUT   MODE   RATE  RATE   RATE  RATE  RATE
+  'YP1-???'   'OPEN' 'ORAT'  1000  4*                       1000 /
+  /
+
+TSTEP
+  100 /
+
+WCONPROD
+--  WELL    OPEN/  CNTL   OIL   WATER  GAS   LIQU  VOID  BHP
+--  NAME    SHUT   MODE   RATE  RATE   RATE  RATE  RATE
+  'YP1-???'   'OPEN' 'ORAT'  1000  4*                       1000 /
+  /
+
+TSTEP
+  100 /
+
+WCONPROD
+--  WELL    OPEN/  CNTL   OIL   WATER  GAS   LIQU  VOID  BHP
+--  NAME    SHUT   MODE   RATE  RATE   RATE  RATE  RATE
+  'YP1-???'   'OPEN' 'ORAT'  1000  4*                       1000 /
+  /
+
+TSTEP
+  100 /
+
+WCONPROD
+--  WELL    OPEN/  CNTL   OIL   WATER  GAS   LIQU  VOID  BHP
+--  NAME    SHUT   MODE   RATE  RATE   RATE  RATE  RATE
+  'YP1-???'   'OPEN' 'ORAT'  1000  4*                       1000 /
+  /
+
+TSTEP
+  100 /
+
+WCONPROD
+--  WELL    OPEN/  CNTL   OIL   WATER  GAS   LIQU  VOID  BHP
+--  NAME    SHUT   MODE   RATE  RATE   RATE  RATE  RATE
+  'YP1-???'   'OPEN' 'ORAT'  1000  4*                       1000 /
+  /
+
+TSTEP
+  100 /
+
+WCONPROD
+--  WELL    OPEN/  CNTL   OIL   WATER  GAS   LIQU  VOID  BHP
+--  NAME    SHUT   MODE   RATE  RATE   RATE  RATE  RATE
+  'YP1-???'   'OPEN' 'ORAT'  1000  4*                       1000 /
+  /
+
+TSTEP
+  100 /
+
+WCONPROD
+--  WELL    OPEN/  CNTL   OIL   WATER  GAS   LIQU  VOID  BHP
+--  NAME    SHUT   MODE   RATE  RATE   RATE  RATE  RATE
+  'YP1-???'   'OPEN' 'ORAT'  1000  4*                       1000 /
+  /
+
+TSTEP
+  100 /
+
+WCONPROD
+--  WELL    OPEN/  CNTL   OIL   WATER  GAS   LIQU  VOID  BHP
+--  NAME    SHUT   MODE   RATE  RATE   RATE  RATE  RATE
+  'YP1-???'   'OPEN' 'ORAT'  1000  4*                       1000 /
+  /
+
+TSTEP
+  100 /
+
+WCONPROD
+--  WELL    OPEN/  CNTL   OIL   WATER  GAS   LIQU  VOID  BHP
+--  NAME    SHUT   MODE   RATE  RATE   RATE  RATE  RATE
+  'YP1-???'   'OPEN' 'ORAT'  1000  4*                       1000 /
+  /
+
+TSTEP
+  100 /
+
+WCONPROD
+--  WELL    OPEN/  CNTL   OIL   WATER  GAS   LIQU  VOID  BHP
+--  NAME    SHUT   MODE   RATE  RATE   RATE  RATE  RATE
+  'YP1-???'   'OPEN' 'ORAT'  1000  4*                       1000 /
+  /
+
+TSTEP
+  100 /
+
+WCONPROD
+--  WELL    OPEN/  CNTL   OIL   WATER  GAS   LIQU  VOID  BHP
+--  NAME    SHUT   MODE   RATE  RATE   RATE  RATE  RATE
+  'YP1-???'   'OPEN' 'ORAT'  1000  4*                       1000 /
+  /
+
+TSTEP
+  100 /
+
+WCONPROD
+--  WELL    OPEN/  CNTL   OIL   WATER  GAS   LIQU  VOID  BHP
+--  NAME    SHUT   MODE   RATE  RATE   RATE  RATE  RATE
+  'YP1-???'   'OPEN' 'ORAT'  1000  4*                       1000 /
+  /
+
+TSTEP
+  100 /
+
+WCONPROD
+--  WELL    OPEN/  CNTL   OIL   WATER  GAS   LIQU  VOID  BHP
+--  NAME    SHUT   MODE   RATE  RATE   RATE  RATE  RATE
+  'YP1-???'   'OPEN' 'ORAT'  1000  4*                       1000 /
   /
 
 END
