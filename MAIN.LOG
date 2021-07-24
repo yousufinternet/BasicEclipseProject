@@ -1,3 +1,7 @@
+
+Intel(R) MPI Library Runtime Environment 3.2 Update 2  for Windows* Build Environment for IA-32 applications
+Copyright (C) 2007-2009 Intel Corporation. All rights reserved.
+
      1 READING RUNSPEC
      2 READING TITLE
      3 READING DIMENS
@@ -8,20 +12,27 @@
      8 READING FIELD
      9 READING START
     10 READING WELLDIMS
-    11 READING GRID
+    11 READING PARALLEL
+    12 READING GRID
+
+ @--MESSAGE  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           CHECKING FOR LICENSES
 
  @--MESSAGE  AT TIME        0.0   DAYS    ( 1-JAN-2020):
  @           CHECKING FOR LICENSES
 
  @--MESSAGE  AT TIME        0.0   DAYS    ( 1-JAN-2020):
  @           THE MEMORY REQUIRED TO PROCESS THE GRID SECTION IS
- @               395448 BYTES
-    12 READING TOPS
-    13 READING DXV
-    14 READING DYV
-    15 READING DZ
-    16 READING EQUALS
-    17 READING PROPS
+ @               141224 BYTES   PROCESSOR   1
+ @               167352 BYTES   PROCESSOR   2
+ @               141224 BYTES   PROCESSOR   3
+ @               141224 BYTES   PROCESSOR   4
+    13 READING TOPS
+    14 READING DXV
+    15 READING DYV
+    16 READING DZ
+    17 READING EQUALS
+    18 READING PROPS
 
  @--MESSAGE  AT TIME        0.0   DAYS    ( 1-JAN-2020):
  @           NEITHER OLDTRAN,OLDTRANR NOR NEWTRAN SPECIFIED
@@ -36,574 +47,1353 @@
 
  @--MESSAGE  AT TIME        0.0   DAYS    ( 1-JAN-2020):
  @           THE MEMORY REQUIRED TO PROCESS THE SOLUTION SECTION IS
- @                 2896 KBYTES
+ @                 2678 KBYTES  PROCESSOR   1
+ @                 2714 KBYTES  PROCESSOR   2
+ @                 2818 KBYTES  PROCESSOR   3
+ @                 2678 KBYTES  PROCESSOR   4
 
  @--MESSAGE  AT TIME        0.0   DAYS    ( 1-JAN-2020):
- @              58943 CHARACTER VARIABLES USED
-    18 READING SWFN
-    19 READING SGFN
-    20 READING SOF3
-    21 READING PVTW
-    22 READING ROCK
-    23 READING DENSITY
-    24 READING PVDG
-    25 READING PVTO
-    26 READING RPTPROPS
-    27 READING SOLUTION
-    28 READING EQUIL
-    29 READING SCHEDULE
-    30 READING RPTSCHED
-    31 READING WELSPECS
-    32 READING COMPDAT
-    33 READING WCONPROD
-    34 READING TSTEP
+ @              59944 CHARACTER VARIABLES USED
+    19 READING SWFN
+    20 READING SGFN
+    21 READING SOF3
+    22 READING PVTW
+    23 READING ROCK
+    24 READING DENSITY
+    25 READING PVDG
+    26 READING PVTO
+    27 READING RPTPROPS
+    28 READING SOLUTION
+    29 READING EQUIL
+    30 READING SUMMARY
+    31 READING FOPR
+    32 READING GOPR
+    33 READING SCHEDULE
+    34 READING RPTSCHED
+    35 READING WELSPECS
+    36 READING COMPDAT
+    37 READING WCONPROD
+    38 READING TSTEP
 
  @--MESSAGE  AT TIME        0.0   DAYS    ( 1-JAN-2020):
  @           DRSDT KEYWORD HAS NOT BEEN ENTERED, SO THE
  @           MAXIMUM GAS RE-SOLUTION RATE IS DEFAULTED TO INFINITY.
 
- @--MESSAGE  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @--WARNING  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER
+ @           IF YOU (A) INCREASE NSTACK (= 10 - RUNSPEC SECTION)     15
+ @               OR (B) MAKE NSTACK NEGATIVE ( EXTENDS STACK ON DISK )
+
+ @--WARNING  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER
+ @           IF YOU (A) INCREASE NSTACK (= 10 - RUNSPEC SECTION)     24
+ @               OR (B) MAKE NSTACK NEGATIVE ( EXTENDS STACK ON DISK )
+
+ @--WARNING  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER
+ @           IF YOU INCREASE LITMAX (= 25 - TUNING KEYWORD)
+
+ @--WARNING  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           LINEAR CONVERGENCE FAILURE ON LAST NUPCOL ITERATION.
+ @           GROUP TARGETS AND LIMITS MAY NOT BE ACCURATELY HONORED.
+ @           YOU MAY NEED TO INCREASE THE CURRENT VALUE OF    3
+ @           USING THE NUPCOL KEYWORD.
+
+ @--WARNING  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER
+ @           IF YOU (A) INCREASE NSTACK (= 10 - RUNSPEC SECTION)     20
+ @               OR (B) MAKE NSTACK NEGATIVE ( EXTENDS STACK ON DISK )
+
+ @--WARNING  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER
+ @           IF YOU (A) INCREASE NSTACK (= 10 - RUNSPEC SECTION)     16
+ @               OR (B) MAKE NSTACK NEGATIVE ( EXTENDS STACK ON DISK )
+
+ @--WARNING  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER
+ @           IF YOU (A) INCREASE NSTACK (= 10 - RUNSPEC SECTION)     24
+ @               OR (B) MAKE NSTACK NEGATIVE ( EXTENDS STACK ON DISK )
+
+ @--WARNING  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER
+ @           IF YOU (A) INCREASE NSTACK (= 10 - RUNSPEC SECTION)     16
+ @               OR (B) MAKE NSTACK NEGATIVE ( EXTENDS STACK ON DISK )
+
+ @--WARNING  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER
+ @           IF YOU (A) INCREASE NSTACK (= 10 - RUNSPEC SECTION)     13
+ @               OR (B) MAKE NSTACK NEGATIVE ( EXTENDS STACK ON DISK )
+
+ @--WARNING  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER
+ @           IF YOU (A) INCREASE NSTACK (= 10 - RUNSPEC SECTION)     13
+ @               OR (B) MAKE NSTACK NEGATIVE ( EXTENDS STACK ON DISK )
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           RESIDUAL ERROR IN FLOW FOR
+ @               OIL       3.60922E-01
+ @               WATER     2.13994E+03
+ @               GAS       1.01780E+04
+ @           TRY INCREASING  MXWSIT  IN TUNING RECORD 3
+
+ @--WARNING  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER
+ @           IF YOU (A) INCREASE NSTACK (= 10 - RUNSPEC SECTION)     13
+ @               OR (B) MAKE NSTACK NEGATIVE ( EXTENDS STACK ON DISK )
+
+ @--WARNING  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER
+ @           IF YOU (A) INCREASE NSTACK (= 10 - RUNSPEC SECTION)     13
+ @               OR (B) MAKE NSTACK NEGATIVE ( EXTENDS STACK ON DISK )
+
+ @--WARNING  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER
+ @           IF YOU (A) INCREASE NSTACK (= 10 - RUNSPEC SECTION)     14
+ @               OR (B) MAKE NSTACK NEGATIVE ( EXTENDS STACK ON DISK )
+
+ @--PROBLEM  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           NON-LINEAR EQUATION CONVERGENCE FAILURE
+ @           ITERATION LIMIT REACHED - TIME STEP CHOPPED FROM   1.00
+
+ @--WARNING  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER
+ @           IF YOU INCREASE LITMAX (= 25 - TUNING KEYWORD)
+
+ @--WARNING  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER
+ @           IF YOU (A) INCREASE NSTACK (= 10 - RUNSPEC SECTION)     24
+ @               OR (B) MAKE NSTACK NEGATIVE ( EXTENDS STACK ON DISK )
+
+ @--WARNING  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER
+ @           IF YOU INCREASE LITMAX (= 25 - TUNING KEYWORD)
+
+ @--WARNING  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           LINEAR CONVERGENCE FAILURE ON LAST NUPCOL ITERATION.
+ @           GROUP TARGETS AND LIMITS MAY NOT BE ACCURATELY HONORED.
+ @           YOU MAY NEED TO INCREASE THE CURRENT VALUE OF    3
+ @           USING THE NUPCOL KEYWORD.
+
+ @--WARNING  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @           LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER
+ @           IF YOU INCREASE LITMAX (= 25 - TUNING KEYWORD)
+ STEP    1 TIME=    2.40 HOURS ( +2.40 HOURS CHOP  5 ITS) (1-JAN-2020)
+  PAV=  4906.4  PSIA   WCT=0.552 GOR=     1.69 MSCF/STB WGR=   0.7314 STB/MSCF
+
+      PR.RATE   PR.TOTAL  IN.RATE   IN.TOTAL  MAX SATURN CHANGE   MAX TIME TRNC ERR
+
+ OIL    6000.       600.       0.         0. -0.011(  1,  1,  2) -0.011(  1,  1,  2)
+ WAT    7395.       739.       0.         0. -0.006(  1,  1,  6) -0.006(  1,  1,  6)
+ GAS   10111.      1011.       0.         0.  0.012(  1,  1,  2)  0.012(  1,  1,  2)
+      MAX DP = -261.51(  1,  1,  8)  MAX DRS= -0.0386(  1,  1,  7)
+
+ @--WARNING  AT TIME        0.1   DAYS    ( 1-JAN-2020):
+ @           LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER
+ @           IF YOU INCREASE LITMAX (= 25 - TUNING KEYWORD)
+ STEP    2 TIME=    5.40 HOURS ( +3.00 HOURS DIFF  3 ITS) (1-JAN-2020)
+  PAV=  4789.1  PSIA   WCT=0.521 GOR=     1.66 MSCF/STB WGR=   0.6549 STB/MSCF
+
+      PR.RATE   PR.TOTAL  IN.RATE   IN.TOTAL  MAX SATURN CHANGE   MAX TIME TRNC ERR
+
+ OIL    6000.      1350.       0.         0. -0.008(  1,  1,  3)  0.005(  1,  1,  2)
+ WAT    6529.      1556.       0.         0. -0.004(  1,  1,  6)  0.003(  1,  1,  6)
+ GAS    9969.      2257.       0.         0.  0.010(  1,  1,  2) -0.005(  1,  1,  3)
+      MAX DP = -143.74(  1,  1,  3)  MAX DRS= -0.0273(  1,  1,  3)
+ STEP    3 TIME=   10.09 HOURS ( +4.69 HOURS DIFF  2 ITS) (1-JAN-2020)
+  PAV=  4611.6  PSIA   WCT=0.529 GOR=     1.63 MSCF/STB WGR=   0.6898 STB/MSCF
+
+      PR.RATE   PR.TOTAL  IN.RATE   IN.TOTAL  MAX SATURN CHANGE   MAX TIME TRNC ERR
+
+ OIL    6000.      2522.       0.         0. -0.012(  1,  1,  2) -0.001( 10, 10,  1)
+ WAT    6733.      2871.       0.         0. -0.007(  1,  1,  6) -0.001(  8,  8,  6)
+ GAS    9760.      4163.       0.         0.  0.015(  1,  1,  2)  0.001(  8,  8,  5)
+      MAX DP = -198.65(  1,  1,  7)  MAX DRS= -0.0377(  1,  1,  7)
+
+ @--WARNING  AT TIME        0.4   DAYS    ( 1-JAN-2020):
+ @           LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER
+ @           IF YOU INCREASE LITMAX (= 25 - TUNING KEYWORD)
+ STEP    4 TIME=   17.41 HOURS ( +7.32 HOURS DIFF  3 ITS) (1-JAN-2020)
+  PAV=  4354.6  PSIA   WCT=0.550 GOR=     1.78 MSCF/STB WGR=   0.6870 STB/MSCF
+
+      PR.RATE   PR.TOTAL  IN.RATE   IN.TOTAL  MAX SATURN CHANGE   MAX TIME TRNC ERR
+
+ OIL    6000.      4353.       0.         0. -0.017(  2,  3,  1)  0.012(  1,  1,  2)
+ WAT    7329.      5107.       0.         0. -0.013(  1,  1,  6) -0.003(  1,  1,  6)
+ GAS   10668.      7419.       0.         0.  0.018(  5,  4,  2) -0.015(  1,  1,  2)
+      MAX DP = -290.10(  1,  1,  3)  MAX DRS= -0.0692(  1,  1,  3)
+
+ @--WARNING  AT TIME        0.7   DAYS    ( 1-JAN-2020):
+ @           LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER
+ @           IF YOU INCREASE LITMAX (= 25 - TUNING KEYWORD)
+
+ @--WARNING  AT TIME        0.7   DAYS    ( 1-JAN-2020):
+ @           LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER
+ @           IF YOU INCREASE LITMAX (= 25 - TUNING KEYWORD)
+
+ @--WARNING  AT TIME        0.7   DAYS    ( 1-JAN-2020):
+ @           LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER
+ @           IF YOU INCREASE LITMAX (= 25 - TUNING KEYWORD)
+
+ @--WARNING  AT TIME        0.7   DAYS    ( 1-JAN-2020):
+ @           LINEAR CONVERGENCE FAILURE ON LAST NUPCOL ITERATION.
+ @           GROUP TARGETS AND LIMITS MAY NOT BE ACCURATELY HONORED.
+ @           YOU MAY NEED TO INCREASE THE CURRENT VALUE OF    3
+ @           USING THE NUPCOL KEYWORD.
+
+ @--WARNING  AT TIME        0.7   DAYS    ( 1-JAN-2020):
+ @           LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER
+ @           IF YOU INCREASE LITMAX (= 25 - TUNING KEYWORD)
+
+ @--WARNING  AT TIME        0.7   DAYS    ( 1-JAN-2020):
+ @           LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER
+ @           IF YOU (A) INCREASE NSTACK (= 10 - RUNSPEC SECTION)     24
+ @               OR (B) MAKE NSTACK NEGATIVE ( EXTENDS STACK ON DISK )
+ STEP    5 TIME=    1.20  DAYS (+11.44 HOURS DIFF  5 ITS) (2-JAN-2020)
+  PAV=  3672.3  PSIA   WCT=0.641 GOR=     7.14 MSCF/STB WGR=   0.2496 STB/MSCF
+
+      PR.RATE   PR.TOTAL  IN.RATE   IN.TOTAL  MAX SATURN CHANGE   MAX TIME TRNC ERR
+
+ OIL    6000.      7214.       0.         0. -0.030( 10,  6,  1) -0.016(  1,  1,  2)
+ WAT   10695.     10207.       0.         0. -0.024( 10, 10,  7) -0.013( 10, 10,  8)
+ GAS   42844.     27849.       0.         0.  0.032( 10,  6,  1)  0.018(  1,  1,  2)
+      MAX DP = -750.14(  1,  1,  5)  MAX DRS= -0.2061(  1,  1,  5)
+
+ @--WARNING  AT TIME        1.2   DAYS    ( 2-JAN-2020):
+ @           LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER
+ @           IF YOU INCREASE LITMAX (= 25 - TUNING KEYWORD)
+
+ @--WARNING  AT TIME        1.2   DAYS    ( 2-JAN-2020):
+ @           LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER
+ @           IF YOU (A) INCREASE NSTACK (= 10 - RUNSPEC SECTION)     18
+ @               OR (B) MAKE NSTACK NEGATIVE ( EXTENDS STACK ON DISK )
+
+ @--WARNING  AT TIME        1.2   DAYS    ( 2-JAN-2020):
+ @           LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER
+ @           IF YOU (A) INCREASE NSTACK (= 10 - RUNSPEC SECTION)     15
+ @               OR (B) MAKE NSTACK NEGATIVE ( EXTENDS STACK ON DISK )
+
+ @--WARNING  AT TIME        1.2   DAYS    ( 2-JAN-2020):
+ @           LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER
+ @           IF YOU (A) INCREASE NSTACK (= 10 - RUNSPEC SECTION)     24
+ @               OR (B) MAKE NSTACK NEGATIVE ( EXTENDS STACK ON DISK )
+
+ @--WARNING  AT TIME        1.2   DAYS    ( 2-JAN-2020):
+ @           LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER
+ @           IF YOU (A) INCREASE NSTACK (= 10 - RUNSPEC SECTION)     15
+ @               OR (B) MAKE NSTACK NEGATIVE ( EXTENDS STACK ON DISK )
+
+ @--WARNING  AT TIME        1.2   DAYS    ( 2-JAN-2020):
+ @           LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER
+ @           IF YOU (A) INCREASE NSTACK (= 10 - RUNSPEC SECTION)     14
+ @               OR (B) MAKE NSTACK NEGATIVE ( EXTENDS STACK ON DISK )
+
+ @--WARNING  AT TIME        1.2   DAYS    ( 2-JAN-2020):
+ @           LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER
+ @           IF YOU (A) INCREASE NSTACK (= 10 - RUNSPEC SECTION)     18
+ @               OR (B) MAKE NSTACK NEGATIVE ( EXTENDS STACK ON DISK )
+
+ @--WARNING  AT TIME        1.2   DAYS    ( 2-JAN-2020):
+ @           LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER
+ @           IF YOU (A) INCREASE NSTACK (= 10 - RUNSPEC SECTION)     14
+ @               OR (B) MAKE NSTACK NEGATIVE ( EXTENDS STACK ON DISK )
+
+ @--WARNING  AT TIME        1.2   DAYS    ( 2-JAN-2020):
+ @           LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER
+ @           IF YOU (A) INCREASE NSTACK (= 10 - RUNSPEC SECTION)     13
+ @               OR (B) MAKE NSTACK NEGATIVE ( EXTENDS STACK ON DISK )
+
+ @--WARNING  AT TIME        1.2   DAYS    ( 2-JAN-2020):
+ @           LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER
+ @           IF YOU (A) INCREASE NSTACK (= 10 - RUNSPEC SECTION)     14
+ @               OR (B) MAKE NSTACK NEGATIVE ( EXTENDS STACK ON DISK )
+
+ @--WARNING  AT TIME        1.2   DAYS    ( 2-JAN-2020):
+ @           LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER
+ @           IF YOU INCREASE LITMAX (= 25 - TUNING KEYWORD)
+
+ @--WARNING  AT TIME        1.2   DAYS    ( 2-JAN-2020):
+ @           LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER
+ @           IF YOU (A) INCREASE NSTACK (= 10 - RUNSPEC SECTION)     14
+ @               OR (B) MAKE NSTACK NEGATIVE ( EXTENDS STACK ON DISK )
+
+ @--PROBLEM  AT TIME        1.2   DAYS    ( 2-JAN-2020):
+ @           NON-LINEAR EQUATION CONVERGENCE FAILURE
+ @           ITERATION LIMIT REACHED - TIME STEP CHOPPED FROM   0.75
+
+ @--WARNING  AT TIME        1.2   DAYS    ( 2-JAN-2020):
+ @           LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER
+ @           IF YOU INCREASE LITMAX (= 25 - TUNING KEYWORD)
+ STEP    6 TIME=    1.28  DAYS ( +1.79 HOURS CHOP  2 ITS) (2-JAN-2020)
+  PAV=  3567.6  PSIA   WCT=0.660 GOR=     8.44 MSCF/STB WGR=   0.2304 STB/MSCF
+
+      PR.RATE   PR.TOTAL  IN.RATE   IN.TOTAL  MAX SATURN CHANGE   MAX TIME TRNC ERR
+
+ OIL    6000.      7661.       0.         0. -0.005( 10, 10,  1)  0.000(  8,  1,  4)
+ WAT   11661.     11076.       0.         0. -0.004(  2,  9,  8)  0.002(  1,  1,  8)
+ GAS   50616.     31620.       0.         0.  0.005( 10, 10,  1) -0.002(  1,  1,  8)
+      MAX DP = -118.84(  1,  1,  8)  MAX DRS= -0.0357(  1,  1,  8)
+
+ @--WARNING  AT TIME        1.3   DAYS    ( 2-JAN-2020):
+ @           LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER
+ @           IF YOU (A) INCREASE NSTACK (= 10 - RUNSPEC SECTION)     24
+ @               OR (B) MAKE NSTACK NEGATIVE ( EXTENDS STACK ON DISK )
+
+ @--WARNING  AT TIME        1.3   DAYS    ( 2-JAN-2020):
+ @           LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER
+ @           IF YOU (A) INCREASE NSTACK (= 10 - RUNSPEC SECTION)     24
+ @               OR (B) MAKE NSTACK NEGATIVE ( EXTENDS STACK ON DISK )
+
+ @--WARNING  AT TIME        1.3   DAYS    ( 2-JAN-2020):
+ @           LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER
+ @           IF YOU INCREASE LITMAX (= 25 - TUNING KEYWORD)
+
+ @--WARNING  AT TIME        1.3   DAYS    ( 2-JAN-2020):
+ @           LINEAR CONVERGENCE FAILURE ON LAST NUPCOL ITERATION.
+ @           GROUP TARGETS AND LIMITS MAY NOT BE ACCURATELY HONORED.
+ @           YOU MAY NEED TO INCREASE THE CURRENT VALUE OF    3
+ @           USING THE NUPCOL KEYWORD.
+ STEP    7 TIME=    1.37  DAYS ( +2.24 HOURS DIFF  3 ITS) (2-JAN-2020)
+  PAV=  3426.1  PSIA   WCT=0.670 GOR=    10.20 MSCF/STB WGR=   0.1988 STB/MSCF
+
+      PR.RATE   PR.TOTAL  IN.RATE   IN.TOTAL  MAX SATURN CHANGE   MAX TIME TRNC ERR
+
+ OIL    6000.      8220.       0.         0. -0.006(  1,  1,  1) -0.001(  5,  8,  2)
+ WAT   12163.     12209.       0.         0. -0.006( 10,  5,  8)  0.001(  8,  1,  8)
+ GAS   61178.     37317.       0.         0.  0.007(  1,  1,  2) -0.001(  8,  1,  8)
+      MAX DP = -159.08(  1,  1,  7)  MAX DRS= -0.0499(  1,  1,  7)
+
+ @--WARNING  AT TIME        1.4   DAYS    ( 2-JAN-2020):
+ @           LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER
+ @           IF YOU INCREASE LITMAX (= 25 - TUNING KEYWORD)
+ STEP    8 TIME=    1.52  DAYS ( +3.49 HOURS DIFF  3 ITS) (2-JAN-2020)
+  PAV=  3168.9  PSIA   WCT=0.685 GOR=    13.31 MSCF/STB WGR=   0.1632 STB/MSCF
+
+      PR.RATE   PR.TOTAL  IN.RATE   IN.TOTAL  MAX SATURN CHANGE   MAX TIME TRNC ERR
+
+ OIL    6000.      9093.       0.         0. -0.010( 10,  8,  1) -0.001(  1,  1,  2)
+ WAT   13034.     14105.       0.         0. -0.009( 10,  6,  8) -0.001(  1,  1,  9)
+ GAS   79879.     48941.       0.         0.  0.011(  1,  1,  2)  0.001(  1,  1,  9)
+      MAX DP = -287.65(  1,  1,  7)  MAX DRS= -0.1007(  1,  1,  7)
+
+ @--WARNING  AT TIME        1.5   DAYS    ( 2-JAN-2020):
+ @           LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER
+ @           IF YOU INCREASE LITMAX (= 25 - TUNING KEYWORD)
+
+ @--WARNING  AT TIME        1.5   DAYS    ( 2-JAN-2020):
+ @           LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER
+ @           IF YOU (A) INCREASE NSTACK (= 10 - RUNSPEC SECTION)     23
+ @               OR (B) MAKE NSTACK NEGATIVE ( EXTENDS STACK ON DISK )
+
+ @--WARNING  AT TIME        1.5   DAYS    ( 2-JAN-2020):
+ @           LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER
+ @           IF YOU (A) INCREASE NSTACK (= 10 - RUNSPEC SECTION)     13
+ @               OR (B) MAKE NSTACK NEGATIVE ( EXTENDS STACK ON DISK )
+
+ @--WARNING  AT TIME        1.5   DAYS    ( 2-JAN-2020):
+ @           LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER
+ @           IF YOU (A) INCREASE NSTACK (= 10 - RUNSPEC SECTION)     15
+ @               OR (B) MAKE NSTACK NEGATIVE ( EXTENDS STACK ON DISK )
+ STEP    9 TIME=    1.74  DAYS ( +5.46 HOURS DIFF  5 ITS) (2-JAN-2020)
+  PAV=  2657.7  PSIA   WCT=0.720 GOR=    20.42 MSCF/STB WGR=   0.1259 STB/MSCF
+
+      PR.RATE   PR.TOTAL  IN.RATE   IN.TOTAL  MAX SATURN CHANGE   MAX TIME TRNC ERR
+
+ OIL    6000.     10457.       0.         0. -0.017(  1,  1,  1) -0.002(  4,  5,  4)
+ WAT   15423.     17612.       0.         0. -0.014(  1,  1,  7) -0.005(  1,  1,  9)
+ GAS  122518.     76799.       0.         0.  0.019(  1,  1,  6)  0.005(  1,  1,  9)
+      MAX DP = -583.74(  1,  1,  7)  MAX DRS= -0.2142(  1,  1,  7)
+
+ @--WARNING  AT TIME        1.7   DAYS    ( 2-JAN-2020):
+ @           LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER
+ @           IF YOU INCREASE LITMAX (= 25 - TUNING KEYWORD)
+
+ @--WARNING  AT TIME        1.7   DAYS    ( 2-JAN-2020):
+ @           LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER
+ @           IF YOU INCREASE LITMAX (= 25 - TUNING KEYWORD)
+
+ @--WARNING  AT TIME        1.7   DAYS    ( 2-JAN-2020):
+ @           LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER
+ @           IF YOU INCREASE LITMAX (= 25 - TUNING KEYWORD)
+
+ @--WARNING  AT TIME        1.7   DAYS    ( 2-JAN-2020):
+ @           LINEAR CONVERGENCE FAILURE ON LAST NUPCOL ITERATION.
+ @           GROUP TARGETS AND LIMITS MAY NOT BE ACCURATELY HONORED.
+ @           YOU MAY NEED TO INCREASE THE CURRENT VALUE OF    3
+ @           USING THE NUPCOL KEYWORD.
+
+ @--MESSAGE  AT TIME        1.7   DAYS    ( 2-JAN-2020):
  @           ******************************************
  @           * WELL YP1-001  HAS CHANGED TO           *
  @           * CONTROL BY BOTTOM HOLE PRESSURE        *
- @           * FROM TIME      0.00   DAYS  .          *
+ @           * FROM TIME      1.74   DAYS  .          *
  @           ******************************************
 
- @--MESSAGE  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @--MESSAGE  AT TIME        1.7   DAYS    ( 2-JAN-2020):
  @           ******************************************
  @           * WELL YP1-003  HAS CHANGED TO           *
  @           * CONTROL BY BOTTOM HOLE PRESSURE        *
- @           * FROM TIME      0.00   DAYS  .          *
+ @           * FROM TIME      1.74   DAYS  .          *
  @           ******************************************
+ STEP   10 TIME=    2.10  DAYS ( +8.53 HOURS DIFF  8 ITS) (3-JAN-2020)
+  PAV=  1569.8  PSIA   WCT=0.782 GOR=    36.91 MSCF/STB WGR=   0.0970 STB/MSCF
 
- @--MESSAGE  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+      PR.RATE   PR.TOTAL  IN.RATE   IN.TOTAL  MAX SATURN CHANGE   MAX TIME TRNC ERR
+
+ OIL    5614.     12452.       0.         0. -0.031(  1,  8,  2) -0.007(  1,  8,  3)
+ WAT   20092.     24750.       0.         0. -0.029( 10,  7,  9) -0.015(  1,  1,  8)
+ GAS  207199.    150410.       0.         0.  0.037(  1,  8,  4)  0.016(  1,  1,  8)
+      MAX DP =-1179.31(  1,  8,  6)  MAX DRS= -0.4762(  1,  8,  7)
+
+ @--WARNING  AT TIME        2.1   DAYS    ( 3-JAN-2020):
+ @           LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER
+ @           IF YOU INCREASE LITMAX (= 25 - TUNING KEYWORD)
+
+ @--MESSAGE  AT TIME        2.1   DAYS    ( 3-JAN-2020):
  @           ******************************************
  @           * WELL YP1-005  HAS CHANGED TO           *
  @           * CONTROL BY BOTTOM HOLE PRESSURE        *
- @           * FROM TIME      0.00   DAYS  .          *
+ @           * FROM TIME      2.10   DAYS  .          *
  @           ******************************************
 
- @--MESSAGE  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @--MESSAGE  AT TIME        2.1   DAYS    ( 3-JAN-2020):
  @           ******************************************
  @           * WELL YP1-006  HAS CHANGED TO           *
  @           * CONTROL BY BOTTOM HOLE PRESSURE        *
- @           * FROM TIME      0.00   DAYS  .          *
+ @           * FROM TIME      2.10   DAYS  .          *
  @           ******************************************
 
- @--MESSAGE  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @--MESSAGE  AT TIME        2.1   DAYS    ( 3-JAN-2020):
  @           ******************************************
  @           * WELL YP1-007  HAS CHANGED TO           *
  @           * CONTROL BY BOTTOM HOLE PRESSURE        *
- @           * FROM TIME      0.00   DAYS  .          *
+ @           * FROM TIME      2.10   DAYS  .          *
  @           ******************************************
 
- @--MESSAGE  AT TIME        0.0   DAYS    ( 1-JAN-2020):
+ @--MESSAGE  AT TIME        2.1   DAYS    ( 3-JAN-2020):
  @           ******************************************
  @           * WELL YP1-009  HAS CHANGED TO           *
  @           * CONTROL BY BOTTOM HOLE PRESSURE        *
- @           * FROM TIME      0.00   DAYS  .          *
+ @           * FROM TIME      2.10   DAYS  .          *
  @           ******************************************
- STEP    1 TIME=    1.00  DAYS (  +1.0  DAYS INIT  3 ITS) (2-JAN-2020)
-  PAV=  1038.2  PSIA   WCT=1.000 GOR= 0.00000  MSCF/STB WGR= 0.00000  STB/MSCF
+ STEP   11 TIME=    2.65  DAYS (+13.32 HOURS DIFF  6 ITS) (3-JAN-2020)
+  PAV=  1149.9  PSIA   WCT=0.779 GOR=    37.62 MSCF/STB WGR=   0.0940 STB/MSCF
 
       PR.RATE   PR.TOTAL  IN.RATE   IN.TOTAL  MAX SATURN CHANGE   MAX TIME TRNC ERR
 
- OIL       0.         0.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
- WAT    1650.      1650.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
- GAS       0.         0.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
-      MAX DP = -579.41(  1,  1,  5)  MAX DRS=  0.3300( 10, 10, 10)
- STEP    2 TIME=    4.00  DAYS (  +3.0  DAYS MAXF  2 ITS) (5-JAN-2020)
-  PAV=  1030.1  PSIA   WCT=1.000 GOR= 0.00000  MSCF/STB WGR= 0.00000  STB/MSCF
+ OIL    1529.     13300.       0.         0. -0.017( 10, 10,  1)  0.041(  1,  8,  3)
+ WAT    5403.     27750.       0.         0. -0.016( 10,  6,  9)  0.038(  1,  1,  7)
+ GAS   57504.    182332.       0.         0.  0.018( 10, 10,  1) -0.051(  1,  8,  4)
+      MAX DP = -582.73( 10, 10,  1)  MAX DRS= -0.2391( 10, 10,  1)
+ STEP   12 TIME=    3.43  DAYS (+18.57 HOURS TRNC  3 ITS) (4-JAN-2020)
+  PAV=  1035.2  PSIA   WCT=0.753 GOR=    35.57 MSCF/STB WGR=   0.0859 STB/MSCF
 
       PR.RATE   PR.TOTAL  IN.RATE   IN.TOTAL  MAX SATURN CHANGE   MAX TIME TRNC ERR
 
- OIL       0.         0.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
- WAT       8.      1673.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
- GAS       0.         0.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
-      MAX DP =  -15.98( 10, 10, 10)  MAX DRS= -0.0066( 10, 10, 10)
+ OIL     328.     13554.       0.         0. -0.006( 10,  6,  1)  0.017( 10, 10,  1)
+ WAT    1002.     28525.       0.         0. -0.004( 10,  5,  7)  0.021( 10,  6,  9)
+ GAS   11664.    191354.       0.         0.  0.007( 10,  6,  1) -0.021( 10,  6,  9)
+      MAX DP = -201.67( 10,  6,  1)  MAX DRS= -0.0832( 10,  6,  1)
+ STEP   13 TIME=    4.51  DAYS (  +1.1  DAYS DIFF  2 ITS) (5-JAN-2020)
+  PAV=  1008.6  PSIA   WCT=0.698 GOR=    33.23 MSCF/STB WGR=   0.0694 STB/MSCF
 
- @--WARNING  AT TIME        4.0   DAYS    ( 5-JAN-2020):
+      PR.RATE   PR.TOTAL  IN.RATE   IN.TOTAL  MAX SATURN CHANGE   MAX TIME TRNC ERR
+
+ OIL      59.     13618.       0.         0. -0.002( 10,  6,  1)  0.006( 10,  6,  1)
+ WAT     136.     28672.       0.         0.  0.003(  8,  8,  9)  0.006( 10,  6,  9)
+ GAS    1954.    193473.       0.         0. -0.003(  8,  8,  9) -0.007( 10,  6,  1)
+      MAX DP =  -53.96( 10,  6,  1)  MAX DRS= -0.0223( 10,  6,  1)
+ STEP   14 TIME=    6.21  DAYS (  +1.7  DAYS DIFF  3 ITS) (7-JAN-2020)
+  PAV=  1003.6  PSIA   WCT=0.534 GOR=    29.79 MSCF/STB WGR=   0.0385 STB/MSCF
+
+      PR.RATE   PR.TOTAL  IN.RATE   IN.TOTAL  MAX SATURN CHANGE   MAX TIME TRNC ERR
+
+ OIL       8.     13631.       0.         0. -0.002( 10,  6,  1)  0.002( 10,  6,  1)
+ WAT       9.     28687.       0.         0. -0.007(  1,  1,  8) -0.006(  1,  1,  8)
+ GAS     240.    193879.       0.         0.  0.007(  1,  1,  8)  0.005(  1,  1,  8)
+      MAX DP =  -10.90( 10,  6,  1)  MAX DRS= -0.0045( 10,  6,  1)
+ STEP   15 TIME=    8.85  DAYS (  +2.6  DAYS DIFF  3 ITS) (9-JAN-2020)
+  PAV=  1002.3  PSIA   WCT=0.950 GOR=    58.64 MSCF/STB WGR=   0.3274 STB/MSCF
+
+      PR.RATE   PR.TOTAL  IN.RATE   IN.TOTAL  MAX SATURN CHANGE   MAX TIME TRNC ERR
+
+ OIL       1.     13633.       0.         0. -0.002(  8,  8,  1) -0.001(  1,  8,  8)
+ WAT      12.     28719.       0.         0.  0.008( 10,  5,  9)  0.013(  1,  8,  8)
+ GAS      37.    193977.       0.         0. -0.008( 10,  5,  9) -0.012(  1,  8,  8)
+      MAX DP =   -3.57(  1,  1,  8)  MAX DRS= -0.0015(  1,  1,  8)
+
+ @--WARNING  AT TIME        8.9   DAYS    ( 9-JAN-2020):
  @           THE RESERVOIR PRESSURE IS TOO LOW FOR WELL YP1-001
  @           TO PRODUCE AT THE REQUIRED BOTTOM HOLE PRESSURE
 
- @--MESSAGE  AT TIME        4.0   DAYS    ( 5-JAN-2020):
+ @--MESSAGE  AT TIME        8.9   DAYS    ( 9-JAN-2020):
  @           WELL YP1-001  CANNOT OPERATE UNDER THE CURRENT
- @           RESERVOIR CONDITIONS IN NON-LINEAR ITERATION   1.
+ @           RESERVOIR CONDITIONS IN NON-LINEAR ITERATION   0.
  @           ITS IPR IS    Q(P)  =  A  -  BHP * B ,   WHERE:
- @           A(O,W,G) =   0.0000E+00  7.6687E+04  0.0000E+00
- @           B(O,W,G) =   0.0000E+00  7.6687E+01  0.0000E+00 .
+ @           A(O,W,G) =   2.7777E+03  3.1566E+04  1.1877E+05
+ @           B(O,W,G) =   2.7822E+00  3.1707E+01  1.1913E+02 .
  @           LAST CONVERGED SOLUTION:
  @               ORAT        WRAT        GRAT        BHP         THP
- @             0.0000E+00  8.2824E-01  0.0000E+00  1.0000E+03  0.0000E+00
+ @             7.3243E-02  1.6648E+00  3.9424E+00  1.0000E+03  0.0000E+00
  @           THE WELL IS   SHUT  FOR THE ITERATION.
 
- @--WARNING  AT TIME        4.0   DAYS    ( 5-JAN-2020):
+ @--WARNING  AT TIME        8.9   DAYS    ( 9-JAN-2020):
  @           THE RESERVOIR PRESSURE IS TOO LOW FOR WELL YP1-003
  @           TO PRODUCE AT THE REQUIRED BOTTOM HOLE PRESSURE
 
- @--MESSAGE  AT TIME        4.0   DAYS    ( 5-JAN-2020):
+ @--MESSAGE  AT TIME        8.9   DAYS    ( 9-JAN-2020):
  @           WELL YP1-003  CANNOT OPERATE UNDER THE CURRENT
- @           RESERVOIR CONDITIONS IN NON-LINEAR ITERATION   1.
+ @           RESERVOIR CONDITIONS IN NON-LINEAR ITERATION   0.
  @           ITS IPR IS    Q(P)  =  A  -  BHP * B ,   WHERE:
- @           A(O,W,G) =   0.0000E+00  7.6687E+04  0.0000E+00
- @           B(O,W,G) =   0.0000E+00  7.6687E+01  0.0000E+00 .
+ @           A(O,W,G) =   2.7274E+03  3.0020E+04  1.2083E+05
+ @           B(O,W,G) =   2.7312E+00  3.0140E+01  1.2116E+02 .
  @           LAST CONVERGED SOLUTION:
  @               ORAT        WRAT        GRAT        BHP         THP
- @             0.0000E+00  1.0493E+00  0.0000E+00  1.0000E+03  0.0000E+00
+ @             9.7908E-02  2.1660E+00  5.6203E+00  1.0000E+03  0.0000E+00
  @           THE WELL IS   SHUT  FOR THE ITERATION.
 
- @--WARNING  AT TIME        4.0   DAYS    ( 5-JAN-2020):
+ @--WARNING  AT TIME        8.9   DAYS    ( 9-JAN-2020):
  @           THE RESERVOIR PRESSURE IS TOO LOW FOR WELL YP1-005
  @           TO PRODUCE AT THE REQUIRED BOTTOM HOLE PRESSURE
 
- @--MESSAGE  AT TIME        4.0   DAYS    ( 5-JAN-2020):
+ @--MESSAGE  AT TIME        8.9   DAYS    ( 9-JAN-2020):
  @           WELL YP1-005  CANNOT OPERATE UNDER THE CURRENT
- @           RESERVOIR CONDITIONS IN NON-LINEAR ITERATION   1.
+ @           RESERVOIR CONDITIONS IN NON-LINEAR ITERATION   0.
  @           ITS IPR IS    Q(P)  =  A  -  BHP * B ,   WHERE:
- @           A(O,W,G) =   0.0000E+00  7.6687E+04  0.0000E+00
- @           B(O,W,G) =   0.0000E+00  7.6687E+01  0.0000E+00 .
+ @           A(O,W,G) =   2.9740E+03  1.4271E+04  1.2922E+05
+ @           B(O,W,G) =   2.9776E+00  1.4345E+01  1.2958E+02 .
  @           LAST CONVERGED SOLUTION:
  @               ORAT        WRAT        GRAT        BHP         THP
- @             0.0000E+00  1.3379E+00  0.0000E+00  1.0000E+03  0.0000E+00
+ @             1.4993E-01  3.0893E+00  9.6821E+00  1.0000E+03  0.0000E+00
  @           THE WELL IS   SHUT  FOR THE ITERATION.
 
- @--WARNING  AT TIME        4.0   DAYS    ( 5-JAN-2020):
+ @--WARNING  AT TIME        8.9   DAYS    ( 9-JAN-2020):
  @           THE RESERVOIR PRESSURE IS TOO LOW FOR WELL YP1-006
  @           TO PRODUCE AT THE REQUIRED BOTTOM HOLE PRESSURE
 
- @--MESSAGE  AT TIME        4.0   DAYS    ( 5-JAN-2020):
+ @--MESSAGE  AT TIME        8.9   DAYS    ( 9-JAN-2020):
  @           WELL YP1-006  CANNOT OPERATE UNDER THE CURRENT
- @           RESERVOIR CONDITIONS IN NON-LINEAR ITERATION   1.
+ @           RESERVOIR CONDITIONS IN NON-LINEAR ITERATION   0.
  @           ITS IPR IS    Q(P)  =  A  -  BHP * B ,   WHERE:
- @           A(O,W,G) =   0.0000E+00  7.6687E+04  0.0000E+00
- @           B(O,W,G) =   0.0000E+00  7.6687E+01  0.0000E+00 .
+ @           A(O,W,G) =   2.9742E+03  1.4251E+04  1.2974E+05
+ @           B(O,W,G) =   2.9776E+00  1.4320E+01  1.3008E+02 .
  @           LAST CONVERGED SOLUTION:
  @               ORAT        WRAT        GRAT        BHP         THP
- @             0.0000E+00  1.3259E+00  0.0000E+00  1.0000E+03  0.0000E+00
+ @             1.5556E-01  3.1118E+00  1.0260E+01  1.0000E+03  0.0000E+00
  @           THE WELL IS   SHUT  FOR THE ITERATION.
 
- @--MESSAGE  AT TIME        4.0   DAYS    ( 5-JAN-2020):
- @           ****************************************************************
- @           * WELL YP1-001  IS  SHUT   AT TIME       4.00   DAYS   BECAUSE *
- @           * IT CANNOT OPERATE AT CURRENT RESERVOIR CONDITIONS.           *
- @           ****************************************************************
+ @--WARNING  AT TIME        8.9   DAYS    ( 9-JAN-2020):
+ @           THE RESERVOIR PRESSURE IS TOO LOW FOR WELL YP1-007
+ @           TO PRODUCE AT THE REQUIRED BOTTOM HOLE PRESSURE
 
- @--MESSAGE  AT TIME        4.0   DAYS    ( 5-JAN-2020):
- @           ****************************************************************
- @           * WELL YP1-003  IS  SHUT   AT TIME       4.00   DAYS   BECAUSE *
- @           * IT CANNOT OPERATE AT CURRENT RESERVOIR CONDITIONS.           *
- @           ****************************************************************
+ @--MESSAGE  AT TIME        8.9   DAYS    ( 9-JAN-2020):
+ @           WELL YP1-007  CANNOT OPERATE UNDER THE CURRENT
+ @           RESERVOIR CONDITIONS IN NON-LINEAR ITERATION   0.
+ @           ITS IPR IS    Q(P)  =  A  -  BHP * B ,   WHERE:
+ @           A(O,W,G) =   3.2109E+03  2.0732E+04  1.2845E+05
+ @           B(O,W,G) =   3.2147E+00  2.0803E+01  1.2872E+02 .
+ @           LAST CONVERGED SOLUTION:
+ @               ORAT        WRAT        GRAT        BHP         THP
+ @             1.2082E-01  1.7203E+00  6.0016E+00  1.0000E+03  0.0000E+00
+ @           THE WELL IS   SHUT  FOR THE ITERATION.
 
- @--MESSAGE  AT TIME        4.0   DAYS    ( 5-JAN-2020):
- @           ****************************************************************
- @           * WELL YP1-005  IS  SHUT   AT TIME       4.00   DAYS   BECAUSE *
- @           * IT CANNOT OPERATE AT CURRENT RESERVOIR CONDITIONS.           *
- @           ****************************************************************
-
- @--MESSAGE  AT TIME        4.0   DAYS    ( 5-JAN-2020):
- @           ****************************************************************
- @           * WELL YP1-006  IS  SHUT   AT TIME       4.00   DAYS   BECAUSE *
- @           * IT CANNOT OPERATE AT CURRENT RESERVOIR CONDITIONS.           *
- @           ****************************************************************
- STEP    3 TIME=   13.00  DAYS (  +9.0  DAYS MAXF  1 ITS) (14-JAN-2020)
-  PAV=  1030.1  PSIA   WCT=1.000 GOR= 0.00000  MSCF/STB WGR= 0.00000  STB/MSCF
-
-      PR.RATE   PR.TOTAL  IN.RATE   IN.TOTAL  MAX SATURN CHANGE   MAX TIME TRNC ERR
-
- OIL       0.         0.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
- WAT       0.      1673.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
- GAS       0.         0.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
-      MAX DP =   -0.12( 10, 10, 10)  MAX DRS= -0.0001( 10, 10, 10)
-
- @--WARNING  AT TIME       13.0   DAYS    (14-JAN-2020):
+ @--WARNING  AT TIME        8.9   DAYS    ( 9-JAN-2020):
  @           THE RESERVOIR PRESSURE IS TOO LOW FOR WELL YP1-009
  @           TO PRODUCE AT THE REQUIRED BOTTOM HOLE PRESSURE
 
- @--MESSAGE  AT TIME       13.0   DAYS    (14-JAN-2020):
+ @--MESSAGE  AT TIME        8.9   DAYS    ( 9-JAN-2020):
+ @           WELL YP1-009  CANNOT OPERATE UNDER THE CURRENT
+ @           RESERVOIR CONDITIONS IN NON-LINEAR ITERATION   0.
+ @           ITS IPR IS    Q(P)  =  A  -  BHP * B ,   WHERE:
+ @           A(O,W,G) =   3.7389E+03  1.9260E+04  1.3022E+05
+ @           B(O,W,G) =   3.7420E+00  1.9300E+01  1.3037E+02 .
+ @           LAST CONVERGED SOLUTION:
+ @               ORAT        WRAT        GRAT        BHP         THP
+ @             2.8976E-02  2.7355E-01  1.2305E+00  1.0000E+03  0.0000E+00
+ @           THE WELL IS   SHUT  FOR THE ITERATION.
+
+ @--MESSAGE  AT TIME        8.9   DAYS    ( 9-JAN-2020):
+ @           WELL YP1-001  IS REVIVED FOR ITERATION   1
+
+ @--MESSAGE  AT TIME        8.9   DAYS    ( 9-JAN-2020):
+ @           WELL YP1-003  IS REVIVED FOR ITERATION   1
+
+ @--MESSAGE  AT TIME        8.9   DAYS    ( 9-JAN-2020):
+ @           WELL YP1-005  IS REVIVED FOR ITERATION   1
+
+ @--MESSAGE  AT TIME        8.9   DAYS    ( 9-JAN-2020):
+ @           WELL YP1-006  IS REVIVED FOR ITERATION   1
+
+ @--MESSAGE  AT TIME        8.9   DAYS    ( 9-JAN-2020):
+ @           WELL YP1-007  IS REVIVED FOR ITERATION   1
+
+ @--MESSAGE  AT TIME        8.9   DAYS    ( 9-JAN-2020):
+ @           WELL YP1-009  IS REVIVED FOR ITERATION   1
+
+ @--WARNING  AT TIME        8.9   DAYS    ( 9-JAN-2020):
+ @           THE RESERVOIR PRESSURE IS TOO LOW FOR WELL YP1-001
+ @           TO PRODUCE AT THE REQUIRED BOTTOM HOLE PRESSURE
+
+ @--MESSAGE  AT TIME        8.9   DAYS    ( 9-JAN-2020):
+ @           WELL YP1-001  CANNOT OPERATE UNDER THE CURRENT
+ @           RESERVOIR CONDITIONS IN NON-LINEAR ITERATION   1.
+ @           ITS IPR IS    Q(P)  =  A  -  BHP * B ,   WHERE:
+ @           A(O,W,G) =   3.0045E+03  1.4431E+04  1.2812E+05
+ @           B(O,W,G) =   3.0059E+00  1.4448E+01  1.2820E+02 .
+ @           LAST CONVERGED SOLUTION:
+ @               ORAT        WRAT        GRAT        BHP         THP
+ @             0.0000E+00  0.0000E+00  0.0000E+00  7.1012E+02  0.0000E+00
+ @           THE WELL IS   SHUT  FOR THE ITERATION.
+
+ @--WARNING  AT TIME        8.9   DAYS    ( 9-JAN-2020):
+ @           THE RESERVOIR PRESSURE IS TOO LOW FOR WELL YP1-003
+ @           TO PRODUCE AT THE REQUIRED BOTTOM HOLE PRESSURE
+
+ @--MESSAGE  AT TIME        8.9   DAYS    ( 9-JAN-2020):
+ @           WELL YP1-003  CANNOT OPERATE UNDER THE CURRENT
+ @           RESERVOIR CONDITIONS IN NON-LINEAR ITERATION   1.
+ @           ITS IPR IS    Q(P)  =  A  -  BHP * B ,   WHERE:
+ @           A(O,W,G) =   2.9894E+03  1.4388E+04  1.2914E+05
+ @           B(O,W,G) =   2.9904E+00  1.4400E+01  1.2920E+02 .
+ @           LAST CONVERGED SOLUTION:
+ @               ORAT        WRAT        GRAT        BHP         THP
+ @             0.0000E+00  0.0000E+00  0.0000E+00  7.1012E+02  0.0000E+00
+ @           THE WELL IS   SHUT  FOR THE ITERATION.
+
+ @--WARNING  AT TIME        8.9   DAYS    ( 9-JAN-2020):
+ @           THE RESERVOIR PRESSURE IS TOO LOW FOR WELL YP1-005
+ @           TO PRODUCE AT THE REQUIRED BOTTOM HOLE PRESSURE
+
+ @--MESSAGE  AT TIME        8.9   DAYS    ( 9-JAN-2020):
+ @           WELL YP1-005  CANNOT OPERATE UNDER THE CURRENT
+ @           RESERVOIR CONDITIONS IN NON-LINEAR ITERATION   1.
+ @           ITS IPR IS    Q(P)  =  A  -  BHP * B ,   WHERE:
+ @           A(O,W,G) =   2.9896E+03  1.4293E+04  1.3010E+05
+ @           B(O,W,G) =   2.9913E+00  1.4327E+01  1.3028E+02 .
+ @           LAST CONVERGED SOLUTION:
+ @               ORAT        WRAT        GRAT        BHP         THP
+ @             0.0000E+00  0.0000E+00  0.0000E+00  7.1012E+02  0.0000E+00
+ @           THE WELL IS   SHUT  FOR THE ITERATION.
+
+ @--WARNING  AT TIME        8.9   DAYS    ( 9-JAN-2020):
+ @           THE RESERVOIR PRESSURE IS TOO LOW FOR WELL YP1-006
+ @           TO PRODUCE AT THE REQUIRED BOTTOM HOLE PRESSURE
+
+ @--MESSAGE  AT TIME        8.9   DAYS    ( 9-JAN-2020):
+ @           WELL YP1-006  CANNOT OPERATE UNDER THE CURRENT
+ @           RESERVOIR CONDITIONS IN NON-LINEAR ITERATION   1.
+ @           ITS IPR IS    Q(P)  =  A  -  BHP * B ,   WHERE:
+ @           A(O,W,G) =   2.9898E+03  1.4267E+04  1.3068E+05
+ @           B(O,W,G) =   2.9913E+00  1.4297E+01  1.3084E+02 .
+ @           LAST CONVERGED SOLUTION:
+ @               ORAT        WRAT        GRAT        BHP         THP
+ @             0.0000E+00  0.0000E+00  0.0000E+00  7.1012E+02  0.0000E+00
+ @           THE WELL IS   SHUT  FOR THE ITERATION.
+
+ @--WARNING  AT TIME        8.9   DAYS    ( 9-JAN-2020):
+ @           THE RESERVOIR PRESSURE IS TOO LOW FOR WELL YP1-007
+ @           TO PRODUCE AT THE REQUIRED BOTTOM HOLE PRESSURE
+
+ @--MESSAGE  AT TIME        8.9   DAYS    ( 9-JAN-2020):
+ @           WELL YP1-007  CANNOT OPERATE UNDER THE CURRENT
+ @           RESERVOIR CONDITIONS IN NON-LINEAR ITERATION   1.
+ @           ITS IPR IS    Q(P)  =  A  -  BHP * B ,   WHERE:
+ @           A(O,W,G) =   2.9876E+03  1.4192E+04  1.3266E+05
+ @           B(O,W,G) =   2.9882E+00  1.4198E+01  1.3270E+02 .
+ @           LAST CONVERGED SOLUTION:
+ @               ORAT        WRAT        GRAT        BHP         THP
+ @             0.0000E+00  0.0000E+00  0.0000E+00  7.1012E+02  0.0000E+00
+ @           THE WELL IS   SHUT  FOR THE ITERATION.
+
+ @--MESSAGE  AT TIME        8.9   DAYS    ( 9-JAN-2020):
+ @           WELL YP1-001  IS REVIVED FOR ITERATION   2
+
+ @--MESSAGE  AT TIME        8.9   DAYS    ( 9-JAN-2020):
+ @           WELL YP1-003  IS REVIVED FOR ITERATION   2
+
+ @--MESSAGE  AT TIME        8.9   DAYS    ( 9-JAN-2020):
+ @           WELL YP1-005  IS REVIVED FOR ITERATION   2
+
+ @--MESSAGE  AT TIME        8.9   DAYS    ( 9-JAN-2020):
+ @           WELL YP1-006  IS REVIVED FOR ITERATION   2
+
+ @--MESSAGE  AT TIME        8.9   DAYS    ( 9-JAN-2020):
+ @           WELL YP1-007  IS REVIVED FOR ITERATION   2
+
+ @--WARNING  AT TIME        8.9   DAYS    ( 9-JAN-2020):
+ @           THE RESERVOIR PRESSURE IS TOO LOW FOR WELL YP1-001
+ @           TO PRODUCE AT THE REQUIRED BOTTOM HOLE PRESSURE
+
+ @--MESSAGE  AT TIME        8.9   DAYS    ( 9-JAN-2020):
+ @           WELL YP1-001  CANNOT OPERATE UNDER THE CURRENT
+ @           RESERVOIR CONDITIONS IN NON-LINEAR ITERATION   2.
+ @           ITS IPR IS    Q(P)  =  A  -  BHP * B ,   WHERE:
+ @           A(O,W,G) =   3.0032E+03  1.4422E+04  1.2806E+05
+ @           B(O,W,G) =   3.0057E+00  1.4445E+01  1.2820E+02 .
+ @           LAST CONVERGED SOLUTION:
+ @               ORAT        WRAT        GRAT        BHP         THP
+ @             0.0000E+00  0.0000E+00  0.0000E+00  7.0981E+02  0.0000E+00
+ @           THE WELL IS   SHUT  FOR THE ITERATION.
+
+ @--WARNING  AT TIME        8.9   DAYS    ( 9-JAN-2020):
+ @           THE RESERVOIR PRESSURE IS TOO LOW FOR WELL YP1-003
+ @           TO PRODUCE AT THE REQUIRED BOTTOM HOLE PRESSURE
+
+ @--MESSAGE  AT TIME        8.9   DAYS    ( 9-JAN-2020):
+ @           WELL YP1-003  CANNOT OPERATE UNDER THE CURRENT
+ @           RESERVOIR CONDITIONS IN NON-LINEAR ITERATION   2.
+ @           ITS IPR IS    Q(P)  =  A  -  BHP * B ,   WHERE:
+ @           A(O,W,G) =   2.9882E+03  1.4372E+04  1.2912E+05
+ @           B(O,W,G) =   2.9903E+00  1.4391E+01  1.2923E+02 .
+ @           LAST CONVERGED SOLUTION:
+ @               ORAT        WRAT        GRAT        BHP         THP
+ @             0.0000E+00  0.0000E+00  0.0000E+00  7.0981E+02  0.0000E+00
+ @           THE WELL IS   SHUT  FOR THE ITERATION.
+
+ @--WARNING  AT TIME        8.9   DAYS    ( 9-JAN-2020):
+ @           THE RESERVOIR PRESSURE IS TOO LOW FOR WELL YP1-005
+ @           TO PRODUCE AT THE REQUIRED BOTTOM HOLE PRESSURE
+
+ @--MESSAGE  AT TIME        8.9   DAYS    ( 9-JAN-2020):
+ @           WELL YP1-005  CANNOT OPERATE UNDER THE CURRENT
+ @           RESERVOIR CONDITIONS IN NON-LINEAR ITERATION   2.
+ @           ITS IPR IS    Q(P)  =  A  -  BHP * B ,   WHERE:
+ @           A(O,W,G) =   2.9884E+03  1.4274E+04  1.3019E+05
+ @           B(O,W,G) =   2.9912E+00  1.4315E+01  1.3041E+02 .
+ @           LAST CONVERGED SOLUTION:
+ @               ORAT        WRAT        GRAT        BHP         THP
+ @             0.0000E+00  0.0000E+00  0.0000E+00  7.0981E+02  0.0000E+00
+ @           THE WELL IS   SHUT  FOR THE ITERATION.
+
+ @--WARNING  AT TIME        8.9   DAYS    ( 9-JAN-2020):
+ @           THE RESERVOIR PRESSURE IS TOO LOW FOR WELL YP1-006
+ @           TO PRODUCE AT THE REQUIRED BOTTOM HOLE PRESSURE
+
+ @--MESSAGE  AT TIME        8.9   DAYS    ( 9-JAN-2020):
+ @           WELL YP1-006  CANNOT OPERATE UNDER THE CURRENT
+ @           RESERVOIR CONDITIONS IN NON-LINEAR ITERATION   2.
+ @           ITS IPR IS    Q(P)  =  A  -  BHP * B ,   WHERE:
+ @           A(O,W,G) =   2.9886E+03  1.4249E+04  1.3075E+05
+ @           B(O,W,G) =   2.9912E+00  1.4287E+01  1.3096E+02 .
+ @           LAST CONVERGED SOLUTION:
+ @               ORAT        WRAT        GRAT        BHP         THP
+ @             0.0000E+00  0.0000E+00  0.0000E+00  7.0982E+02  0.0000E+00
+ @           THE WELL IS   SHUT  FOR THE ITERATION.
+
+ @--WARNING  AT TIME        8.9   DAYS    ( 9-JAN-2020):
+ @           THE RESERVOIR PRESSURE IS TOO LOW FOR WELL YP1-007
+ @           TO PRODUCE AT THE REQUIRED BOTTOM HOLE PRESSURE
+
+ @--MESSAGE  AT TIME        8.9   DAYS    ( 9-JAN-2020):
+ @           WELL YP1-007  CANNOT OPERATE UNDER THE CURRENT
+ @           RESERVOIR CONDITIONS IN NON-LINEAR ITERATION   2.
+ @           ITS IPR IS    Q(P)  =  A  -  BHP * B ,   WHERE:
+ @           A(O,W,G) =   2.9864E+03  1.4179E+04  1.3268E+05
+ @           B(O,W,G) =   2.9880E+00  1.4191E+01  1.3277E+02 .
+ @           LAST CONVERGED SOLUTION:
+ @               ORAT        WRAT        GRAT        BHP         THP
+ @             0.0000E+00  0.0000E+00  0.0000E+00  7.0981E+02  0.0000E+00
+ @           THE WELL IS   SHUT  FOR THE ITERATION.
+
+ @--MESSAGE  AT TIME        8.9   DAYS    ( 9-JAN-2020):
+ @           WELL YP1-001  IS REVIVED FOR ITERATION   3
+
+ @--MESSAGE  AT TIME        8.9   DAYS    ( 9-JAN-2020):
+ @           WELL YP1-003  IS REVIVED FOR ITERATION   3
+
+ @--MESSAGE  AT TIME        8.9   DAYS    ( 9-JAN-2020):
+ @           WELL YP1-005  IS REVIVED FOR ITERATION   3
+
+ @--MESSAGE  AT TIME        8.9   DAYS    ( 9-JAN-2020):
+ @           WELL YP1-006  IS REVIVED FOR ITERATION   3
+
+ @--MESSAGE  AT TIME        8.9   DAYS    ( 9-JAN-2020):
+ @           WELL YP1-007  IS REVIVED FOR ITERATION   3
+
+ @--WARNING  AT TIME        8.9   DAYS    ( 9-JAN-2020):
+ @           THE RESERVOIR PRESSURE IS TOO LOW FOR WELL YP1-001
+ @           TO PRODUCE AT THE REQUIRED BOTTOM HOLE PRESSURE
+
+ @--MESSAGE  AT TIME        8.9   DAYS    ( 9-JAN-2020):
+ @           WELL YP1-001  CANNOT OPERATE UNDER THE CURRENT
+ @           RESERVOIR CONDITIONS IN NON-LINEAR ITERATION   3.
+ @           ITS IPR IS    Q(P)  =  A  -  BHP * B ,   WHERE:
+ @           A(O,W,G) =   3.0032E+03  1.4421E+04  1.2806E+05
+ @           B(O,W,G) =   3.0057E+00  1.4445E+01  1.2820E+02 .
+ @           LAST CONVERGED SOLUTION:
+ @               ORAT        WRAT        GRAT        BHP         THP
+ @             0.0000E+00  0.0000E+00  0.0000E+00  7.0980E+02  0.0000E+00
+ @           THE WELL IS   SHUT  FOR THE ITERATION.
+
+ @--WARNING  AT TIME        8.9   DAYS    ( 9-JAN-2020):
+ @           THE RESERVOIR PRESSURE IS TOO LOW FOR WELL YP1-003
+ @           TO PRODUCE AT THE REQUIRED BOTTOM HOLE PRESSURE
+
+ @--MESSAGE  AT TIME        8.9   DAYS    ( 9-JAN-2020):
+ @           WELL YP1-003  CANNOT OPERATE UNDER THE CURRENT
+ @           RESERVOIR CONDITIONS IN NON-LINEAR ITERATION   3.
+ @           ITS IPR IS    Q(P)  =  A  -  BHP * B ,   WHERE:
+ @           A(O,W,G) =   2.9882E+03  1.4372E+04  1.2911E+05
+ @           B(O,W,G) =   2.9903E+00  1.4391E+01  1.2923E+02 .
+ @           LAST CONVERGED SOLUTION:
+ @               ORAT        WRAT        GRAT        BHP         THP
+ @             0.0000E+00  0.0000E+00  0.0000E+00  7.0981E+02  0.0000E+00
+ @           THE WELL IS   SHUT  FOR THE ITERATION.
+
+ @--WARNING  AT TIME        8.9   DAYS    ( 9-JAN-2020):
+ @           THE RESERVOIR PRESSURE IS TOO LOW FOR WELL YP1-005
+ @           TO PRODUCE AT THE REQUIRED BOTTOM HOLE PRESSURE
+
+ @--MESSAGE  AT TIME        8.9   DAYS    ( 9-JAN-2020):
+ @           WELL YP1-005  CANNOT OPERATE UNDER THE CURRENT
+ @           RESERVOIR CONDITIONS IN NON-LINEAR ITERATION   3.
+ @           ITS IPR IS    Q(P)  =  A  -  BHP * B ,   WHERE:
+ @           A(O,W,G) =   2.9883E+03  1.4274E+04  1.3019E+05
+ @           B(O,W,G) =   2.9912E+00  1.4314E+01  1.3041E+02 .
+ @           LAST CONVERGED SOLUTION:
+ @               ORAT        WRAT        GRAT        BHP         THP
+ @             0.0000E+00  0.0000E+00  0.0000E+00  7.0981E+02  0.0000E+00
+ @           THE WELL IS   SHUT  FOR THE ITERATION.
+
+ @--WARNING  AT TIME        8.9   DAYS    ( 9-JAN-2020):
+ @           THE RESERVOIR PRESSURE IS TOO LOW FOR WELL YP1-006
+ @           TO PRODUCE AT THE REQUIRED BOTTOM HOLE PRESSURE
+
+ @--MESSAGE  AT TIME        8.9   DAYS    ( 9-JAN-2020):
+ @           WELL YP1-006  CANNOT OPERATE UNDER THE CURRENT
+ @           RESERVOIR CONDITIONS IN NON-LINEAR ITERATION   3.
+ @           ITS IPR IS    Q(P)  =  A  -  BHP * B ,   WHERE:
+ @           A(O,W,G) =   2.9886E+03  1.4249E+04  1.3074E+05
+ @           B(O,W,G) =   2.9912E+00  1.4286E+01  1.3095E+02 .
+ @           LAST CONVERGED SOLUTION:
+ @               ORAT        WRAT        GRAT        BHP         THP
+ @             0.0000E+00  0.0000E+00  0.0000E+00  7.0981E+02  0.0000E+00
+ @           THE WELL IS   SHUT  FOR THE ITERATION.
+
+ @--WARNING  AT TIME        8.9   DAYS    ( 9-JAN-2020):
+ @           THE RESERVOIR PRESSURE IS TOO LOW FOR WELL YP1-007
+ @           TO PRODUCE AT THE REQUIRED BOTTOM HOLE PRESSURE
+
+ @--MESSAGE  AT TIME        8.9   DAYS    ( 9-JAN-2020):
+ @           WELL YP1-007  CANNOT OPERATE UNDER THE CURRENT
+ @           RESERVOIR CONDITIONS IN NON-LINEAR ITERATION   3.
+ @           ITS IPR IS    Q(P)  =  A  -  BHP * B ,   WHERE:
+ @           A(O,W,G) =   2.9864E+03  1.4178E+04  1.3268E+05
+ @           B(O,W,G) =   2.9880E+00  1.4191E+01  1.3277E+02 .
+ @           LAST CONVERGED SOLUTION:
+ @               ORAT        WRAT        GRAT        BHP         THP
+ @             0.0000E+00  0.0000E+00  0.0000E+00  7.0981E+02  0.0000E+00
+ @           THE WELL IS   SHUT  FOR THE ITERATION.
+
+ @--MESSAGE  AT TIME        8.9   DAYS    ( 9-JAN-2020):
+ @           ****************************************************************
+ @           * WELL YP1-001  IS  SHUT   AT TIME       8.85   DAYS   BECAUSE *
+ @           * IT CANNOT OPERATE AT CURRENT RESERVOIR CONDITIONS.           *
+ @           ****************************************************************
+
+ @--MESSAGE  AT TIME        8.9   DAYS    ( 9-JAN-2020):
+ @           ****************************************************************
+ @           * WELL YP1-003  IS  SHUT   AT TIME       8.85   DAYS   BECAUSE *
+ @           * IT CANNOT OPERATE AT CURRENT RESERVOIR CONDITIONS.           *
+ @           ****************************************************************
+
+ @--MESSAGE  AT TIME        8.9   DAYS    ( 9-JAN-2020):
+ @           ****************************************************************
+ @           * WELL YP1-005  IS  SHUT   AT TIME       8.85   DAYS   BECAUSE *
+ @           * IT CANNOT OPERATE AT CURRENT RESERVOIR CONDITIONS.           *
+ @           ****************************************************************
+
+ @--MESSAGE  AT TIME        8.9   DAYS    ( 9-JAN-2020):
+ @           ****************************************************************
+ @           * WELL YP1-006  IS  SHUT   AT TIME       8.85   DAYS   BECAUSE *
+ @           * IT CANNOT OPERATE AT CURRENT RESERVOIR CONDITIONS.           *
+ @           ****************************************************************
+
+ @--MESSAGE  AT TIME        8.9   DAYS    ( 9-JAN-2020):
+ @           ****************************************************************
+ @           * WELL YP1-007  IS  SHUT   AT TIME       8.85   DAYS   BECAUSE *
+ @           * IT CANNOT OPERATE AT CURRENT RESERVOIR CONDITIONS.           *
+ @           ****************************************************************
+ STEP   16 TIME=   12.99  DAYS (  +4.1  DAYS DIFF  3 ITS) (13-JAN-2020)
+  PAV=  1001.9  PSIA   WCT=0.991 GOR=   388.33 MSCF/STB WGR=   0.2732 STB/MSCF
+
+      PR.RATE   PR.TOTAL  IN.RATE   IN.TOTAL  MAX SATURN CHANGE   MAX TIME TRNC ERR
+
+ OIL       0.     13633.       0.         0. -0.003(  3,  3,  1) -0.001(  8,  8,  2)
+ WAT       2.     28727.       0.         0.  0.010( 10,  6,  9)  0.004(  2,  8,  8)
+ GAS       7.    194006.       0.         0. -0.010( 10,  6,  9) -0.004(  2,  8,  8)
+      MAX DP =   -0.84(  8,  8,  7)  MAX DRS= -0.0003(  8,  8,  7)
+
+ @--WARNING  AT TIME       13.0   DAYS    (13-JAN-2020):
+ @           THE RESERVOIR PRESSURE IS TOO LOW FOR WELL YP1-009
+ @           TO PRODUCE AT THE REQUIRED BOTTOM HOLE PRESSURE
+
+ @--MESSAGE  AT TIME       13.0   DAYS    (13-JAN-2020):
+ @           WELL YP1-009  CANNOT OPERATE UNDER THE CURRENT
+ @           RESERVOIR CONDITIONS IN NON-LINEAR ITERATION   0.
+ @           ITS IPR IS    Q(P)  =  A  -  BHP * B ,   WHERE:
+ @           A(O,W,G) =   6.4140E+02  2.8473E+04  1.2642E+05
+ @           B(O,W,G) =   6.4269E-01  2.8532E+01  1.2668E+02 .
+ @           LAST CONVERGED SOLUTION:
+ @               ORAT        WRAT        GRAT        BHP         THP
+ @             1.8499E-02  1.9627E+00  7.1835E+00  1.0000E+03  0.0000E+00
+ @           THE WELL IS   SHUT  FOR THE ITERATION.
+
+ @--MESSAGE  AT TIME       13.0   DAYS    (13-JAN-2020):
+ @           WELL YP1-009  IS REVIVED FOR ITERATION   1
+
+ @--WARNING  AT TIME       13.0   DAYS    (13-JAN-2020):
+ @           THE RESERVOIR PRESSURE IS TOO LOW FOR WELL YP1-009
+ @           TO PRODUCE AT THE REQUIRED BOTTOM HOLE PRESSURE
+
+ @--MESSAGE  AT TIME       13.0   DAYS    (13-JAN-2020):
  @           WELL YP1-009  CANNOT OPERATE UNDER THE CURRENT
  @           RESERVOIR CONDITIONS IN NON-LINEAR ITERATION   1.
  @           ITS IPR IS    Q(P)  =  A  -  BHP * B ,   WHERE:
- @           A(O,W,G) =   0.0000E+00  7.6687E+04  0.0000E+00
- @           B(O,W,G) =   0.0000E+00  7.6687E+01  0.0000E+00 .
+ @           A(O,W,G) =   2.9814E+03  1.4220E+04  1.3359E+05
+ @           B(O,W,G) =   2.9832E+00  1.4235E+01  1.3370E+02 .
  @           LAST CONVERGED SOLUTION:
  @               ORAT        WRAT        GRAT        BHP         THP
- @            -2.6075E-19  1.1743E-02  0.0000E+00  1.0000E+03  0.0000E+00
+ @             0.0000E+00  0.0000E+00  0.0000E+00  7.0971E+02  0.0000E+00
  @           THE WELL IS   SHUT  FOR THE ITERATION.
 
- @--MESSAGE  AT TIME       13.0   DAYS    (14-JAN-2020):
+ @--MESSAGE  AT TIME       13.0   DAYS    (13-JAN-2020):
+ @           WELL YP1-009  IS REVIVED FOR ITERATION   2
+
+ @--WARNING  AT TIME       13.0   DAYS    (13-JAN-2020):
+ @           THE RESERVOIR PRESSURE IS TOO LOW FOR WELL YP1-009
+ @           TO PRODUCE AT THE REQUIRED BOTTOM HOLE PRESSURE
+
+ @--MESSAGE  AT TIME       13.0   DAYS    (13-JAN-2020):
+ @           WELL YP1-009  CANNOT OPERATE UNDER THE CURRENT
+ @           RESERVOIR CONDITIONS IN NON-LINEAR ITERATION   2.
+ @           ITS IPR IS    Q(P)  =  A  -  BHP * B ,   WHERE:
+ @           A(O,W,G) =   2.9811E+03  1.4193E+04  1.3369E+05
+ @           B(O,W,G) =   2.9828E+00  1.4207E+01  1.3380E+02 .
+ @           LAST CONVERGED SOLUTION:
+ @               ORAT        WRAT        GRAT        BHP         THP
+ @             0.0000E+00  0.0000E+00  0.0000E+00  7.0971E+02  0.0000E+00
+ @           THE WELL IS   SHUT  FOR THE ITERATION.
+
+ @--MESSAGE  AT TIME       13.0   DAYS    (13-JAN-2020):
  @           ****************************************************************
- @           * WELL YP1-009  IS  SHUT   AT TIME      13.00   DAYS   BECAUSE *
+ @           * WELL YP1-009  IS  SHUT   AT TIME      12.99   DAYS   BECAUSE *
  @           * IT CANNOT OPERATE AT CURRENT RESERVOIR CONDITIONS.           *
  @           ****************************************************************
- STEP    4 TIME=   40.00  DAYS ( +27.0  DAYS MAXF  1 ITS) (10-FEB-2020)
-  PAV=  1030.1  PSIA   WCT=1.000 GOR= 0.00000  MSCF/STB WGR= 0.00000  STB/MSCF
+ STEP   17 TIME=   19.45  DAYS (  +6.5  DAYS DIFF  2 ITS) (20-JAN-2020)
+  PAV=  1001.9  PSIA   WCT= 0.00 GOR= 0.00000  MSCF/STB WGR= 0.00000  STB/MSCF
 
       PR.RATE   PR.TOTAL  IN.RATE   IN.TOTAL  MAX SATURN CHANGE   MAX TIME TRNC ERR
 
- OIL       0.         0.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
- WAT       0.      1673.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
- GAS       0.         0.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
-      MAX DP =    0.00(  1,  5,  2)  MAX DRS=  0.0000(  1,  5,  2)
- STEP    5 TIME=  121.00  DAYS ( +81.0  DAYS MAXF  1 ITS) (1-MAY-2020)
-  PAV=  1030.1  PSIA   WCT=1.000 GOR= 0.00000  MSCF/STB WGR= 0.00000  STB/MSCF
+ OIL       0.     13633.       0.         0. -0.005(  3,  3,  1)  0.001(  8,  8,  2)
+ WAT       0.     28727.       0.         0.  0.012( 10,  5,  8) -0.007( 10, 10,  9)
+ GAS       0.    194006.       0.         0. -0.012( 10,  5,  8)  0.007( 10, 10,  9)
+      MAX DP =    1.75( 10, 10, 10)  MAX DRS=  0.0007( 10, 10, 10)
+ STEP   18 TIME=   29.55  DAYS ( +10.1  DAYS DIFF  2 ITS) (30-JAN-2020)
+  PAV=  1001.8  PSIA   WCT= 0.00 GOR= 0.00000  MSCF/STB WGR= 0.00000  STB/MSCF
 
       PR.RATE   PR.TOTAL  IN.RATE   IN.TOTAL  MAX SATURN CHANGE   MAX TIME TRNC ERR
 
- OIL       0.         0.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
- WAT       0.      1673.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
- GAS       0.         0.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
-      MAX DP =    0.00(  1,  5,  2)  MAX DRS=  0.0000(  1,  5,  2)
- STEP    6 TIME=  364.00  DAYS (+243.0  DAYS MAXF  1 ITS) (30-DEC-2020)
-  PAV=  1030.1  PSIA   WCT=1.000 GOR= 0.00000  MSCF/STB WGR= 0.00000  STB/MSCF
+ OIL       0.     13633.       0.         0. -0.007(  3,  3,  1)  0.001(  3,  3,  1)
+ WAT       0.     28727.       0.         0.  0.023( 10,  5,  8) -0.009( 10,  5,  9)
+ GAS       0.    194006.       0.         0. -0.023( 10,  5,  8)  0.009( 10,  5,  9)
+      MAX DP =    1.51( 10, 10, 10)  MAX DRS=  0.0006( 10, 10, 10)
+ STEP   19 TIME=   45.32  DAYS ( +15.8  DAYS DIFF  3 ITS) (15-FEB-2020)
+  PAV=  1001.8  PSIA   WCT= 0.00 GOR= 0.00000  MSCF/STB WGR= 0.00000  STB/MSCF
 
       PR.RATE   PR.TOTAL  IN.RATE   IN.TOTAL  MAX SATURN CHANGE   MAX TIME TRNC ERR
 
- OIL       0.         0.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
- WAT       0.      1673.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
- GAS       0.         0.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
-      MAX DP =    0.00(  8,  1,  8)  MAX DRS=  0.0000(  8,  1,  8)
-
- @--WARNING  AT TIME      364.0   DAYS    (30-DEC-2020):
- @           THE RESERVOIR PRESSURE IS TOO LOW FOR WELL YP1-007
- @           TO PRODUCE AT THE REQUIRED BOTTOM HOLE PRESSURE
-
- @--MESSAGE  AT TIME      364.0   DAYS    (30-DEC-2020):
- @           WELL YP1-007  CANNOT OPERATE UNDER THE CURRENT
- @           RESERVOIR CONDITIONS IN NON-LINEAR ITERATION   0.
- @           ITS IPR IS    Q(P)  =  A  -  BHP * B ,   WHERE:
- @           A(O,W,G) =   0.0000E+00  7.6687E+04  0.0000E+00
- @           B(O,W,G) =   0.0000E+00  7.6687E+01  0.0000E+00 .
- @           LAST CONVERGED SOLUTION:
- @               ORAT        WRAT        GRAT        BHP         THP
- @             0.0000E+00  7.2221E-06  0.0000E+00  1.0000E+03  0.0000E+00
- @           THE WELL IS   SHUT  FOR THE ITERATION.
-
- @--MESSAGE  AT TIME      364.0   DAYS    (30-DEC-2020):
- @           WELL YP1-007  IS REVIVED FOR ITERATION   1
- STEP    7 TIME=  729.00  DAYS (+365.0  DAYS MAXS  2 ITS) (30-DEC-2021)
-  PAV=  1030.0  PSIA   WCT=1.000 GOR= 0.00000  MSCF/STB WGR= 0.00000  STB/MSCF
+ OIL       0.     13633.       0.         0. -0.010(  3,  3,  1)  0.001(  3,  3,  1)
+ WAT       0.     28727.       0.         0.  0.026( 10,  5,  8)  0.012(  1,  3,  7)
+ GAS       0.    194006.       0.         0. -0.026( 10,  5,  8) -0.012(  1,  3,  7)
+      MAX DP =    2.08( 10,  8, 10)  MAX DRS=  0.0009( 10,  8, 10)
+ STEP   20 TIME=   69.98  DAYS ( +24.7  DAYS DIFF  2 ITS) (10-MAR-2020)
+  PAV=  1001.8  PSIA   WCT= 0.00 GOR= 0.00000  MSCF/STB WGR= 0.00000  STB/MSCF
 
       PR.RATE   PR.TOTAL  IN.RATE   IN.TOTAL  MAX SATURN CHANGE   MAX TIME TRNC ERR
 
- OIL       0.         0.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
- WAT       0.      1674.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
- GAS       0.         0.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
-      MAX DP =   -0.04(  8,  1,  8)  MAX DRS=  0.0000(  8,  1,  8)
-
- @--WARNING  AT TIME      729.0   DAYS    (30-DEC-2021):
- @           THE RESERVOIR PRESSURE IS TOO LOW FOR WELL YP1-007
- @           TO PRODUCE AT THE REQUIRED BOTTOM HOLE PRESSURE
-
- @--MESSAGE  AT TIME      729.0   DAYS    (30-DEC-2021):
- @           WELL YP1-007  CANNOT OPERATE UNDER THE CURRENT
- @           RESERVOIR CONDITIONS IN NON-LINEAR ITERATION   0.
- @           ITS IPR IS    Q(P)  =  A  -  BHP * B ,   WHERE:
- @           A(O,W,G) =   0.0000E+00  7.6685E+04  0.0000E+00
- @           B(O,W,G) =   0.0000E+00  7.6687E+01  0.0000E+00 .
- @           LAST CONVERGED SOLUTION:
- @               ORAT        WRAT        GRAT        BHP         THP
- @             0.0000E+00  1.7597E-04  0.0000E+00  1.0000E+03  0.0000E+00
- @           THE WELL IS   SHUT  FOR THE ITERATION.
-
- @--MESSAGE  AT TIME      729.0   DAYS    (30-DEC-2021):
- @           WELL YP1-007  IS REVIVED FOR ITERATION   1
-
- @--WARNING  AT TIME      729.0   DAYS    (30-DEC-2021):
- @           THE RESERVOIR PRESSURE IS TOO LOW FOR WELL YP1-007
- @           TO PRODUCE AT THE REQUIRED BOTTOM HOLE PRESSURE
-
- @--MESSAGE  AT TIME      729.0   DAYS    (30-DEC-2021):
- @           WELL YP1-007  CANNOT OPERATE UNDER THE CURRENT
- @           RESERVOIR CONDITIONS IN NON-LINEAR ITERATION   1.
- @           ITS IPR IS    Q(P)  =  A  -  BHP * B ,   WHERE:
- @           A(O,W,G) =   0.0000E+00  7.6687E+04  0.0000E+00
- @           B(O,W,G) =   0.0000E+00  7.6687E+01  0.0000E+00 .
- @           LAST CONVERGED SOLUTION:
- @               ORAT        WRAT        GRAT        BHP         THP
- @             0.0000E+00  0.0000E+00  0.0000E+00  7.0998E+02  0.0000E+00
- @           THE WELL IS   SHUT  FOR THE ITERATION.
-
- @--MESSAGE  AT TIME      729.0   DAYS    (30-DEC-2021):
- @           ****************************************************************
- @           * WELL YP1-007  IS  SHUT   AT TIME     729.00   DAYS   BECAUSE *
- @           * IT CANNOT OPERATE AT CURRENT RESERVOIR CONDITIONS.           *
- @           ****************************************************************
- STEP    8 TIME= 1094.00  DAYS (+365.0  DAYS MAXS  1 ITS) (30-DEC-2022)
-  PAV=  1030.0  PSIA   WCT= 0.00 GOR= 0.00000  MSCF/STB WGR= 0.00000  STB/MSCF
+ OIL       0.     13633.       0.         0. -0.014(  3,  3,  1)  0.002(  3,  3,  1)
+ WAT       0.     28727.       0.         0.  0.032( 10,  5,  7) -0.030( 10,  5,  8)
+ GAS       0.    194006.       0.         0. -0.035( 10,  5,  7)  0.030( 10,  5,  8)
+      MAX DP =    2.76( 10, 10,  9)  MAX DRS=  0.0011( 10, 10,  9)
+ STEP   21 TIME=  108.50  DAYS ( +38.5  DAYS DIFF  3 ITS) (18-APR-2020)
+  PAV=  1001.8  PSIA   WCT= 0.00 GOR= 0.00000  MSCF/STB WGR= 0.00000  STB/MSCF
 
       PR.RATE   PR.TOTAL  IN.RATE   IN.TOTAL  MAX SATURN CHANGE   MAX TIME TRNC ERR
 
- OIL       0.         0.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
- WAT       0.      1674.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
- GAS       0.         0.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
-      MAX DP =   -0.01(  8,  1,  2)  MAX DRS=  0.0000(  8,  1,  2)
- STEP    9 TIME= 1459.00  DAYS (+365.0  DAYS MAXS  1 ITS) (30-DEC-2023)
-  PAV=  1030.0  PSIA   WCT= 0.00 GOR= 0.00000  MSCF/STB WGR= 0.00000  STB/MSCF
+ OIL       0.     13633.       0.         0. -0.017(  3,  8,  1)  0.004(  3,  3,  1)
+ WAT       0.     28727.       0.         0.  0.046( 10,  7,  7) -0.015( 10,  6,  8)
+ GAS       0.    194006.       0.         0. -0.050( 10,  7,  7)  0.015( 10,  6,  8)
+      MAX DP =    1.99( 10,  7,  8)  MAX DRS=  0.0008( 10,  7,  8)
+ STEP   22 TIME=  168.68  DAYS ( +60.2  DAYS DIFF  3 ITS) (17-JUN-2020)
+  PAV=  1001.8  PSIA   WCT= 0.00 GOR= 0.00000  MSCF/STB WGR= 0.00000  STB/MSCF
 
       PR.RATE   PR.TOTAL  IN.RATE   IN.TOTAL  MAX SATURN CHANGE   MAX TIME TRNC ERR
 
- OIL       0.         0.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
- WAT       0.      1674.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
- GAS       0.         0.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
-      MAX DP =    0.00(  1, 10, 10)  MAX DRS=  0.0000(  1, 10, 10)
- STEP   10 TIME= 1824.00  DAYS (+365.0  DAYS MAXS  1 ITS) (29-DEC-2024)
-  PAV=  1030.0  PSIA   WCT= 0.00 GOR= 0.00000  MSCF/STB WGR= 0.00000  STB/MSCF
+ OIL       0.     13633.       0.         0.  0.029(  2,  1,  6)  0.008(  4,  5,  1)
+ WAT       0.     28727.       0.         0.  0.029( 10,  6,  6) -0.054( 10,  6,  7)
+ GAS       0.    194006.       0.         0. -0.057(  6,  5,  6)  0.060( 10,  6,  7)
+      MAX DP =    3.73( 10, 10,  8)  MAX DRS=  0.0015( 10, 10,  8)
+ STEP   23 TIME=  246.36  DAYS ( +77.7  DAYS TRNC  4 ITS) (3-SEP-2020)
+  PAV=  1001.8  PSIA   WCT= 0.00 GOR= 0.00000  MSCF/STB WGR= 0.00000  STB/MSCF
 
       PR.RATE   PR.TOTAL  IN.RATE   IN.TOTAL  MAX SATURN CHANGE   MAX TIME TRNC ERR
 
- OIL       0.         0.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
- WAT       0.      1674.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
- GAS       0.         0.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
-      MAX DP =    0.00(  1, 10, 10)  MAX DRS=  0.0000(  1, 10, 10)
- STEP   11 TIME= 2189.00  DAYS (+365.0  DAYS MAXS  1 ITS) (29-DEC-2025)
-  PAV=  1030.0  PSIA   WCT= 0.00 GOR= 0.00000  MSCF/STB WGR= 0.00000  STB/MSCF
+ OIL       0.     13633.       0.         0.  0.025(  1,  2,  5) -0.012(  1,  1,  6)
+ WAT       0.     28727.       0.         0.  0.030( 10,  9,  6) -0.021( 10,  8,  7)
+ GAS       0.    194006.       0.         0. -0.055( 10,  8,  6) -0.027(  1,  1,  5)
+      MAX DP =    2.96( 10,  8, 10)  MAX DRS=  0.0012( 10,  8, 10)
+ STEP   24 TIME=  363.91  DAYS (+117.5  DAYS DIFF  3 ITS) (29-DEC-2020)
+  PAV=  1001.7  PSIA   WCT= 0.00 GOR= 0.00000  MSCF/STB WGR= 0.00000  STB/MSCF
 
       PR.RATE   PR.TOTAL  IN.RATE   IN.TOTAL  MAX SATURN CHANGE   MAX TIME TRNC ERR
 
- OIL       0.         0.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
- WAT       0.      1674.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
- GAS       0.         0.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
-      MAX DP =    0.00(  1, 10, 10)  MAX DRS=  0.0000(  1, 10, 10)
- STEP   12 TIME= 2554.00  DAYS (+365.0  DAYS MAXS  1 ITS) (29-DEC-2026)
-  PAV=  1030.0  PSIA   WCT= 0.00 GOR= 0.00000  MSCF/STB WGR= 0.00000  STB/MSCF
+ OIL       0.     13633.       0.         0.  0.062(  1,  5,  5) -0.040(  9,  1,  6)
+ WAT       0.     28727.       0.         0.  0.018( 10,  9,  5) -0.038( 10,  9,  6)
+ GAS       0.    194006.       0.         0. -0.080(  1,  5,  5)  0.078( 10,  8,  6)
+      MAX DP =    2.89( 10,  9, 10)  MAX DRS=  0.0012( 10,  9, 10)
+ STEP   25 TIME=  496.95  DAYS (+133.0  DAYS TRNC  3 ITS) (11-MAY-2021)
+  PAV=  1001.7  PSIA   WCT= 0.00 GOR= 0.00000  MSCF/STB WGR= 0.00000  STB/MSCF
 
       PR.RATE   PR.TOTAL  IN.RATE   IN.TOTAL  MAX SATURN CHANGE   MAX TIME TRNC ERR
 
- OIL       0.         0.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
- WAT       0.      1674.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
- GAS       0.         0.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
-      MAX DP =    0.00(  1,  1, 10)  MAX DRS=  0.0000(  1,  1, 10)
- STEP   13 TIME= 2919.00  DAYS (+365.0  DAYS MAXS  1 ITS) (29-DEC-2027)
-  PAV=  1030.0  PSIA   WCT= 0.00 GOR= 0.00000  MSCF/STB WGR= 0.00000  STB/MSCF
+ OIL       0.     13633.       0.         0.  0.029(  1,  3,  4) -0.048(  1,  2,  5)
+ WAT       0.     28727.       0.         0. -0.007( 10,  5,  3) -0.020( 10,  9,  5)
+ GAS       0.    194006.       0.         0. -0.032(  1,  3,  4)  0.068(  1,  2,  5)
+      MAX DP =    2.60(  3,  5, 10)  MAX DRS=  0.0011(  3,  5, 10)
+ STEP   26 TIME=  658.30  DAYS (+161.4  DAYS TRNC  2 ITS) (20-OCT-2021)
+  PAV=  1001.7  PSIA   WCT= 0.00 GOR= 0.00000  MSCF/STB WGR= 0.00000  STB/MSCF
 
       PR.RATE   PR.TOTAL  IN.RATE   IN.TOTAL  MAX SATURN CHANGE   MAX TIME TRNC ERR
 
- OIL       0.         0.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
- WAT       0.      1674.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
- GAS       0.         0.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
-      MAX DP =    0.00(  1,  2, 10)  MAX DRS=  0.0000(  1,  2, 10)
- STEP   14 TIME= 3284.00  DAYS (+365.0  DAYS MAXS  1 ITS) (28-DEC-2028)
-  PAV=  1030.0  PSIA   WCT= 0.00 GOR= 0.00000  MSCF/STB WGR= 0.00000  STB/MSCF
+ OIL       0.     13633.       0.         0.  0.040(  6,  5,  4) -0.022( 10,  9,  5)
+ WAT       0.     28727.       0.         0.  0.005( 10,  5,  6) -0.005( 10, 10,  5)
+ GAS       0.    194006.       0.         0. -0.045(  1,  5,  4)  0.027( 10,  8,  5)
+      MAX DP =    0.82( 10,  5, 10)  MAX DRS=  0.0003( 10,  5, 10)
+ STEP   27 TIME=  945.29  DAYS (+287.0  DAYS DIFF  2 ITS) (3-AUG-2022)
+  PAV=  1001.7  PSIA   WCT= 0.00 GOR= 0.00000  MSCF/STB WGR= 0.00000  STB/MSCF
 
       PR.RATE   PR.TOTAL  IN.RATE   IN.TOTAL  MAX SATURN CHANGE   MAX TIME TRNC ERR
 
- OIL       0.         0.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
- WAT       0.      1674.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
- GAS       0.         0.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
-      MAX DP =    0.00(  1,  2,  4)  MAX DRS=  0.0000(  1,  2,  4)
- STEP   15 TIME= 3649.00  DAYS (+365.0  DAYS MAXS  1 ITS) (28-DEC-2029)
-  PAV=  1030.0  PSIA   WCT= 0.00 GOR= 0.00000  MSCF/STB WGR= 0.00000  STB/MSCF
+ OIL       0.     13633.       0.         0.  0.052( 10,  5,  4) -0.020(  1,  3,  4)
+ WAT       0.     28727.       0.         0.  0.007( 10,  5,  6) -0.008( 10, 10,  4)
+ GAS       0.    194006.       0.         0. -0.052( 10,  5,  4)  0.028(  1,  3,  4)
+      MAX DP =   -0.25(  1,  1,  2)  MAX DRS= -0.0001(  1,  1,  2)
+
+ @--WARNING  AT TIME      945.3   DAYS    ( 3-AUG-2022):
+ @           LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER
+ @           IF YOU INCREASE LITMAX (= 25 - TUNING KEYWORD)
+
+ @--WARNING  AT TIME      945.3   DAYS    ( 3-AUG-2022):
+ @           LINEAR CONVERGENCE FAILURE ON LAST NUPCOL ITERATION.
+ @           GROUP TARGETS AND LIMITS MAY NOT BE ACCURATELY HONORED.
+ @           YOU MAY NEED TO INCREASE THE CURRENT VALUE OF    3
+ @           USING THE NUPCOL KEYWORD.
+ STEP   28 TIME= 1310.29  DAYS (+365.0  DAYS MAXS  4 ITS) (3-AUG-2023)
+  PAV=  1001.7  PSIA   WCT= 0.00 GOR= 0.00000  MSCF/STB WGR= 0.00000  STB/MSCF
 
       PR.RATE   PR.TOTAL  IN.RATE   IN.TOTAL  MAX SATURN CHANGE   MAX TIME TRNC ERR
 
- OIL       0.         0.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
- WAT       0.      1674.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
- GAS       0.         0.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
-      MAX DP =    0.00( 10, 10, 10)  MAX DRS=  0.0000( 10, 10, 10)
- STEP   16 TIME= 4014.00  DAYS (+365.0  DAYS MAXS  1 ITS) (28-DEC-2030)
-  PAV=  1030.0  PSIA   WCT= 0.00 GOR= 0.00000  MSCF/STB WGR= 0.00000  STB/MSCF
+ OIL       0.     13633.       0.         0.  0.032( 10, 10,  4) -0.034(  2,  5,  4)
+ WAT       0.     28727.       0.         0.  0.007( 10,  5,  6) -0.003(  1,  1,  4)
+ GAS       0.    194006.       0.         0. -0.030( 10, 10,  4)  0.037(  2,  5,  4)
+      MAX DP =   -1.45(  1,  1,  2)  MAX DRS= -0.0006(  1,  1,  2)
+ STEP   29 TIME= 1675.29  DAYS (+365.0  DAYS MAXS  3 ITS) (2-AUG-2024)
+  PAV=  1001.7  PSIA   WCT= 0.00 GOR= 0.00000  MSCF/STB WGR= 0.00000  STB/MSCF
 
       PR.RATE   PR.TOTAL  IN.RATE   IN.TOTAL  MAX SATURN CHANGE   MAX TIME TRNC ERR
 
- OIL       0.         0.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
- WAT       0.      1674.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
- GAS       0.         0.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
-      MAX DP =    0.00( 10, 10, 10)  MAX DRS=  0.0000( 10, 10, 10)
- STEP   17 TIME= 4379.00  DAYS (+365.0  DAYS MAXS  1 ITS) (28-DEC-2031)
-  PAV=  1030.0  PSIA   WCT= 0.00 GOR= 0.00000  MSCF/STB WGR= 0.00000  STB/MSCF
+ OIL       0.     13633.       0.         0.  0.022(  2, 10,  3) -0.029( 10, 10,  4)
+ WAT       0.     28727.       0.         0.  0.005( 10,  5,  6) -0.002( 10, 10,  6)
+ GAS       0.    194006.       0.         0. -0.022(  2, 10,  3)  0.029( 10, 10,  4)
+      MAX DP =   -1.18(  3,  5,  2)  MAX DRS= -0.0005(  3,  5,  2)
+ STEP   30 TIME= 2040.29  DAYS (+365.0  DAYS MAXS  2 ITS) (2-AUG-2025)
+  PAV=  1001.7  PSIA   WCT= 0.00 GOR= 0.00000  MSCF/STB WGR= 0.00000  STB/MSCF
 
       PR.RATE   PR.TOTAL  IN.RATE   IN.TOTAL  MAX SATURN CHANGE   MAX TIME TRNC ERR
 
- OIL       0.         0.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
- WAT       0.      1674.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
- GAS       0.         0.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
-      MAX DP =    0.00(  1,  3,  4)  MAX DRS=  0.0000(  1,  3,  4)
- STEP   18 TIME= 4744.00  DAYS (+365.0  DAYS MAXS  1 ITS) (27-DEC-2032)
-  PAV=  1030.0  PSIA   WCT= 0.00 GOR= 0.00000  MSCF/STB WGR= 0.00000  STB/MSCF
+ OIL       0.     13633.       0.         0.  0.017( 10,  5,  3) -0.005(  2, 10,  3)
+ WAT       0.     28727.       0.         0.  0.004( 10,  4,  6) -0.001( 10,  5,  6)
+ GAS       0.    194006.       0.         0. -0.017( 10,  5,  3)  0.005(  2, 10,  3)
+      MAX DP =   -0.10(  1,  1,  2)  MAX DRS=  0.0000(  1,  1,  2)
+ STEP   31 TIME= 2405.29  DAYS (+365.0  DAYS MAXS  2 ITS) (2-AUG-2026)
+  PAV=  1001.7  PSIA   WCT= 0.00 GOR= 0.00000  MSCF/STB WGR= 0.00000  STB/MSCF
 
       PR.RATE   PR.TOTAL  IN.RATE   IN.TOTAL  MAX SATURN CHANGE   MAX TIME TRNC ERR
 
- OIL       0.         0.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
- WAT       0.      1674.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
- GAS       0.         0.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
-      MAX DP =    0.00(  1,  2, 10)  MAX DRS=  0.0000(  1,  2, 10)
- STEP   19 TIME= 5109.00  DAYS (+365.0  DAYS MAXS  1 ITS) (27-DEC-2033)
-  PAV=  1030.0  PSIA   WCT= 0.00 GOR= 0.00000  MSCF/STB WGR= 0.00000  STB/MSCF
+ OIL       0.     13633.       0.         0.  0.012( 10,  5,  3) -0.005(  6,  5,  3)
+ WAT       0.     28727.       0.         0.  0.003( 10,  4,  6) -0.001( 10,  4,  6)
+ GAS       0.    194006.       0.         0. -0.012( 10,  5,  3)  0.005(  6,  5,  3)
+      MAX DP =   -0.06(  1,  1,  2)  MAX DRS=  0.0000(  1,  1,  2)
+ STEP   32 TIME= 2770.29  DAYS (+365.0  DAYS MAXS  2 ITS) (2-AUG-2027)
+  PAV=  1001.7  PSIA   WCT= 0.00 GOR= 0.00000  MSCF/STB WGR= 0.00000  STB/MSCF
 
       PR.RATE   PR.TOTAL  IN.RATE   IN.TOTAL  MAX SATURN CHANGE   MAX TIME TRNC ERR
 
- OIL       0.         0.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
- WAT       0.      1674.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
- GAS       0.         0.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
-      MAX DP =    0.00(  1,  3, 10)  MAX DRS=  0.0000(  1,  3, 10)
- STEP   20 TIME= 5474.00  DAYS (+365.0  DAYS MAXS  1 ITS) (27-DEC-2034)
-  PAV=  1030.0  PSIA   WCT= 0.00 GOR= 0.00000  MSCF/STB WGR= 0.00000  STB/MSCF
+ OIL       0.     13633.       0.         0.  0.009( 10,  6,  3) -0.004( 10,  5,  3)
+ WAT       0.     28727.       0.         0.  0.003( 10,  4,  6) -0.001( 10,  4,  6)
+ GAS       0.    194006.       0.         0. -0.008( 10,  5,  3)  0.004( 10,  5,  3)
+      MAX DP =   -0.04(  1,  1,  2)  MAX DRS=  0.0000(  1,  1,  2)
+ STEP   33 TIME= 3135.29  DAYS (+365.0  DAYS MAXS  2 ITS) (1-AUG-2028)
+  PAV=  1001.7  PSIA   WCT= 0.00 GOR= 0.00000  MSCF/STB WGR= 0.00000  STB/MSCF
 
       PR.RATE   PR.TOTAL  IN.RATE   IN.TOTAL  MAX SATURN CHANGE   MAX TIME TRNC ERR
 
- OIL       0.         0.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
- WAT       0.      1674.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
- GAS       0.         0.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
-      MAX DP =    0.00( 10,  3, 10)  MAX DRS=  0.0000( 10,  3, 10)
- STEP   21 TIME= 5839.00  DAYS (+365.0  DAYS MAXS  1 ITS) (27-DEC-2035)
-  PAV=  1030.0  PSIA   WCT= 0.00 GOR= 0.00000  MSCF/STB WGR= 0.00000  STB/MSCF
+ OIL       0.     13633.       0.         0.  0.006( 10,  6,  3) -0.003( 10,  5,  3)
+ WAT       0.     28727.       0.         0.  0.002( 10,  4,  6) -0.001( 10,  5,  6)
+ GAS       0.    194006.       0.         0. -0.006( 10,  5,  3)  0.003( 10,  5,  3)
+      MAX DP =    0.03( 10,  5,  3)  MAX DRS=  0.0000( 10,  5,  3)
+ STEP   34 TIME= 3500.29  DAYS (+365.0  DAYS MAXS  2 ITS) (1-AUG-2029)
+  PAV=  1001.7  PSIA   WCT= 0.00 GOR= 0.00000  MSCF/STB WGR= 0.00000  STB/MSCF
 
       PR.RATE   PR.TOTAL  IN.RATE   IN.TOTAL  MAX SATURN CHANGE   MAX TIME TRNC ERR
 
- OIL       0.         0.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
- WAT       0.      1674.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
- GAS       0.         0.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
-      MAX DP =    0.00(  1, 10,  4)  MAX DRS=  0.0000(  1, 10,  4)
- STEP   22 TIME= 6204.00  DAYS (+365.0  DAYS MAXS  1 ITS) (26-DEC-2036)
-  PAV=  1030.0  PSIA   WCT= 0.00 GOR= 0.00000  MSCF/STB WGR= 0.00000  STB/MSCF
+ OIL       0.     13633.       0.         0.  0.004( 10,  6,  3) -0.002( 10,  6,  3)
+ WAT       0.     28727.       0.         0.  0.001( 10,  5,  6) -0.001( 10,  7,  6)
+ GAS       0.    194006.       0.         0. -0.004( 10,  5,  3)  0.002( 10,  6,  3)
+      MAX DP =    0.02( 10,  5,  3)  MAX DRS=  0.0000( 10,  5,  3)
+ STEP   35 TIME= 3865.29  DAYS (+365.0  DAYS MAXS  2 ITS) (1-AUG-2030)
+  PAV=  1001.7  PSIA   WCT= 0.00 GOR= 0.00000  MSCF/STB WGR= 0.00000  STB/MSCF
 
       PR.RATE   PR.TOTAL  IN.RATE   IN.TOTAL  MAX SATURN CHANGE   MAX TIME TRNC ERR
 
- OIL       0.         0.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
- WAT       0.      1674.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
- GAS       0.         0.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
-      MAX DP =    0.00(  1, 10,  3)  MAX DRS=  0.0000(  1, 10,  3)
- STEP   23 TIME= 6569.00  DAYS (+365.0  DAYS MAXS  1 ITS) (26-DEC-2037)
-  PAV=  1030.0  PSIA   WCT= 0.00 GOR= 0.00000  MSCF/STB WGR= 0.00000  STB/MSCF
+ OIL       0.     13633.       0.         0.  0.003( 10, 10,  3) -0.001( 10,  5,  3)
+ WAT       0.     28727.       0.         0.  0.001( 10,  5,  7)  0.000( 10,  5,  6)
+ GAS       0.    194006.       0.         0. -0.003( 10, 10,  3)  0.001( 10,  5,  3)
+      MAX DP =    0.02( 10, 10,  3)  MAX DRS=  0.0000( 10, 10,  3)
+ STEP   36 TIME= 4230.29  DAYS (+365.0  DAYS MAXS  1 ITS) (1-AUG-2031)
+  PAV=  1001.7  PSIA   WCT= 0.00 GOR= 0.00000  MSCF/STB WGR= 0.00000  STB/MSCF
 
       PR.RATE   PR.TOTAL  IN.RATE   IN.TOTAL  MAX SATURN CHANGE   MAX TIME TRNC ERR
 
- OIL       0.         0.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
- WAT       0.      1674.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
- GAS       0.         0.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
-      MAX DP =    0.00(  1, 10,  4)  MAX DRS=  0.0000(  1, 10,  4)
- STEP   24 TIME= 6934.00  DAYS (+365.0  DAYS MAXS  1 ITS) (26-DEC-2038)
-  PAV=  1030.0  PSIA   WCT= 0.00 GOR= 0.00000  MSCF/STB WGR= 0.00000  STB/MSCF
+ OIL       0.     13633.       0.         0.  0.002( 10,  9,  3) -0.001(  5,  7,  3)
+ WAT       0.     28727.       0.         0.  0.001( 10,  4,  7)  0.000( 10,  5,  6)
+ GAS       0.    194006.       0.         0. -0.002(  1,  5,  3)  0.001(  5,  7,  3)
+      MAX DP =    0.01(  1,  5,  3)  MAX DRS=  0.0000(  1,  5,  3)
+ STEP   37 TIME= 4595.29  DAYS (+365.0  DAYS MAXS  1 ITS) (31-JLY-2032)
+  PAV=  1001.7  PSIA   WCT= 0.00 GOR= 0.00000  MSCF/STB WGR= 0.00000  STB/MSCF
 
       PR.RATE   PR.TOTAL  IN.RATE   IN.TOTAL  MAX SATURN CHANGE   MAX TIME TRNC ERR
 
- OIL       0.         0.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
- WAT       0.      1674.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
- GAS       0.         0.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
-      MAX DP =    0.00(  1, 10,  4)  MAX DRS=  0.0000(  1, 10,  4)
- STEP   25 TIME= 7299.00  DAYS (+365.0  DAYS MAXS  1 ITS) (26-DEC-2039)
-  PAV=  1030.0  PSIA   WCT= 0.00 GOR= 0.00000  MSCF/STB WGR= 0.00000  STB/MSCF
+ OIL       0.     13633.       0.         0.  0.001( 10,  5,  3) -0.001( 10, 10,  3)
+ WAT       0.     28727.       0.         0.  0.001( 10,  5,  7)  0.000( 10,  1,  6)
+ GAS       0.    194006.       0.         0. -0.001( 10,  5,  3)  0.001( 10, 10,  3)
+      MAX DP =    0.01( 10,  5,  3)  MAX DRS=  0.0000( 10,  5,  3)
+ STEP   38 TIME= 4960.29  DAYS (+365.0  DAYS MAXS  1 ITS) (31-JLY-2033)
+  PAV=  1001.7  PSIA   WCT= 0.00 GOR= 0.00000  MSCF/STB WGR= 0.00000  STB/MSCF
 
       PR.RATE   PR.TOTAL  IN.RATE   IN.TOTAL  MAX SATURN CHANGE   MAX TIME TRNC ERR
 
- OIL       0.         0.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
- WAT       0.      1674.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
- GAS       0.         0.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
-      MAX DP =    0.00(  1,  2, 10)  MAX DRS=  0.0000(  1,  2, 10)
- STEP   26 TIME= 7664.00  DAYS (+365.0  DAYS MAXS  1 ITS) (25-DEC-2040)
-  PAV=  1030.0  PSIA   WCT= 0.00 GOR= 0.00000  MSCF/STB WGR= 0.00000  STB/MSCF
+ OIL       0.     13633.       0.         0. -0.001( 10,  5,  7)  0.000( 10,  5,  3)
+ WAT       0.     28727.       0.         0.  0.001( 10,  5,  7)  0.000( 10,  5,  6)
+ GAS       0.    194006.       0.         0. -0.001( 10,  6,  3)  0.000( 10,  5,  3)
+      MAX DP =    0.01( 10,  6,  3)  MAX DRS=  0.0000( 10,  6,  3)
+ STEP   39 TIME= 5325.29  DAYS (+365.0  DAYS MAXS  1 ITS) (31-JLY-2034)
+  PAV=  1001.7  PSIA   WCT= 0.00 GOR= 0.00000  MSCF/STB WGR= 0.00000  STB/MSCF
 
       PR.RATE   PR.TOTAL  IN.RATE   IN.TOTAL  MAX SATURN CHANGE   MAX TIME TRNC ERR
 
- OIL       0.         0.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
- WAT       0.      1674.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
- GAS       0.         0.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
-      MAX DP =    0.00(  1,  3, 10)  MAX DRS=  0.0000(  1,  3, 10)
- STEP   27 TIME= 8029.00  DAYS (+365.0  DAYS MAXS  1 ITS) (25-DEC-2041)
-  PAV=  1030.0  PSIA   WCT= 0.00 GOR= 0.00000  MSCF/STB WGR= 0.00000  STB/MSCF
+ OIL       0.     13633.       0.         0. -0.001( 10,  4,  7)  0.000(  7,  5,  3)
+ WAT       0.     28727.       0.         0.  0.001( 10,  4,  7)  0.000(  8,  5,  6)
+ GAS       0.    194006.       0.         0. -0.001( 10, 10,  3)  0.000(  7,  5,  3)
+      MAX DP =   -0.01( 10,  4,  7)  MAX DRS=  0.0000( 10,  4,  7)
+ STEP   40 TIME= 5690.29  DAYS (+365.0  DAYS MAXS  1 ITS) (31-JLY-2035)
+  PAV=  1001.7  PSIA   WCT= 0.00 GOR= 0.00000  MSCF/STB WGR= 0.00000  STB/MSCF
 
       PR.RATE   PR.TOTAL  IN.RATE   IN.TOTAL  MAX SATURN CHANGE   MAX TIME TRNC ERR
 
- OIL       0.         0.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
- WAT       0.      1674.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
- GAS       0.         0.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
-      MAX DP =    0.00(  1,  3, 10)  MAX DRS=  0.0000(  1,  3, 10)
- STEP   28 TIME= 8394.00  DAYS (+365.0  DAYS MAXS  1 ITS) (25-DEC-2042)
-  PAV=  1030.0  PSIA   WCT= 0.00 GOR= 0.00000  MSCF/STB WGR= 0.00000  STB/MSCF
+ OIL       0.     13633.       0.         0. -0.001( 10,  4,  7)  0.000(  1, 10,  3)
+ WAT       0.     28727.       0.         0.  0.001( 10,  4,  7)  0.000( 10,  1,  6)
+ GAS       0.    194006.       0.         0.  0.000( 10,  5,  3)  0.000(  1, 10,  3)
+      MAX DP =   -0.01( 10,  4,  7)  MAX DRS=  0.0000( 10,  4,  7)
+ STEP   41 TIME= 6055.29  DAYS (+365.0  DAYS MAXS  1 ITS) (30-JLY-2036)
+  PAV=  1001.7  PSIA   WCT= 0.00 GOR= 0.00000  MSCF/STB WGR= 0.00000  STB/MSCF
 
       PR.RATE   PR.TOTAL  IN.RATE   IN.TOTAL  MAX SATURN CHANGE   MAX TIME TRNC ERR
 
- OIL       0.         0.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
- WAT       0.      1674.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
- GAS       0.         0.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
-      MAX DP =    0.00(  1,  2, 10)  MAX DRS=  0.0000(  1,  2, 10)
- STEP   29 TIME= 8759.00  DAYS (+365.0  DAYS MAXS  1 ITS) (25-DEC-2043)
-  PAV=  1030.0  PSIA   WCT= 0.00 GOR= 0.00000  MSCF/STB WGR= 0.00000  STB/MSCF
+ OIL       0.     13633.       0.         0. -0.001( 10,  4,  7)  0.000( 10,  5,  3)
+ WAT       0.     28727.       0.         0.  0.001( 10,  4,  7)  0.000(  4,  5,  6)
+ GAS       0.    194006.       0.         0.  0.000(  1,  5,  3)  0.000( 10,  3,  3)
+      MAX DP =   -0.01( 10,  4,  7)  MAX DRS=  0.0000( 10,  4,  7)
+ STEP   42 TIME= 6420.29  DAYS (+365.0  DAYS MAXS  1 ITS) (30-JLY-2037)
+  PAV=  1001.7  PSIA   WCT= 0.00 GOR= 0.00000  MSCF/STB WGR= 0.00000  STB/MSCF
 
       PR.RATE   PR.TOTAL  IN.RATE   IN.TOTAL  MAX SATURN CHANGE   MAX TIME TRNC ERR
 
- OIL       0.         0.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
- WAT       0.      1674.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
- GAS       0.         0.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
-      MAX DP =    0.00(  1,  2, 10)  MAX DRS=  0.0000(  1,  2, 10)
- STEP   30 TIME= 9124.00  DAYS (+365.0  DAYS MAXS  1 ITS) (24-DEC-2044)
-  PAV=  1030.0  PSIA   WCT= 0.00 GOR= 0.00000  MSCF/STB WGR= 0.00000  STB/MSCF
+ OIL       0.     13633.       0.         0. -0.001( 10,  5,  7)  0.000(  1,  1,  3)
+ WAT       0.     28727.       0.         0.  0.001( 10,  5,  7)  0.000( 10,  1,  6)
+ GAS       0.    194006.       0.         0.  0.000(  3,  5,  3)  0.000(  1,  1,  3)
+      MAX DP =   -0.01( 10,  5,  7)  MAX DRS=  0.0000( 10,  5,  7)
+ STEP   43 TIME= 6785.29  DAYS (+365.0  DAYS MAXS  1 ITS) (30-JLY-2038)
+  PAV=  1001.7  PSIA   WCT= 0.00 GOR= 0.00000  MSCF/STB WGR= 0.00000  STB/MSCF
 
       PR.RATE   PR.TOTAL  IN.RATE   IN.TOTAL  MAX SATURN CHANGE   MAX TIME TRNC ERR
 
- OIL       0.         0.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
- WAT       0.      1674.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
- GAS       0.         0.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
-      MAX DP =    0.00( 10, 10, 10)  MAX DRS=  0.0000( 10, 10, 10)
- STEP   31 TIME= 9489.00  DAYS (+365.0  DAYS MAXS  1 ITS) (24-DEC-2045)
-  PAV=  1030.0  PSIA   WCT= 0.00 GOR= 0.00000  MSCF/STB WGR= 0.00000  STB/MSCF
+ OIL       0.     13633.       0.         0. -0.001( 10,  4,  7)  0.000(  1,  5,  3)
+ WAT       0.     28727.       0.         0.  0.001( 10,  4,  7)  0.000(  5,  5,  6)
+ GAS       0.    194006.       0.         0.  0.000( 10,  7,  3)  0.000(  3,  5,  3)
+      MAX DP =   -0.01( 10,  4,  7)  MAX DRS=  0.0000( 10,  4,  7)
+ STEP   44 TIME= 7150.29  DAYS (+365.0  DAYS MAXS  1 ITS) (30-JLY-2039)
+  PAV=  1001.7  PSIA   WCT= 0.00 GOR= 0.00000  MSCF/STB WGR= 0.00000  STB/MSCF
 
       PR.RATE   PR.TOTAL  IN.RATE   IN.TOTAL  MAX SATURN CHANGE   MAX TIME TRNC ERR
 
- OIL       0.         0.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
- WAT       0.      1674.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
- GAS       0.         0.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
-      MAX DP =    0.00( 10, 10, 10)  MAX DRS=  0.0000( 10, 10, 10)
- STEP   32 TIME= 9744.50  DAYS (+255.5  DAYS HALF  1 ITS) (5-SEP-2046)
-  PAV=  1030.0  PSIA   WCT= 0.00 GOR= 0.00000  MSCF/STB WGR= 0.00000  STB/MSCF
+ OIL       0.     13633.       0.         0. -0.001( 10,  4,  7)  0.000(  6,  5,  4)
+ WAT       0.     28727.       0.         0.  0.001( 10,  4,  7)  0.000( 10,  5,  6)
+ GAS       0.    194006.       0.         0.  0.000(  7,  6,  3)  0.000(  1,  7,  3)
+      MAX DP =   -0.01( 10,  4,  7)  MAX DRS=  0.0000( 10,  4,  7)
+ STEP   45 TIME= 7515.29  DAYS (+365.0  DAYS MAXS  1 ITS) (29-JLY-2040)
+  PAV=  1001.7  PSIA   WCT= 0.00 GOR= 0.00000  MSCF/STB WGR= 0.00000  STB/MSCF
 
       PR.RATE   PR.TOTAL  IN.RATE   IN.TOTAL  MAX SATURN CHANGE   MAX TIME TRNC ERR
 
- OIL       0.         0.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
- WAT       0.      1674.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
- GAS       0.         0.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
-      MAX DP =    0.00(  1,  2, 10)  MAX DRS=  0.0000(  1,  2, 10)
- STEP   33 TIME=10000.00  DAYS (+255.5  DAYS REPT  1 ITS) (19-MAY-2047)
-  PAV=  1030.0  PSIA   WCT= 0.00 GOR= 0.00000  MSCF/STB WGR= 0.00000  STB/MSCF
+ OIL       0.     13633.       0.         0. -0.001( 10,  4,  7)  0.000(  7,  1,  6)
+ WAT       0.     28727.       0.         0.  0.001( 10,  4,  7)  0.000(  7,  1,  6)
+ GAS       0.    194006.       0.         0.  0.000(  1,  4,  3)  0.000(  7,  4,  3)
+      MAX DP =   -0.01( 10,  4,  7)  MAX DRS=  0.0000( 10,  4,  7)
+ STEP   46 TIME= 7880.29  DAYS (+365.0  DAYS MAXS  1 ITS) (29-JLY-2041)
+  PAV=  1001.7  PSIA   WCT= 0.00 GOR= 0.00000  MSCF/STB WGR= 0.00000  STB/MSCF
 
       PR.RATE   PR.TOTAL  IN.RATE   IN.TOTAL  MAX SATURN CHANGE   MAX TIME TRNC ERR
 
- OIL       0.         0.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
- WAT       0.      1674.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
- GAS       0.         0.       0.         0.  0.000(  1,  1,  1)  0.000(  1,  1,  1)
-      MAX DP =    0.00(  1,  2, 10)  MAX DRS=  0.0000(  1,  2, 10)
+ OIL       0.     13633.       0.         0. -0.001( 10,  4,  7)  0.000( 10,  5,  6)
+ WAT       0.     28727.       0.         0.  0.001( 10,  4,  7)  0.000( 10,  5,  6)
+ GAS       0.    194006.       0.         0.  0.000(  6,  8,  3)  0.000(  2,  5,  4)
+      MAX DP =   -0.01( 10,  4,  7)  MAX DRS=  0.0000( 10,  4,  7)
+ STEP   47 TIME= 8245.29  DAYS (+365.0  DAYS MAXS  1 ITS) (29-JLY-2042)
+  PAV=  1001.7  PSIA   WCT= 0.00 GOR= 0.00000  MSCF/STB WGR= 0.00000  STB/MSCF
+
+      PR.RATE   PR.TOTAL  IN.RATE   IN.TOTAL  MAX SATURN CHANGE   MAX TIME TRNC ERR
+
+ OIL       0.     13633.       0.         0. -0.001( 10,  5,  7)  0.000(  2,  5,  4)
+ WAT       0.     28727.       0.         0.  0.001( 10,  5,  7)  0.000(  1,  1,  6)
+ GAS       0.    194006.       0.         0.  0.000(  3,  5,  3)  0.000( 10,  5,  2)
+      MAX DP =   -0.01( 10,  5,  7)  MAX DRS=  0.0000( 10,  5,  7)
+ STEP   48 TIME= 8610.29  DAYS (+365.0  DAYS MAXS  1 ITS) (29-JLY-2043)
+  PAV=  1001.7  PSIA   WCT= 0.00 GOR= 0.00000  MSCF/STB WGR= 0.00000  STB/MSCF
+
+      PR.RATE   PR.TOTAL  IN.RATE   IN.TOTAL  MAX SATURN CHANGE   MAX TIME TRNC ERR
+
+ OIL       0.     13633.       0.         0. -0.001( 10,  4,  7)  0.000(  3,  5,  4)
+ WAT       0.     28727.       0.         0.  0.001( 10,  4,  7)  0.000(  5,  5,  7)
+ GAS       0.    194006.       0.         0.  0.000(  6,  5,  3)  0.000(  1,  5,  4)
+      MAX DP =   -0.01( 10,  4,  7)  MAX DRS=  0.0000( 10,  4,  7)
+ STEP   49 TIME= 8975.29  DAYS (+365.0  DAYS MAXS  1 ITS) (28-JLY-2044)
+  PAV=  1001.7  PSIA   WCT= 0.00 GOR= 0.00000  MSCF/STB WGR= 0.00000  STB/MSCF
+
+      PR.RATE   PR.TOTAL  IN.RATE   IN.TOTAL  MAX SATURN CHANGE   MAX TIME TRNC ERR
+
+ OIL       0.     13633.       0.         0. -0.001( 10,  5,  7)  0.000(  1,  5,  4)
+ WAT       0.     28727.       0.         0.  0.001( 10,  5,  7)  0.000( 10,  4,  7)
+ GAS       0.    194006.       0.         0.  0.000( 10,  6,  3)  0.000(  6,  5,  4)
+      MAX DP =   -0.01( 10,  5,  7)  MAX DRS=  0.0000( 10,  5,  7)
+ STEP   50 TIME= 9340.29  DAYS (+365.0  DAYS MAXS  1 ITS) (28-JLY-2045)
+  PAV=  1001.7  PSIA   WCT= 0.00 GOR= 0.00000  MSCF/STB WGR= 0.00000  STB/MSCF
+
+      PR.RATE   PR.TOTAL  IN.RATE   IN.TOTAL  MAX SATURN CHANGE   MAX TIME TRNC ERR
+
+ OIL       0.     13633.       0.         0. -0.001( 10,  5,  7)  0.000(  6,  5,  4)
+ WAT       0.     28727.       0.         0.  0.001( 10,  5,  7)  0.000(  5,  5,  7)
+ GAS       0.    194006.       0.         0.  0.000(  6,  5,  4)  0.000(  6,  5,  4)
+      MAX DP =   -0.01( 10,  5,  7)  MAX DRS=  0.0000( 10,  5,  7)
+ STEP   51 TIME= 9670.14  DAYS (+329.9  DAYS HALF  1 ITS) (23-JUN-2046)
+  PAV=  1001.7  PSIA   WCT= 0.00 GOR= 0.00000  MSCF/STB WGR= 0.00000  STB/MSCF
+
+      PR.RATE   PR.TOTAL  IN.RATE   IN.TOTAL  MAX SATURN CHANGE   MAX TIME TRNC ERR
+
+ OIL       0.     13633.       0.         0. -0.001( 10,  5,  7)  0.000( 10,  4,  7)
+ WAT       0.     28727.       0.         0.  0.001( 10,  5,  7)  0.000( 10,  4,  7)
+ GAS       0.    194006.       0.         0.  0.000(  2,  5,  4)  0.000(  6,  5,  4)
+      MAX DP =    0.00( 10,  5,  7)  MAX DRS=  0.0000( 10,  5,  7)
+ STEP   52 TIME=10000.00  DAYS (+329.9  DAYS REPT  1 ITS) (19-MAY-2047)
+  PAV=  1001.7  PSIA   WCT= 0.00 GOR= 0.00000  MSCF/STB WGR= 0.00000  STB/MSCF
+
+      PR.RATE   PR.TOTAL  IN.RATE   IN.TOTAL  MAX SATURN CHANGE   MAX TIME TRNC ERR
+
+ OIL       0.     13633.       0.         0. -0.001( 10,  4,  7)  0.000(  4,  5,  7)
+ WAT       0.     28727.       0.         0.  0.001( 10,  4,  7)  0.000(  4,  5,  7)
+ GAS       0.    194006.       0.         0.  0.000(  5,  5,  4)  0.000(  2,  5,  4)
+      MAX DP =    0.00( 10,  4,  7)  MAX DRS=  0.0000( 10,  4,  7)
 
  @--MESSAGE  AT TIME    10000.0   DAYS    (19-MAY-2047):
  @           FAIL-SAFE RESTART FILE WRITTEN   REPORT     1
  @           RESTART INCLUDES FLUIDS IN PLACE
- =======================================================
- TIMING REPORTS AT CPU=     3 SECS - ELAPSED=     3 SECS
- =======================================================
- ZZSS    1  1  1
-                RR      1  0  0
- SR      1  0  0
- TS      1 98 98
-                NX     33 28 28
-                               WC     70 26 26
-                               LMRS   70  0  0
-                               CONV   70  0  0
-                               LMJC   37  0  0
-                               LXX    37  1  1
-                                              WGIN   37  0  0
-                                              GINV   37  0  0
-                                                             GINV   37  0  0
-                                              WRES   37  0  0
-                                              ITER   37  1  1
-                                                             NORM  118  0  0
-                                                             SRCH   81  0  0
-                                                             WADX   81  0  0
-                                                             ORTH   81  0  0
-                                                             UPDA   81  0  0
-                                              WSOL   37  0  0
-                               XUIT   37  0  0
-                               LC     37  1  1
+ ============================================================
+ TIMING REPORT FOR CPU     1=     1 SECS - ELAPSED=     1 SECS
+ TIMING REPORT FOR CPU     2=     1 SECS - ELAPSED=     1 SECS
+ TIMING REPORT FOR CPU     3=     1 SECS - ELAPSED=     1 SECS
+ TIMING REPORT FOR CPU     4=     1 SECS - ELAPSED=     1 SECS
+ ============================================================
+ ZZSS    1  4  4
+                RR      1  1  1
+ SR      1  2  2
+ TS      1 94 94
+                TSJ     1  0  0
+                NX     54 82 82
+                               WC    202 11 11
+                                              SWC2  202  2  2
+                               LMRS  202  1  1
+                                              LMRI  202  0  0
+                                              LMRO  202  1  1
+                               CONV  202  3  3
+                               LMJC  148  1  1
+                                              LMJI  148  0  0
+                                              LMJO  148  0  0
+                                              SWPJ  148  0  0
+                               LXX   148 61 61
+                                              WGIN  148  0  0
+                                              GINV  148  6  6
+                                                             GINV  148  6  6
+                                                                            SEB1  296  0  0
+                                                                            SEB7  148  0  0
+                                                                            GAM   148  4  4
+                                                                                           SEB8  148  0  0
+                                                                                           SEB6  148  0  0
+                                                                                           REB6  148  4  4
+                                              WRES  148  0  0
+                                              ITER  148 51 51
+                                                             NORM 2519  6  6
+                                                                            MAX  2519  5  5
+                                                             SRCH 2371 23 23
+                                                                            FORW 2371  3  3
+                                                                            SES2 2371  1  1
+                                                                            TREE 2371  2  2
+                                                                                           RES2 2371  0  0
+                                                                                           RSTR 2371  0  0
+                                                                                           RES8 2371  0  0
+                                                                                           SES8 2371  0  0
+                                                                                           SES6 2371  0  0
+                                                                                           RES6 2371  1  1
+                                                                            BACK 2371  4  4
+                                                                            SWS5 2371  0  0
+                                                             WADX 2371  1  1
+                                                             ORTH 2371 13 13
+                                                                            SUMB 2371  5  5
+                                                             UPDA 2371  7  7
+                                                                            SUMA 2223  5  5
+                                              WSOL  148  0  0
+                               XUIT  148  1  1
+                               SWPX  148  0  0
+                               SWC4  148  0  0
+                               RWC4  148  0  0
+                               LC    148  3  3
+                ZSOL   54  2  2
+                               SOL    54  0  0
+                SWC4    2  0  0
+                RWC4    2  0  0
+                LC      2  0  0
+                XRPN   52  0  0
+                SWC2   52  1  1
  WWX     1  0  0
  FWXR    1  0  0
- XW      1  0  0
- YW      1  0  0
-    35 READING WCONPROD
-    36 READING END
+ YW      1  1  1
+    39 READING WCONPROD
+    40 READING END
 
  Error summary
  Comments               1
- Warnings               8
- Problems               0
+ Warnings              79
+ Problems               3
  Errors                 0
  Bugs                   0
- Final cpu       3.59 elapsed       3.59
+ Final cpu       1.46 elapsed       1.46
 

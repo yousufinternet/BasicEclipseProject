@@ -1,16 +1,22 @@
 <eclipse>
 <message source="eclrun" date="" time="0">
-Executing ECLIPSE on pc system with  architecture named yusufs-lenovo
+Executing ECLIPSE on pc system with  architecture named yusufs-lenovo using ilmpi communications
 </message>
 <message source="eclrun" date="" time="0">
-Process ID is 280
+Process ID is 328
+</message>
+<message date="1/1/2020" time="0.00000000000000">
+ CHECKING FOR LICENSES                                                   
 </message>
 <message date="1/1/2020" time="0.00000000000000">
  CHECKING FOR LICENSES                                                   
 </message>
 <message date="1/1/2020" time="0.00000000000000">
  THE MEMORY REQUIRED TO PROCESS THE GRID SECTION IS                      
-     395448 BYTES                                                        
+     141224 BYTES   PROCESSOR   1                                        
+     167352 BYTES   PROCESSOR   2                                        
+     141224 BYTES   PROCESSOR   3                                        
+     141224 BYTES   PROCESSOR   4                                        
 </message>
 <message date="1/1/2020" time="0.00000000000000">
  NEITHER OLDTRAN,OLDTRANR NOR NEWTRAN SPECIFIED                          
@@ -25,219 +31,785 @@ Process ID is 280
 </message>
 <message date="1/1/2020" time="0.00000000000000">
  THE MEMORY REQUIRED TO PROCESS THE SOLUTION SECTION IS                  
-       2896 KBYTES                                                       
+       2678 KBYTES  PROCESSOR   1                                        
+       2714 KBYTES  PROCESSOR   2                                        
+       2818 KBYTES  PROCESSOR   3                                        
+       2678 KBYTES  PROCESSOR   4                                        
 </message>
 <message date="1/1/2020" time="0.00000000000000">
-    58943 CHARACTER VARIABLES USED                                       
+    59944 CHARACTER VARIABLES USED                                       
 </message>
 <message date="1/1/2020" time="0.00000000000000">
  DRSDT KEYWORD HAS NOT BEEN ENTERED, SO THE                              
  MAXIMUM GAS RE-SOLUTION RATE IS DEFAULTED TO INFINITY.                  
 </message>
-<message date="1/1/2020" time="0.00000000000000">
+<warning date="1/1/2020" time="0.00000000000000">
+ LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER                
+ IF YOU (A) INCREASE NSTACK (= 10 - RUNSPEC SECTION)     15              
+     OR (B) MAKE NSTACK NEGATIVE ( EXTENDS STACK ON DISK )               
+</warning>
+<warning date="1/1/2020" time="0.00000000000000">
+ LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER                
+ IF YOU (A) INCREASE NSTACK (= 10 - RUNSPEC SECTION)     24              
+     OR (B) MAKE NSTACK NEGATIVE ( EXTENDS STACK ON DISK )               
+</warning>
+<warning date="1/1/2020" time="0.00000000000000">
+ LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER                
+ IF YOU INCREASE LITMAX (= 25 - TUNING KEYWORD)                          
+</warning>
+<warning date="1/1/2020" time="0.00000000000000">
+ LINEAR CONVERGENCE FAILURE ON LAST NUPCOL ITERATION.                    
+ GROUP TARGETS AND LIMITS MAY NOT BE ACCURATELY HONORED.                 
+ YOU MAY NEED TO INCREASE THE CURRENT VALUE OF    3                      
+ USING THE NUPCOL KEYWORD.                                               
+</warning>
+<warning date="1/1/2020" time="0.00000000000000">
+ LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER                
+ IF YOU (A) INCREASE NSTACK (= 10 - RUNSPEC SECTION)     20              
+     OR (B) MAKE NSTACK NEGATIVE ( EXTENDS STACK ON DISK )               
+</warning>
+<warning date="1/1/2020" time="0.00000000000000">
+ LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER                
+ IF YOU (A) INCREASE NSTACK (= 10 - RUNSPEC SECTION)     16              
+     OR (B) MAKE NSTACK NEGATIVE ( EXTENDS STACK ON DISK )               
+</warning>
+<warning date="1/1/2020" time="0.00000000000000">
+ LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER                
+ IF YOU (A) INCREASE NSTACK (= 10 - RUNSPEC SECTION)     24              
+     OR (B) MAKE NSTACK NEGATIVE ( EXTENDS STACK ON DISK )               
+</warning>
+<warning date="1/1/2020" time="0.00000000000000">
+ LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER                
+ IF YOU (A) INCREASE NSTACK (= 10 - RUNSPEC SECTION)     16              
+     OR (B) MAKE NSTACK NEGATIVE ( EXTENDS STACK ON DISK )               
+</warning>
+<warning date="1/1/2020" time="0.00000000000000">
+ LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER                
+ IF YOU (A) INCREASE NSTACK (= 10 - RUNSPEC SECTION)     13              
+     OR (B) MAKE NSTACK NEGATIVE ( EXTENDS STACK ON DISK )               
+</warning>
+<warning date="1/1/2020" time="0.00000000000000">
+ LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER                
+ IF YOU (A) INCREASE NSTACK (= 10 - RUNSPEC SECTION)     13              
+     OR (B) MAKE NSTACK NEGATIVE ( EXTENDS STACK ON DISK )               
+</warning>
+<problem date="1/1/2020" time="0.00000000000000">
+ RESIDUAL ERROR IN FLOW FOR                                              
+     OIL       3.60922E-01                                               
+     WATER     2.13994E+03                                               
+     GAS       1.01780E+04                                               
+ TRY INCREASING  MXWSIT  IN TUNING RECORD 3                              
+</problem>
+<warning date="1/1/2020" time="0.00000000000000">
+ LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER                
+ IF YOU (A) INCREASE NSTACK (= 10 - RUNSPEC SECTION)     13              
+     OR (B) MAKE NSTACK NEGATIVE ( EXTENDS STACK ON DISK )               
+</warning>
+<warning date="1/1/2020" time="0.00000000000000">
+ LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER                
+ IF YOU (A) INCREASE NSTACK (= 10 - RUNSPEC SECTION)     13              
+     OR (B) MAKE NSTACK NEGATIVE ( EXTENDS STACK ON DISK )               
+</warning>
+<warning date="1/1/2020" time="0.00000000000000">
+ LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER                
+ IF YOU (A) INCREASE NSTACK (= 10 - RUNSPEC SECTION)     14              
+     OR (B) MAKE NSTACK NEGATIVE ( EXTENDS STACK ON DISK )               
+</warning>
+<problem date="1/1/2020" time="0.00000000000000">
+ NON-LINEAR EQUATION CONVERGENCE FAILURE                                 
+ ITERATION LIMIT REACHED - TIME STEP CHOPPED FROM   1.00                 
+</problem>
+<warning date="1/1/2020" time="0.00000000000000">
+ LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER                
+ IF YOU INCREASE LITMAX (= 25 - TUNING KEYWORD)                          
+</warning>
+<warning date="1/1/2020" time="0.00000000000000">
+ LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER                
+ IF YOU (A) INCREASE NSTACK (= 10 - RUNSPEC SECTION)     24              
+     OR (B) MAKE NSTACK NEGATIVE ( EXTENDS STACK ON DISK )               
+</warning>
+<warning date="1/1/2020" time="0.00000000000000">
+ LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER                
+ IF YOU INCREASE LITMAX (= 25 - TUNING KEYWORD)                          
+</warning>
+<warning date="1/1/2020" time="0.00000000000000">
+ LINEAR CONVERGENCE FAILURE ON LAST NUPCOL ITERATION.                    
+ GROUP TARGETS AND LIMITS MAY NOT BE ACCURATELY HONORED.                 
+ YOU MAY NEED TO INCREASE THE CURRENT VALUE OF    3                      
+ USING THE NUPCOL KEYWORD.                                               
+</warning>
+<warning date="1/1/2020" time="0.00000000000000">
+ LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER                
+ IF YOU INCREASE LITMAX (= 25 - TUNING KEYWORD)                          
+</warning>
+<warning date="1/1/2020" time="0.10000000149012">
+ LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER                
+ IF YOU INCREASE LITMAX (= 25 - TUNING KEYWORD)                          
+</warning>
+<warning date="1/1/2020" time="0.42031250626314">
+ LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER                
+ IF YOU INCREASE LITMAX (= 25 - TUNING KEYWORD)                          
+</warning>
+<warning date="1/1/2020" time="0.72548829206062">
+ LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER                
+ IF YOU INCREASE LITMAX (= 25 - TUNING KEYWORD)                          
+</warning>
+<warning date="1/1/2020" time="0.72548829206062">
+ LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER                
+ IF YOU INCREASE LITMAX (= 25 - TUNING KEYWORD)                          
+</warning>
+<warning date="1/1/2020" time="0.72548829206062">
+ LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER                
+ IF YOU INCREASE LITMAX (= 25 - TUNING KEYWORD)                          
+</warning>
+<warning date="1/1/2020" time="0.72548829206062">
+ LINEAR CONVERGENCE FAILURE ON LAST NUPCOL ITERATION.                    
+ GROUP TARGETS AND LIMITS MAY NOT BE ACCURATELY HONORED.                 
+ YOU MAY NEED TO INCREASE THE CURRENT VALUE OF    3                      
+ USING THE NUPCOL KEYWORD.                                               
+</warning>
+<warning date="1/1/2020" time="0.72548829206062">
+ LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER                
+ IF YOU INCREASE LITMAX (= 25 - TUNING KEYWORD)                          
+</warning>
+<warning date="1/1/2020" time="0.72548829206062">
+ LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER                
+ IF YOU (A) INCREASE NSTACK (= 10 - RUNSPEC SECTION)     24              
+     OR (B) MAKE NSTACK NEGATIVE ( EXTENDS STACK ON DISK )               
+</warning>
+<warning date="2/1/2020" time="1.20232545736917">
+ LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER                
+ IF YOU INCREASE LITMAX (= 25 - TUNING KEYWORD)                          
+</warning>
+<warning date="2/1/2020" time="1.20232545736917">
+ LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER                
+ IF YOU (A) INCREASE NSTACK (= 10 - RUNSPEC SECTION)     18              
+     OR (B) MAKE NSTACK NEGATIVE ( EXTENDS STACK ON DISK )               
+</warning>
+<warning date="2/1/2020" time="1.20232545736917">
+ LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER                
+ IF YOU (A) INCREASE NSTACK (= 10 - RUNSPEC SECTION)     15              
+     OR (B) MAKE NSTACK NEGATIVE ( EXTENDS STACK ON DISK )               
+</warning>
+<warning date="2/1/2020" time="1.20232545736917">
+ LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER                
+ IF YOU (A) INCREASE NSTACK (= 10 - RUNSPEC SECTION)     24              
+     OR (B) MAKE NSTACK NEGATIVE ( EXTENDS STACK ON DISK )               
+</warning>
+<warning date="2/1/2020" time="1.20232545736917">
+ LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER                
+ IF YOU (A) INCREASE NSTACK (= 10 - RUNSPEC SECTION)     15              
+     OR (B) MAKE NSTACK NEGATIVE ( EXTENDS STACK ON DISK )               
+</warning>
+<warning date="2/1/2020" time="1.20232545736917">
+ LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER                
+ IF YOU (A) INCREASE NSTACK (= 10 - RUNSPEC SECTION)     14              
+     OR (B) MAKE NSTACK NEGATIVE ( EXTENDS STACK ON DISK )               
+</warning>
+<warning date="2/1/2020" time="1.20232545736917">
+ LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER                
+ IF YOU (A) INCREASE NSTACK (= 10 - RUNSPEC SECTION)     18              
+     OR (B) MAKE NSTACK NEGATIVE ( EXTENDS STACK ON DISK )               
+</warning>
+<warning date="2/1/2020" time="1.20232545736917">
+ LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER                
+ IF YOU (A) INCREASE NSTACK (= 10 - RUNSPEC SECTION)     14              
+     OR (B) MAKE NSTACK NEGATIVE ( EXTENDS STACK ON DISK )               
+</warning>
+<warning date="2/1/2020" time="1.20232545736917">
+ LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER                
+ IF YOU (A) INCREASE NSTACK (= 10 - RUNSPEC SECTION)     13              
+     OR (B) MAKE NSTACK NEGATIVE ( EXTENDS STACK ON DISK )               
+</warning>
+<warning date="2/1/2020" time="1.20232545736917">
+ LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER                
+ IF YOU (A) INCREASE NSTACK (= 10 - RUNSPEC SECTION)     14              
+     OR (B) MAKE NSTACK NEGATIVE ( EXTENDS STACK ON DISK )               
+</warning>
+<warning date="2/1/2020" time="1.20232545736917">
+ LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER                
+ IF YOU INCREASE LITMAX (= 25 - TUNING KEYWORD)                          
+</warning>
+<warning date="2/1/2020" time="1.20232545736917">
+ LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER                
+ IF YOU (A) INCREASE NSTACK (= 10 - RUNSPEC SECTION)     14              
+     OR (B) MAKE NSTACK NEGATIVE ( EXTENDS STACK ON DISK )               
+</warning>
+<problem date="2/1/2020" time="1.20232545736917">
+ NON-LINEAR EQUATION CONVERGENCE FAILURE                                 
+ ITERATION LIMIT REACHED - TIME STEP CHOPPED FROM   0.75                 
+</problem>
+<warning date="2/1/2020" time="1.20232545736917">
+ LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER                
+ IF YOU INCREASE LITMAX (= 25 - TUNING KEYWORD)                          
+</warning>
+<warning date="2/1/2020" time="1.27683126555885">
+ LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER                
+ IF YOU (A) INCREASE NSTACK (= 10 - RUNSPEC SECTION)     24              
+     OR (B) MAKE NSTACK NEGATIVE ( EXTENDS STACK ON DISK )               
+</warning>
+<warning date="2/1/2020" time="1.27683126555885">
+ LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER                
+ IF YOU (A) INCREASE NSTACK (= 10 - RUNSPEC SECTION)     24              
+     OR (B) MAKE NSTACK NEGATIVE ( EXTENDS STACK ON DISK )               
+</warning>
+<warning date="2/1/2020" time="1.27683126555885">
+ LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER                
+ IF YOU INCREASE LITMAX (= 25 - TUNING KEYWORD)                          
+</warning>
+<warning date="2/1/2020" time="1.27683126555885">
+ LINEAR CONVERGENCE FAILURE ON LAST NUPCOL ITERATION.                    
+ GROUP TARGETS AND LIMITS MAY NOT BE ACCURATELY HONORED.                 
+ YOU MAY NEED TO INCREASE THE CURRENT VALUE OF    3                      
+ USING THE NUPCOL KEYWORD.                                               
+</warning>
+<warning date="2/1/2020" time="1.36996352579596">
+ LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER                
+ IF YOU INCREASE LITMAX (= 25 - TUNING KEYWORD)                          
+</warning>
+<warning date="2/1/2020" time="1.51548268241644">
+ LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER                
+ IF YOU INCREASE LITMAX (= 25 - TUNING KEYWORD)                          
+</warning>
+<warning date="2/1/2020" time="1.51548268241644">
+ LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER                
+ IF YOU (A) INCREASE NSTACK (= 10 - RUNSPEC SECTION)     23              
+     OR (B) MAKE NSTACK NEGATIVE ( EXTENDS STACK ON DISK )               
+</warning>
+<warning date="2/1/2020" time="1.51548268241644">
+ LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER                
+ IF YOU (A) INCREASE NSTACK (= 10 - RUNSPEC SECTION)     13              
+     OR (B) MAKE NSTACK NEGATIVE ( EXTENDS STACK ON DISK )               
+</warning>
+<warning date="2/1/2020" time="1.51548268241644">
+ LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER                
+ IF YOU (A) INCREASE NSTACK (= 10 - RUNSPEC SECTION)     15              
+     OR (B) MAKE NSTACK NEGATIVE ( EXTENDS STACK ON DISK )               
+</warning>
+<warning date="2/1/2020" time="1.74285636463593">
+ LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER                
+ IF YOU INCREASE LITMAX (= 25 - TUNING KEYWORD)                          
+</warning>
+<warning date="2/1/2020" time="1.74285636463593">
+ LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER                
+ IF YOU INCREASE LITMAX (= 25 - TUNING KEYWORD)                          
+</warning>
+<warning date="2/1/2020" time="1.74285636463593">
+ LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER                
+ IF YOU INCREASE LITMAX (= 25 - TUNING KEYWORD)                          
+</warning>
+<warning date="2/1/2020" time="1.74285636463593">
+ LINEAR CONVERGENCE FAILURE ON LAST NUPCOL ITERATION.                    
+ GROUP TARGETS AND LIMITS MAY NOT BE ACCURATELY HONORED.                 
+ YOU MAY NEED TO INCREASE THE CURRENT VALUE OF    3                      
+ USING THE NUPCOL KEYWORD.                                               
+</warning>
+<message date="2/1/2020" time="1.74285636463593">
  ******************************************                              
  * WELL YP1-001  HAS CHANGED TO           *                              
  * CONTROL BY BOTTOM HOLE PRESSURE        *                              
- * FROM TIME      0.00   DAYS  .          *                              
+ * FROM TIME      1.74   DAYS  .          *                              
  ******************************************                              
 </message>
-<message date="1/1/2020" time="0.00000000000000">
+<message date="2/1/2020" time="1.74285636463593">
  ******************************************                              
  * WELL YP1-003  HAS CHANGED TO           *                              
  * CONTROL BY BOTTOM HOLE PRESSURE        *                              
- * FROM TIME      0.00   DAYS  .          *                              
+ * FROM TIME      1.74   DAYS  .          *                              
  ******************************************                              
 </message>
-<message date="1/1/2020" time="0.00000000000000">
+<warning date="3/1/2020" time="2.09812774310389">
+ LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER                
+ IF YOU INCREASE LITMAX (= 25 - TUNING KEYWORD)                          
+</warning>
+<message date="3/1/2020" time="2.09812774310389">
  ******************************************                              
  * WELL YP1-005  HAS CHANGED TO           *                              
  * CONTROL BY BOTTOM HOLE PRESSURE        *                              
- * FROM TIME      0.00   DAYS  .          *                              
+ * FROM TIME      2.10   DAYS  .          *                              
  ******************************************                              
 </message>
-<message date="1/1/2020" time="0.00000000000000">
+<message date="3/1/2020" time="2.09812774310389">
  ******************************************                              
  * WELL YP1-006  HAS CHANGED TO           *                              
  * CONTROL BY BOTTOM HOLE PRESSURE        *                              
- * FROM TIME      0.00   DAYS  .          *                              
+ * FROM TIME      2.10   DAYS  .          *                              
  ******************************************                              
 </message>
-<message date="1/1/2020" time="0.00000000000000">
+<message date="3/1/2020" time="2.09812774310389">
  ******************************************                              
  * WELL YP1-007  HAS CHANGED TO           *                              
  * CONTROL BY BOTTOM HOLE PRESSURE        *                              
- * FROM TIME      0.00   DAYS  .          *                              
+ * FROM TIME      2.10   DAYS  .          *                              
  ******************************************                              
 </message>
-<message date="1/1/2020" time="0.00000000000000">
+<message date="3/1/2020" time="2.09812774310389">
  ******************************************                              
  * WELL YP1-009  HAS CHANGED TO           *                              
  * CONTROL BY BOTTOM HOLE PRESSURE        *                              
- * FROM TIME      0.00   DAYS  .          *                              
+ * FROM TIME      2.10   DAYS  .          *                              
  ******************************************                              
 </message>
-<warning date="5/1/2020" time="4.00000000000000">
+<warning date="9/1/2020" time="8.85202975472009">
  THE RESERVOIR PRESSURE IS TOO LOW FOR WELL YP1-001                      
  TO PRODUCE AT THE REQUIRED BOTTOM HOLE PRESSURE                         
 </warning>
-<message date="5/1/2020" time="4.00000000000000">
+<message date="9/1/2020" time="8.85202975472009">
  WELL YP1-001  CANNOT OPERATE UNDER THE CURRENT                          
- RESERVOIR CONDITIONS IN NON-LINEAR ITERATION   1.                       
+ RESERVOIR CONDITIONS IN NON-LINEAR ITERATION   0.                       
  ITS IPR IS    Q(P)  =  A  -  BHP * B ,   WHERE:                         
- A(O,W,G) =   0.0000E+00  7.6687E+04  0.0000E+00                         
- B(O,W,G) =   0.0000E+00  7.6687E+01  0.0000E+00 .                       
+ A(O,W,G) =   2.7777E+03  3.1566E+04  1.1877E+05                         
+ B(O,W,G) =   2.7822E+00  3.1707E+01  1.1913E+02 .                       
  LAST CONVERGED SOLUTION:                                                
      ORAT        WRAT        GRAT        BHP         THP                 
-   0.0000E+00  8.2824E-01  0.0000E+00  1.0000E+03  0.0000E+00            
+   7.3243E-02  1.6648E+00  3.9424E+00  1.0000E+03  0.0000E+00            
  THE WELL IS   SHUT  FOR THE ITERATION.                                  
 </message>
-<warning date="5/1/2020" time="4.00000000000000">
+<warning date="9/1/2020" time="8.85202975472009">
  THE RESERVOIR PRESSURE IS TOO LOW FOR WELL YP1-003                      
  TO PRODUCE AT THE REQUIRED BOTTOM HOLE PRESSURE                         
 </warning>
-<message date="5/1/2020" time="4.00000000000000">
+<message date="9/1/2020" time="8.85202975472009">
  WELL YP1-003  CANNOT OPERATE UNDER THE CURRENT                          
- RESERVOIR CONDITIONS IN NON-LINEAR ITERATION   1.                       
+ RESERVOIR CONDITIONS IN NON-LINEAR ITERATION   0.                       
  ITS IPR IS    Q(P)  =  A  -  BHP * B ,   WHERE:                         
- A(O,W,G) =   0.0000E+00  7.6687E+04  0.0000E+00                         
- B(O,W,G) =   0.0000E+00  7.6687E+01  0.0000E+00 .                       
+ A(O,W,G) =   2.7274E+03  3.0020E+04  1.2083E+05                         
+ B(O,W,G) =   2.7312E+00  3.0140E+01  1.2116E+02 .                       
  LAST CONVERGED SOLUTION:                                                
      ORAT        WRAT        GRAT        BHP         THP                 
-   0.0000E+00  1.0493E+00  0.0000E+00  1.0000E+03  0.0000E+00            
+   9.7908E-02  2.1660E+00  5.6203E+00  1.0000E+03  0.0000E+00            
  THE WELL IS   SHUT  FOR THE ITERATION.                                  
 </message>
-<warning date="5/1/2020" time="4.00000000000000">
+<warning date="9/1/2020" time="8.85202975472009">
  THE RESERVOIR PRESSURE IS TOO LOW FOR WELL YP1-005                      
  TO PRODUCE AT THE REQUIRED BOTTOM HOLE PRESSURE                         
 </warning>
-<message date="5/1/2020" time="4.00000000000000">
+<message date="9/1/2020" time="8.85202975472009">
  WELL YP1-005  CANNOT OPERATE UNDER THE CURRENT                          
- RESERVOIR CONDITIONS IN NON-LINEAR ITERATION   1.                       
+ RESERVOIR CONDITIONS IN NON-LINEAR ITERATION   0.                       
  ITS IPR IS    Q(P)  =  A  -  BHP * B ,   WHERE:                         
- A(O,W,G) =   0.0000E+00  7.6687E+04  0.0000E+00                         
- B(O,W,G) =   0.0000E+00  7.6687E+01  0.0000E+00 .                       
+ A(O,W,G) =   2.9740E+03  1.4271E+04  1.2922E+05                         
+ B(O,W,G) =   2.9776E+00  1.4345E+01  1.2958E+02 .                       
  LAST CONVERGED SOLUTION:                                                
      ORAT        WRAT        GRAT        BHP         THP                 
-   0.0000E+00  1.3379E+00  0.0000E+00  1.0000E+03  0.0000E+00            
+   1.4993E-01  3.0893E+00  9.6821E+00  1.0000E+03  0.0000E+00            
  THE WELL IS   SHUT  FOR THE ITERATION.                                  
 </message>
-<warning date="5/1/2020" time="4.00000000000000">
+<warning date="9/1/2020" time="8.85202975472009">
  THE RESERVOIR PRESSURE IS TOO LOW FOR WELL YP1-006                      
  TO PRODUCE AT THE REQUIRED BOTTOM HOLE PRESSURE                         
 </warning>
-<message date="5/1/2020" time="4.00000000000000">
+<message date="9/1/2020" time="8.85202975472009">
  WELL YP1-006  CANNOT OPERATE UNDER THE CURRENT                          
- RESERVOIR CONDITIONS IN NON-LINEAR ITERATION   1.                       
+ RESERVOIR CONDITIONS IN NON-LINEAR ITERATION   0.                       
  ITS IPR IS    Q(P)  =  A  -  BHP * B ,   WHERE:                         
- A(O,W,G) =   0.0000E+00  7.6687E+04  0.0000E+00                         
- B(O,W,G) =   0.0000E+00  7.6687E+01  0.0000E+00 .                       
+ A(O,W,G) =   2.9742E+03  1.4251E+04  1.2974E+05                         
+ B(O,W,G) =   2.9776E+00  1.4320E+01  1.3008E+02 .                       
  LAST CONVERGED SOLUTION:                                                
      ORAT        WRAT        GRAT        BHP         THP                 
-   0.0000E+00  1.3259E+00  0.0000E+00  1.0000E+03  0.0000E+00            
+   1.5556E-01  3.1118E+00  1.0260E+01  1.0000E+03  0.0000E+00            
  THE WELL IS   SHUT  FOR THE ITERATION.                                  
 </message>
-<message date="5/1/2020" time="4.00000000000000">
- ****************************************************************        
- * WELL YP1-001  IS  SHUT   AT TIME       4.00   DAYS   BECAUSE *        
- * IT CANNOT OPERATE AT CURRENT RESERVOIR CONDITIONS.           *        
- ****************************************************************        
+<warning date="9/1/2020" time="8.85202975472009">
+ THE RESERVOIR PRESSURE IS TOO LOW FOR WELL YP1-007                      
+ TO PRODUCE AT THE REQUIRED BOTTOM HOLE PRESSURE                         
+</warning>
+<message date="9/1/2020" time="8.85202975472009">
+ WELL YP1-007  CANNOT OPERATE UNDER THE CURRENT                          
+ RESERVOIR CONDITIONS IN NON-LINEAR ITERATION   0.                       
+ ITS IPR IS    Q(P)  =  A  -  BHP * B ,   WHERE:                         
+ A(O,W,G) =   3.2109E+03  2.0732E+04  1.2845E+05                         
+ B(O,W,G) =   3.2147E+00  2.0803E+01  1.2872E+02 .                       
+ LAST CONVERGED SOLUTION:                                                
+     ORAT        WRAT        GRAT        BHP         THP                 
+   1.2082E-01  1.7203E+00  6.0016E+00  1.0000E+03  0.0000E+00            
+ THE WELL IS   SHUT  FOR THE ITERATION.                                  
 </message>
-<message date="5/1/2020" time="4.00000000000000">
- ****************************************************************        
- * WELL YP1-003  IS  SHUT   AT TIME       4.00   DAYS   BECAUSE *        
- * IT CANNOT OPERATE AT CURRENT RESERVOIR CONDITIONS.           *        
- ****************************************************************        
-</message>
-<message date="5/1/2020" time="4.00000000000000">
- ****************************************************************        
- * WELL YP1-005  IS  SHUT   AT TIME       4.00   DAYS   BECAUSE *        
- * IT CANNOT OPERATE AT CURRENT RESERVOIR CONDITIONS.           *        
- ****************************************************************        
-</message>
-<message date="5/1/2020" time="4.00000000000000">
- ****************************************************************        
- * WELL YP1-006  IS  SHUT   AT TIME       4.00   DAYS   BECAUSE *        
- * IT CANNOT OPERATE AT CURRENT RESERVOIR CONDITIONS.           *        
- ****************************************************************        
-</message>
-<warning date="14/1/2020" time="13.00000000000000">
+<warning date="9/1/2020" time="8.85202975472009">
  THE RESERVOIR PRESSURE IS TOO LOW FOR WELL YP1-009                      
  TO PRODUCE AT THE REQUIRED BOTTOM HOLE PRESSURE                         
 </warning>
-<message date="14/1/2020" time="13.00000000000000">
+<message date="9/1/2020" time="8.85202975472009">
+ WELL YP1-009  CANNOT OPERATE UNDER THE CURRENT                          
+ RESERVOIR CONDITIONS IN NON-LINEAR ITERATION   0.                       
+ ITS IPR IS    Q(P)  =  A  -  BHP * B ,   WHERE:                         
+ A(O,W,G) =   3.7389E+03  1.9260E+04  1.3022E+05                         
+ B(O,W,G) =   3.7420E+00  1.9300E+01  1.3037E+02 .                       
+ LAST CONVERGED SOLUTION:                                                
+     ORAT        WRAT        GRAT        BHP         THP                 
+   2.8976E-02  2.7355E-01  1.2305E+00  1.0000E+03  0.0000E+00            
+ THE WELL IS   SHUT  FOR THE ITERATION.                                  
+</message>
+<message date="9/1/2020" time="8.85202975472009">
+ WELL YP1-001  IS REVIVED FOR ITERATION   1                              
+</message>
+<message date="9/1/2020" time="8.85202975472009">
+ WELL YP1-003  IS REVIVED FOR ITERATION   1                              
+</message>
+<message date="9/1/2020" time="8.85202975472009">
+ WELL YP1-005  IS REVIVED FOR ITERATION   1                              
+</message>
+<message date="9/1/2020" time="8.85202975472009">
+ WELL YP1-006  IS REVIVED FOR ITERATION   1                              
+</message>
+<message date="9/1/2020" time="8.85202975472009">
+ WELL YP1-007  IS REVIVED FOR ITERATION   1                              
+</message>
+<message date="9/1/2020" time="8.85202975472009">
+ WELL YP1-009  IS REVIVED FOR ITERATION   1                              
+</message>
+<warning date="9/1/2020" time="8.85202975472009">
+ THE RESERVOIR PRESSURE IS TOO LOW FOR WELL YP1-001                      
+ TO PRODUCE AT THE REQUIRED BOTTOM HOLE PRESSURE                         
+</warning>
+<message date="9/1/2020" time="8.85202975472009">
+ WELL YP1-001  CANNOT OPERATE UNDER THE CURRENT                          
+ RESERVOIR CONDITIONS IN NON-LINEAR ITERATION   1.                       
+ ITS IPR IS    Q(P)  =  A  -  BHP * B ,   WHERE:                         
+ A(O,W,G) =   3.0045E+03  1.4431E+04  1.2812E+05                         
+ B(O,W,G) =   3.0059E+00  1.4448E+01  1.2820E+02 .                       
+ LAST CONVERGED SOLUTION:                                                
+     ORAT        WRAT        GRAT        BHP         THP                 
+   0.0000E+00  0.0000E+00  0.0000E+00  7.1012E+02  0.0000E+00            
+ THE WELL IS   SHUT  FOR THE ITERATION.                                  
+</message>
+<warning date="9/1/2020" time="8.85202975472009">
+ THE RESERVOIR PRESSURE IS TOO LOW FOR WELL YP1-003                      
+ TO PRODUCE AT THE REQUIRED BOTTOM HOLE PRESSURE                         
+</warning>
+<message date="9/1/2020" time="8.85202975472009">
+ WELL YP1-003  CANNOT OPERATE UNDER THE CURRENT                          
+ RESERVOIR CONDITIONS IN NON-LINEAR ITERATION   1.                       
+ ITS IPR IS    Q(P)  =  A  -  BHP * B ,   WHERE:                         
+ A(O,W,G) =   2.9894E+03  1.4388E+04  1.2914E+05                         
+ B(O,W,G) =   2.9904E+00  1.4400E+01  1.2920E+02 .                       
+ LAST CONVERGED SOLUTION:                                                
+     ORAT        WRAT        GRAT        BHP         THP                 
+   0.0000E+00  0.0000E+00  0.0000E+00  7.1012E+02  0.0000E+00            
+ THE WELL IS   SHUT  FOR THE ITERATION.                                  
+</message>
+<warning date="9/1/2020" time="8.85202975472009">
+ THE RESERVOIR PRESSURE IS TOO LOW FOR WELL YP1-005                      
+ TO PRODUCE AT THE REQUIRED BOTTOM HOLE PRESSURE                         
+</warning>
+<message date="9/1/2020" time="8.85202975472009">
+ WELL YP1-005  CANNOT OPERATE UNDER THE CURRENT                          
+ RESERVOIR CONDITIONS IN NON-LINEAR ITERATION   1.                       
+ ITS IPR IS    Q(P)  =  A  -  BHP * B ,   WHERE:                         
+ A(O,W,G) =   2.9896E+03  1.4293E+04  1.3010E+05                         
+ B(O,W,G) =   2.9913E+00  1.4327E+01  1.3028E+02 .                       
+ LAST CONVERGED SOLUTION:                                                
+     ORAT        WRAT        GRAT        BHP         THP                 
+   0.0000E+00  0.0000E+00  0.0000E+00  7.1012E+02  0.0000E+00            
+ THE WELL IS   SHUT  FOR THE ITERATION.                                  
+</message>
+<warning date="9/1/2020" time="8.85202975472009">
+ THE RESERVOIR PRESSURE IS TOO LOW FOR WELL YP1-006                      
+ TO PRODUCE AT THE REQUIRED BOTTOM HOLE PRESSURE                         
+</warning>
+<message date="9/1/2020" time="8.85202975472009">
+ WELL YP1-006  CANNOT OPERATE UNDER THE CURRENT                          
+ RESERVOIR CONDITIONS IN NON-LINEAR ITERATION   1.                       
+ ITS IPR IS    Q(P)  =  A  -  BHP * B ,   WHERE:                         
+ A(O,W,G) =   2.9898E+03  1.4267E+04  1.3068E+05                         
+ B(O,W,G) =   2.9913E+00  1.4297E+01  1.3084E+02 .                       
+ LAST CONVERGED SOLUTION:                                                
+     ORAT        WRAT        GRAT        BHP         THP                 
+   0.0000E+00  0.0000E+00  0.0000E+00  7.1012E+02  0.0000E+00            
+ THE WELL IS   SHUT  FOR THE ITERATION.                                  
+</message>
+<warning date="9/1/2020" time="8.85202975472009">
+ THE RESERVOIR PRESSURE IS TOO LOW FOR WELL YP1-007                      
+ TO PRODUCE AT THE REQUIRED BOTTOM HOLE PRESSURE                         
+</warning>
+<message date="9/1/2020" time="8.85202975472009">
+ WELL YP1-007  CANNOT OPERATE UNDER THE CURRENT                          
+ RESERVOIR CONDITIONS IN NON-LINEAR ITERATION   1.                       
+ ITS IPR IS    Q(P)  =  A  -  BHP * B ,   WHERE:                         
+ A(O,W,G) =   2.9876E+03  1.4192E+04  1.3266E+05                         
+ B(O,W,G) =   2.9882E+00  1.4198E+01  1.3270E+02 .                       
+ LAST CONVERGED SOLUTION:                                                
+     ORAT        WRAT        GRAT        BHP         THP                 
+   0.0000E+00  0.0000E+00  0.0000E+00  7.1012E+02  0.0000E+00            
+ THE WELL IS   SHUT  FOR THE ITERATION.                                  
+</message>
+<message date="9/1/2020" time="8.85202975472009">
+ WELL YP1-001  IS REVIVED FOR ITERATION   2                              
+</message>
+<message date="9/1/2020" time="8.85202975472009">
+ WELL YP1-003  IS REVIVED FOR ITERATION   2                              
+</message>
+<message date="9/1/2020" time="8.85202975472009">
+ WELL YP1-005  IS REVIVED FOR ITERATION   2                              
+</message>
+<message date="9/1/2020" time="8.85202975472009">
+ WELL YP1-006  IS REVIVED FOR ITERATION   2                              
+</message>
+<message date="9/1/2020" time="8.85202975472009">
+ WELL YP1-007  IS REVIVED FOR ITERATION   2                              
+</message>
+<warning date="9/1/2020" time="8.85202975472009">
+ THE RESERVOIR PRESSURE IS TOO LOW FOR WELL YP1-001                      
+ TO PRODUCE AT THE REQUIRED BOTTOM HOLE PRESSURE                         
+</warning>
+<message date="9/1/2020" time="8.85202975472009">
+ WELL YP1-001  CANNOT OPERATE UNDER THE CURRENT                          
+ RESERVOIR CONDITIONS IN NON-LINEAR ITERATION   2.                       
+ ITS IPR IS    Q(P)  =  A  -  BHP * B ,   WHERE:                         
+ A(O,W,G) =   3.0032E+03  1.4422E+04  1.2806E+05                         
+ B(O,W,G) =   3.0057E+00  1.4445E+01  1.2820E+02 .                       
+ LAST CONVERGED SOLUTION:                                                
+     ORAT        WRAT        GRAT        BHP         THP                 
+   0.0000E+00  0.0000E+00  0.0000E+00  7.0981E+02  0.0000E+00            
+ THE WELL IS   SHUT  FOR THE ITERATION.                                  
+</message>
+<warning date="9/1/2020" time="8.85202975472009">
+ THE RESERVOIR PRESSURE IS TOO LOW FOR WELL YP1-003                      
+ TO PRODUCE AT THE REQUIRED BOTTOM HOLE PRESSURE                         
+</warning>
+<message date="9/1/2020" time="8.85202975472009">
+ WELL YP1-003  CANNOT OPERATE UNDER THE CURRENT                          
+ RESERVOIR CONDITIONS IN NON-LINEAR ITERATION   2.                       
+ ITS IPR IS    Q(P)  =  A  -  BHP * B ,   WHERE:                         
+ A(O,W,G) =   2.9882E+03  1.4372E+04  1.2912E+05                         
+ B(O,W,G) =   2.9903E+00  1.4391E+01  1.2923E+02 .                       
+ LAST CONVERGED SOLUTION:                                                
+     ORAT        WRAT        GRAT        BHP         THP                 
+   0.0000E+00  0.0000E+00  0.0000E+00  7.0981E+02  0.0000E+00            
+ THE WELL IS   SHUT  FOR THE ITERATION.                                  
+</message>
+<warning date="9/1/2020" time="8.85202975472009">
+ THE RESERVOIR PRESSURE IS TOO LOW FOR WELL YP1-005                      
+ TO PRODUCE AT THE REQUIRED BOTTOM HOLE PRESSURE                         
+</warning>
+<message date="9/1/2020" time="8.85202975472009">
+ WELL YP1-005  CANNOT OPERATE UNDER THE CURRENT                          
+ RESERVOIR CONDITIONS IN NON-LINEAR ITERATION   2.                       
+ ITS IPR IS    Q(P)  =  A  -  BHP * B ,   WHERE:                         
+ A(O,W,G) =   2.9884E+03  1.4274E+04  1.3019E+05                         
+ B(O,W,G) =   2.9912E+00  1.4315E+01  1.3041E+02 .                       
+ LAST CONVERGED SOLUTION:                                                
+     ORAT        WRAT        GRAT        BHP         THP                 
+   0.0000E+00  0.0000E+00  0.0000E+00  7.0981E+02  0.0000E+00            
+ THE WELL IS   SHUT  FOR THE ITERATION.                                  
+</message>
+<warning date="9/1/2020" time="8.85202975472009">
+ THE RESERVOIR PRESSURE IS TOO LOW FOR WELL YP1-006                      
+ TO PRODUCE AT THE REQUIRED BOTTOM HOLE PRESSURE                         
+</warning>
+<message date="9/1/2020" time="8.85202975472009">
+ WELL YP1-006  CANNOT OPERATE UNDER THE CURRENT                          
+ RESERVOIR CONDITIONS IN NON-LINEAR ITERATION   2.                       
+ ITS IPR IS    Q(P)  =  A  -  BHP * B ,   WHERE:                         
+ A(O,W,G) =   2.9886E+03  1.4249E+04  1.3075E+05                         
+ B(O,W,G) =   2.9912E+00  1.4287E+01  1.3096E+02 .                       
+ LAST CONVERGED SOLUTION:                                                
+     ORAT        WRAT        GRAT        BHP         THP                 
+   0.0000E+00  0.0000E+00  0.0000E+00  7.0982E+02  0.0000E+00            
+ THE WELL IS   SHUT  FOR THE ITERATION.                                  
+</message>
+<warning date="9/1/2020" time="8.85202975472009">
+ THE RESERVOIR PRESSURE IS TOO LOW FOR WELL YP1-007                      
+ TO PRODUCE AT THE REQUIRED BOTTOM HOLE PRESSURE                         
+</warning>
+<message date="9/1/2020" time="8.85202975472009">
+ WELL YP1-007  CANNOT OPERATE UNDER THE CURRENT                          
+ RESERVOIR CONDITIONS IN NON-LINEAR ITERATION   2.                       
+ ITS IPR IS    Q(P)  =  A  -  BHP * B ,   WHERE:                         
+ A(O,W,G) =   2.9864E+03  1.4179E+04  1.3268E+05                         
+ B(O,W,G) =   2.9880E+00  1.4191E+01  1.3277E+02 .                       
+ LAST CONVERGED SOLUTION:                                                
+     ORAT        WRAT        GRAT        BHP         THP                 
+   0.0000E+00  0.0000E+00  0.0000E+00  7.0981E+02  0.0000E+00            
+ THE WELL IS   SHUT  FOR THE ITERATION.                                  
+</message>
+<message date="9/1/2020" time="8.85202975472009">
+ WELL YP1-001  IS REVIVED FOR ITERATION   3                              
+</message>
+<message date="9/1/2020" time="8.85202975472009">
+ WELL YP1-003  IS REVIVED FOR ITERATION   3                              
+</message>
+<message date="9/1/2020" time="8.85202975472009">
+ WELL YP1-005  IS REVIVED FOR ITERATION   3                              
+</message>
+<message date="9/1/2020" time="8.85202975472009">
+ WELL YP1-006  IS REVIVED FOR ITERATION   3                              
+</message>
+<message date="9/1/2020" time="8.85202975472009">
+ WELL YP1-007  IS REVIVED FOR ITERATION   3                              
+</message>
+<warning date="9/1/2020" time="8.85202975472009">
+ THE RESERVOIR PRESSURE IS TOO LOW FOR WELL YP1-001                      
+ TO PRODUCE AT THE REQUIRED BOTTOM HOLE PRESSURE                         
+</warning>
+<message date="9/1/2020" time="8.85202975472009">
+ WELL YP1-001  CANNOT OPERATE UNDER THE CURRENT                          
+ RESERVOIR CONDITIONS IN NON-LINEAR ITERATION   3.                       
+ ITS IPR IS    Q(P)  =  A  -  BHP * B ,   WHERE:                         
+ A(O,W,G) =   3.0032E+03  1.4421E+04  1.2806E+05                         
+ B(O,W,G) =   3.0057E+00  1.4445E+01  1.2820E+02 .                       
+ LAST CONVERGED SOLUTION:                                                
+     ORAT        WRAT        GRAT        BHP         THP                 
+   0.0000E+00  0.0000E+00  0.0000E+00  7.0980E+02  0.0000E+00            
+ THE WELL IS   SHUT  FOR THE ITERATION.                                  
+</message>
+<warning date="9/1/2020" time="8.85202975472009">
+ THE RESERVOIR PRESSURE IS TOO LOW FOR WELL YP1-003                      
+ TO PRODUCE AT THE REQUIRED BOTTOM HOLE PRESSURE                         
+</warning>
+<message date="9/1/2020" time="8.85202975472009">
+ WELL YP1-003  CANNOT OPERATE UNDER THE CURRENT                          
+ RESERVOIR CONDITIONS IN NON-LINEAR ITERATION   3.                       
+ ITS IPR IS    Q(P)  =  A  -  BHP * B ,   WHERE:                         
+ A(O,W,G) =   2.9882E+03  1.4372E+04  1.2911E+05                         
+ B(O,W,G) =   2.9903E+00  1.4391E+01  1.2923E+02 .                       
+ LAST CONVERGED SOLUTION:                                                
+     ORAT        WRAT        GRAT        BHP         THP                 
+   0.0000E+00  0.0000E+00  0.0000E+00  7.0981E+02  0.0000E+00            
+ THE WELL IS   SHUT  FOR THE ITERATION.                                  
+</message>
+<warning date="9/1/2020" time="8.85202975472009">
+ THE RESERVOIR PRESSURE IS TOO LOW FOR WELL YP1-005                      
+ TO PRODUCE AT THE REQUIRED BOTTOM HOLE PRESSURE                         
+</warning>
+<message date="9/1/2020" time="8.85202975472009">
+ WELL YP1-005  CANNOT OPERATE UNDER THE CURRENT                          
+ RESERVOIR CONDITIONS IN NON-LINEAR ITERATION   3.                       
+ ITS IPR IS    Q(P)  =  A  -  BHP * B ,   WHERE:                         
+ A(O,W,G) =   2.9883E+03  1.4274E+04  1.3019E+05                         
+ B(O,W,G) =   2.9912E+00  1.4314E+01  1.3041E+02 .                       
+ LAST CONVERGED SOLUTION:                                                
+     ORAT        WRAT        GRAT        BHP         THP                 
+   0.0000E+00  0.0000E+00  0.0000E+00  7.0981E+02  0.0000E+00            
+ THE WELL IS   SHUT  FOR THE ITERATION.                                  
+</message>
+<warning date="9/1/2020" time="8.85202975472009">
+ THE RESERVOIR PRESSURE IS TOO LOW FOR WELL YP1-006                      
+ TO PRODUCE AT THE REQUIRED BOTTOM HOLE PRESSURE                         
+</warning>
+<message date="9/1/2020" time="8.85202975472009">
+ WELL YP1-006  CANNOT OPERATE UNDER THE CURRENT                          
+ RESERVOIR CONDITIONS IN NON-LINEAR ITERATION   3.                       
+ ITS IPR IS    Q(P)  =  A  -  BHP * B ,   WHERE:                         
+ A(O,W,G) =   2.9886E+03  1.4249E+04  1.3074E+05                         
+ B(O,W,G) =   2.9912E+00  1.4286E+01  1.3095E+02 .                       
+ LAST CONVERGED SOLUTION:                                                
+     ORAT        WRAT        GRAT        BHP         THP                 
+   0.0000E+00  0.0000E+00  0.0000E+00  7.0981E+02  0.0000E+00            
+ THE WELL IS   SHUT  FOR THE ITERATION.                                  
+</message>
+<warning date="9/1/2020" time="8.85202975472009">
+ THE RESERVOIR PRESSURE IS TOO LOW FOR WELL YP1-007                      
+ TO PRODUCE AT THE REQUIRED BOTTOM HOLE PRESSURE                         
+</warning>
+<message date="9/1/2020" time="8.85202975472009">
+ WELL YP1-007  CANNOT OPERATE UNDER THE CURRENT                          
+ RESERVOIR CONDITIONS IN NON-LINEAR ITERATION   3.                       
+ ITS IPR IS    Q(P)  =  A  -  BHP * B ,   WHERE:                         
+ A(O,W,G) =   2.9864E+03  1.4178E+04  1.3268E+05                         
+ B(O,W,G) =   2.9880E+00  1.4191E+01  1.3277E+02 .                       
+ LAST CONVERGED SOLUTION:                                                
+     ORAT        WRAT        GRAT        BHP         THP                 
+   0.0000E+00  0.0000E+00  0.0000E+00  7.0981E+02  0.0000E+00            
+ THE WELL IS   SHUT  FOR THE ITERATION.                                  
+</message>
+<message date="9/1/2020" time="8.85202975472009">
+ ****************************************************************        
+ * WELL YP1-001  IS  SHUT   AT TIME       8.85   DAYS   BECAUSE *        
+ * IT CANNOT OPERATE AT CURRENT RESERVOIR CONDITIONS.           *        
+ ****************************************************************        
+</message>
+<message date="9/1/2020" time="8.85202975472009">
+ ****************************************************************        
+ * WELL YP1-003  IS  SHUT   AT TIME       8.85   DAYS   BECAUSE *        
+ * IT CANNOT OPERATE AT CURRENT RESERVOIR CONDITIONS.           *        
+ ****************************************************************        
+</message>
+<message date="9/1/2020" time="8.85202975472009">
+ ****************************************************************        
+ * WELL YP1-005  IS  SHUT   AT TIME       8.85   DAYS   BECAUSE *        
+ * IT CANNOT OPERATE AT CURRENT RESERVOIR CONDITIONS.           *        
+ ****************************************************************        
+</message>
+<message date="9/1/2020" time="8.85202975472009">
+ ****************************************************************        
+ * WELL YP1-006  IS  SHUT   AT TIME       8.85   DAYS   BECAUSE *        
+ * IT CANNOT OPERATE AT CURRENT RESERVOIR CONDITIONS.           *        
+ ****************************************************************        
+</message>
+<message date="9/1/2020" time="8.85202975472009">
+ ****************************************************************        
+ * WELL YP1-007  IS  SHUT   AT TIME       8.85   DAYS   BECAUSE *        
+ * IT CANNOT OPERATE AT CURRENT RESERVOIR CONDITIONS.           *        
+ ****************************************************************        
+</message>
+<warning date="13/1/2020" time="12.98793294074474">
+ THE RESERVOIR PRESSURE IS TOO LOW FOR WELL YP1-009                      
+ TO PRODUCE AT THE REQUIRED BOTTOM HOLE PRESSURE                         
+</warning>
+<message date="13/1/2020" time="12.98793294074474">
+ WELL YP1-009  CANNOT OPERATE UNDER THE CURRENT                          
+ RESERVOIR CONDITIONS IN NON-LINEAR ITERATION   0.                       
+ ITS IPR IS    Q(P)  =  A  -  BHP * B ,   WHERE:                         
+ A(O,W,G) =   6.4140E+02  2.8473E+04  1.2642E+05                         
+ B(O,W,G) =   6.4269E-01  2.8532E+01  1.2668E+02 .                       
+ LAST CONVERGED SOLUTION:                                                
+     ORAT        WRAT        GRAT        BHP         THP                 
+   1.8499E-02  1.9627E+00  7.1835E+00  1.0000E+03  0.0000E+00            
+ THE WELL IS   SHUT  FOR THE ITERATION.                                  
+</message>
+<message date="13/1/2020" time="12.98793294074474">
+ WELL YP1-009  IS REVIVED FOR ITERATION   1                              
+</message>
+<warning date="13/1/2020" time="12.98793294074474">
+ THE RESERVOIR PRESSURE IS TOO LOW FOR WELL YP1-009                      
+ TO PRODUCE AT THE REQUIRED BOTTOM HOLE PRESSURE                         
+</warning>
+<message date="13/1/2020" time="12.98793294074474">
  WELL YP1-009  CANNOT OPERATE UNDER THE CURRENT                          
  RESERVOIR CONDITIONS IN NON-LINEAR ITERATION   1.                       
  ITS IPR IS    Q(P)  =  A  -  BHP * B ,   WHERE:                         
- A(O,W,G) =   0.0000E+00  7.6687E+04  0.0000E+00                         
- B(O,W,G) =   0.0000E+00  7.6687E+01  0.0000E+00 .                       
+ A(O,W,G) =   2.9814E+03  1.4220E+04  1.3359E+05                         
+ B(O,W,G) =   2.9832E+00  1.4235E+01  1.3370E+02 .                       
  LAST CONVERGED SOLUTION:                                                
      ORAT        WRAT        GRAT        BHP         THP                 
-  -2.6075E-19  1.1743E-02  0.0000E+00  1.0000E+03  0.0000E+00            
+   0.0000E+00  0.0000E+00  0.0000E+00  7.0971E+02  0.0000E+00            
  THE WELL IS   SHUT  FOR THE ITERATION.                                  
 </message>
-<message date="14/1/2020" time="13.00000000000000">
+<message date="13/1/2020" time="12.98793294074474">
+ WELL YP1-009  IS REVIVED FOR ITERATION   2                              
+</message>
+<warning date="13/1/2020" time="12.98793294074474">
+ THE RESERVOIR PRESSURE IS TOO LOW FOR WELL YP1-009                      
+ TO PRODUCE AT THE REQUIRED BOTTOM HOLE PRESSURE                         
+</warning>
+<message date="13/1/2020" time="12.98793294074474">
+ WELL YP1-009  CANNOT OPERATE UNDER THE CURRENT                          
+ RESERVOIR CONDITIONS IN NON-LINEAR ITERATION   2.                       
+ ITS IPR IS    Q(P)  =  A  -  BHP * B ,   WHERE:                         
+ A(O,W,G) =   2.9811E+03  1.4193E+04  1.3369E+05                         
+ B(O,W,G) =   2.9828E+00  1.4207E+01  1.3380E+02 .                       
+ LAST CONVERGED SOLUTION:                                                
+     ORAT        WRAT        GRAT        BHP         THP                 
+   0.0000E+00  0.0000E+00  0.0000E+00  7.0971E+02  0.0000E+00            
+ THE WELL IS   SHUT  FOR THE ITERATION.                                  
+</message>
+<message date="13/1/2020" time="12.98793294074474">
  ****************************************************************        
- * WELL YP1-009  IS  SHUT   AT TIME      13.00   DAYS   BECAUSE *        
+ * WELL YP1-009  IS  SHUT   AT TIME      12.99   DAYS   BECAUSE *        
  * IT CANNOT OPERATE AT CURRENT RESERVOIR CONDITIONS.           *        
  ****************************************************************        
 </message>
-<warning date="30/12/2020" time="364.00000000000000">
- THE RESERVOIR PRESSURE IS TOO LOW FOR WELL YP1-007                      
- TO PRODUCE AT THE REQUIRED BOTTOM HOLE PRESSURE                         
+<warning date="3/8/2022" time="945.28924475051508">
+ LINEAR EQUATIONS NOT FULLY CONVERGED - RUN MAY GO FASTER                
+ IF YOU INCREASE LITMAX (= 25 - TUNING KEYWORD)                          
 </warning>
-<message date="30/12/2020" time="364.00000000000000">
- WELL YP1-007  CANNOT OPERATE UNDER THE CURRENT                          
- RESERVOIR CONDITIONS IN NON-LINEAR ITERATION   0.                       
- ITS IPR IS    Q(P)  =  A  -  BHP * B ,   WHERE:                         
- A(O,W,G) =   0.0000E+00  7.6687E+04  0.0000E+00                         
- B(O,W,G) =   0.0000E+00  7.6687E+01  0.0000E+00 .                       
- LAST CONVERGED SOLUTION:                                                
-     ORAT        WRAT        GRAT        BHP         THP                 
-   0.0000E+00  7.2221E-06  0.0000E+00  1.0000E+03  0.0000E+00            
- THE WELL IS   SHUT  FOR THE ITERATION.                                  
-</message>
-<message date="30/12/2020" time="364.00000000000000">
- WELL YP1-007  IS REVIVED FOR ITERATION   1                              
-</message>
-<warning date="30/12/2021" time="729.00000000000000">
- THE RESERVOIR PRESSURE IS TOO LOW FOR WELL YP1-007                      
- TO PRODUCE AT THE REQUIRED BOTTOM HOLE PRESSURE                         
+<warning date="3/8/2022" time="945.28924475051508">
+ LINEAR CONVERGENCE FAILURE ON LAST NUPCOL ITERATION.                    
+ GROUP TARGETS AND LIMITS MAY NOT BE ACCURATELY HONORED.                 
+ YOU MAY NEED TO INCREASE THE CURRENT VALUE OF    3                      
+ USING THE NUPCOL KEYWORD.                                               
 </warning>
-<message date="30/12/2021" time="729.00000000000000">
- WELL YP1-007  CANNOT OPERATE UNDER THE CURRENT                          
- RESERVOIR CONDITIONS IN NON-LINEAR ITERATION   0.                       
- ITS IPR IS    Q(P)  =  A  -  BHP * B ,   WHERE:                         
- A(O,W,G) =   0.0000E+00  7.6685E+04  0.0000E+00                         
- B(O,W,G) =   0.0000E+00  7.6687E+01  0.0000E+00 .                       
- LAST CONVERGED SOLUTION:                                                
-     ORAT        WRAT        GRAT        BHP         THP                 
-   0.0000E+00  1.7597E-04  0.0000E+00  1.0000E+03  0.0000E+00            
- THE WELL IS   SHUT  FOR THE ITERATION.                                  
-</message>
-<message date="30/12/2021" time="729.00000000000000">
- WELL YP1-007  IS REVIVED FOR ITERATION   1                              
-</message>
-<warning date="30/12/2021" time="729.00000000000000">
- THE RESERVOIR PRESSURE IS TOO LOW FOR WELL YP1-007                      
- TO PRODUCE AT THE REQUIRED BOTTOM HOLE PRESSURE                         
-</warning>
-<message date="30/12/2021" time="729.00000000000000">
- WELL YP1-007  CANNOT OPERATE UNDER THE CURRENT                          
- RESERVOIR CONDITIONS IN NON-LINEAR ITERATION   1.                       
- ITS IPR IS    Q(P)  =  A  -  BHP * B ,   WHERE:                         
- A(O,W,G) =   0.0000E+00  7.6687E+04  0.0000E+00                         
- B(O,W,G) =   0.0000E+00  7.6687E+01  0.0000E+00 .                       
- LAST CONVERGED SOLUTION:                                                
-     ORAT        WRAT        GRAT        BHP         THP                 
-   0.0000E+00  0.0000E+00  0.0000E+00  7.0998E+02  0.0000E+00            
- THE WELL IS   SHUT  FOR THE ITERATION.                                  
-</message>
-<message date="30/12/2021" time="729.00000000000000">
- ****************************************************************        
- * WELL YP1-007  IS  SHUT   AT TIME     729.00   DAYS   BECAUSE *        
- * IT CANNOT OPERATE AT CURRENT RESERVOIR CONDITIONS.           *        
- ****************************************************************        
-</message>
 <message date="19/5/2047" time="10000.00000000000000">
  FAIL-SAFE RESTART FILE WRITTEN   REPORT     1                           
  RESTART INCLUDES FLUIDS IN PLACE                                        

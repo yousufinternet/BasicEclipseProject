@@ -21,6 +21,9 @@ START
 WELLDIMS
 50 30 4 20 /
 
+PARALLEL
+  4 /
+
 -- Specification of geometry of computational grid (location of grid block corners), and of rock properties (porosity, absolute permeability, etc.) in each grid block.
 GRID
 
@@ -184,10 +187,37 @@ RPTPROPS
 -- Initial conditions
 SOLUTION
 
+-- SET THE EQUILIBRATION DATA
+--
+--   DATUM  DATUM   OWC    OWC    GOC    GOC   RSVD   RVVD   SOLN
+--   DEPTH  PRESS  DEPTH   PCOW  DEPTH   PCOG  TABLE  TABLE  METH
 EQUIL
-3000 300 3180 0 3000 0 0 0 5 /
+     7010   4000   9000    0.0   7010    0.0    0      0       5  /
+-- EQUIL
+-- DATUM  PRES.  OWC    Pc
+-- DEPTH  DATUM	 DEPTH	OWC
+-- 6000   5000 	 6180 	0    6000 0 0 0 5 /
 
 -- Simulation schedule
+SUMMARY
+
+FOPR
+
+GOPR
+
+WOPR
+
+FLPR
+
+GLPR
+
+WLPR
+
+RUNSUM
+
+RPTSMRY
+  1 /
+  
 SCHEDULE
 
 RPTSCHED
