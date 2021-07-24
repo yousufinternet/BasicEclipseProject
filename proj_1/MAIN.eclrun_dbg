@@ -1,0 +1,89 @@
+2021-07-23 23:04:13	Debug   	yusuf-dell	ECLIPSE release: 2010.1
+2021-07-23 23:04:13	Debug   	yusuf-dell	ECLRUN build date: 2010-05-20
+2021-07-23 23:04:13	Debug   	yusuf-dell	All User's Configuration file: 'C:\ProgramData\Schlumberger\Simulation Launcher\SimLaunchConfig.xml'.
+2021-07-23 23:04:13	Debug   	yusuf-dell	Current User's configuration file: 'C:\users\archie-work\AppData\Roaming\Schlumberger\Simulation Launcher\SimLaunchConfig.xml'.
+2021-07-23 23:04:14	Debug   	yusuf-dell	Found C:\ecl\macros\eclrun.EXE
+2021-07-23 23:04:14	Debug   	yusuf-dell	Looking for network XML configuration file name in :'C:\users\archie-work\AppData\Roaming\Schlumberger\Simulation Launcher\SimLaunchConfig.xml'
+2021-07-23 23:04:14	Debug   	yusuf-dell	Looking for network XML configuration file name in :'C:\ProgramData\Schlumberger\Simulation Launcher\SimLaunchConfig.xml'
+2021-07-23 23:04:14	Debug   	yusuf-dell	Setting up default configuration.
+2021-07-23 23:04:14	Debug   	yusuf-dell	State key shell=/bin/bash
+2021-07-23 23:04:14	Debug   	yusuf-dell	State key ChkLicOnWin=False
+2021-07-23 23:04:14	Debug   	yusuf-dell	State key lsf_licenses=False
+2021-07-23 23:04:14	Debug   	yusuf-dell	State key windows_dirs=['C:\\users\\archie-work']
+2021-07-23 23:04:14	Debug   	yusuf-dell	State key temp_run_dir=C:\users\archie-work
+2021-07-23 23:04:14	Debug   	yusuf-dell	State key NoLocalQueueAuth=True
+2021-07-23 23:04:14	Debug   	yusuf-dell	State key IntelMpiSsh=True
+2021-07-23 23:04:14	Debug   	yusuf-dell	State key EfHttpAuth=True
+2021-07-23 23:04:14	Debug   	yusuf-dell	State key max_history=300
+2021-07-23 23:04:14	Debug   	yusuf-dell	State key EclEnableFloGridSaveRestore=False
+2021-07-23 23:04:14	Debug   	yusuf-dell	Processing the XML configuration file: 'C:\ecl\macros\eclrun.config'
+2021-07-23 23:04:14	Debug   	yusuf-dell	Platform: system=Windows hostname=yusuf-dell release=post2008Server os_version=6.1.7601 machine=x86 processor=x86 Family 6 Model 61 Stepping 4, GenuineIntel
+2021-07-23 23:04:14	Debug   	yusuf-dell	State key queue_system=local
+2021-07-23 23:04:14	Debug   	yusuf-dell	Found C:\ecl\macros\eclrun.EXE
+2021-07-23 23:04:14	Debug   	yusuf-dell	State key program=eclipse
+2021-07-23 23:04:14	Debug   	yusuf-dell	Found C:\ecl\macros\eclrun.EXE
+2021-07-23 23:04:14	Debug   	yusuf-dell	Platform: system=Windows hostname=yusuf-dell release=post2008Server os_version=6.1.7601 machine=x86 processor=x86 Family 6 Model 61 Stepping 4, GenuineIntel
+2021-07-23 23:04:14	Debug   	yusuf-dell	Found Z:\home\archie-work\Documents\eclipse_proj\MAIN.DATA
+2021-07-23 23:04:14	Debug   	yusuf-dell	Failed to find MAIN with extension ['.MRKEY'] in ['Z:\\home\\archie-work\\Documents\\eclipse_proj']
+2021-07-23 23:04:14	Debug   	yusuf-dell	['Z:\\home\\archie-work\\Documents\\eclipse_proj']
+2021-07-23 23:04:14	Debug   	yusuf-dell	['Z:\\home\\archie-work\\Documents\\eclipse_proj']
+2021-07-23 23:04:14	Debug   	yusuf-dell	State key data_files=['MAIN.DATA']
+2021-07-23 23:04:14	Debug   	yusuf-dell	Analysed MAIN.DATA
+Licenses = []
+Files = ['MAIN.DATA']
+Backslash Files = []
+Processors = 4
+File root = Z:\home\archie-work\Documents\eclipse_proj\
+2021-07-23 23:04:14	Debug   	yusuf-dell	State key input_files=['MAIN.DATA']
+2021-07-23 23:04:14	Debug   	yusuf-dell	State key backslash_files=[]
+2021-07-23 23:04:14	Debug   	yusuf-dell	State key licenses=[]
+2021-07-23 23:04:14	Debug   	yusuf-dell	State key processors=4
+2021-07-23 23:04:14	Debug   	yusuf-dell	Current User's Application Data: 'C:\users\archie-work\AppData\Roaming'.
+2021-07-23 23:04:14	Debug   	yusuf-dell	Local Queue Length = 1 jobs (running|queued|not started). Local Queue Access Timeout is: 120 seconds.
+2021-07-23 23:04:14	Debug   	yusuf-dell	Platform: system=Windows hostname=yusuf-dell release=post2008Server os_version=6.1.7601 machine=x86 processor=x86 Family 6 Model 61 Stepping 4, GenuineIntel
+2021-07-23 23:04:14	Debug   	yusuf-dell	Found C:\ecl\macros\eclrun.EXE
+2021-07-23 23:04:14	Debug   	yusuf-dell	Checking local license in Local Queue is disabled.
+2021-07-23 23:04:14	Debug   	yusuf-dell	Determining supported MPIs for: 'eclipse' on 'pc' with 'default' architecture. User requested MPI: ''
+2021-07-23 23:04:14	Debug   	yusuf-dell	Platform: system=Windows hostname=yusuf-dell release=post2008Server os_version=6.1.7601 machine=x86 processor=x86 Family 6 Model 61 Stepping 4, GenuineIntel
+2021-07-23 23:04:14	Debug   	yusuf-dell	Running : cluscfg view
+2021-07-23 23:04:14	Debug   	yusuf-dell	Process ID is 256
+2021-07-23 23:04:14	Debug   	yusuf-dell	Can't recognize 'cluscfg view' as an internal or external command, or batch script.
+2021-07-23 23:04:14	Debug   	yusuf-dell	Return code is 9009
+2021-07-23 23:04:14	Debug   	yusuf-dell	Failed to execute hpc cluscfg command.
+2021-07-23 23:04:14	Debug   	yusuf-dell	Supported MPIs: '['ilmpi', 'msmpi', 'mpi']'.
+2021-07-23 23:04:14	Debug   	yusuf-dell	Sorted versions are ['2010.1']
+2021-07-23 23:04:14	Debug   	yusuf-dell	Arch. chosen by the user: 'auto'.
+2021-07-23 23:04:14	Debug   	yusuf-dell	Installation path: 'C:\ecl'
+2021-07-23 23:04:14	Debug   	yusuf-dell	Searching for executable to run...
+2021-07-23 23:04:14	Debug   	yusuf-dell	Executable's name: 'eclipse_ilmpi.exe'
+2021-07-23 23:04:14	Debug   	yusuf-dell	Executable's MPI: 'ilmpi'
+2021-07-23 23:04:14	Debug   	yusuf-dell	Searching for executable to run...
+2021-07-23 23:04:14	Debug   	yusuf-dell	Executable's name: 'eclipse_msmpi.exe'
+2021-07-23 23:04:14	Debug   	yusuf-dell	Executable's MPI: 'msmpi'
+2021-07-23 23:04:14	Debug   	yusuf-dell	Searching for executable to run...
+2021-07-23 23:04:14	Debug   	yusuf-dell	Executable's name: 'eclipse_mpi.exe'
+2021-07-23 23:04:14	Debug   	yusuf-dell	Executable's MPI: 'mpi'
+2021-07-23 23:04:14	Debug   	yusuf-dell	The executable was found when searching for: '['eclipse_ilmpi', 'eclipse_msmpi', 'eclipse_mpi']'- 1. ExeName: 'eclipse_ilmpi.exe', ExePath: 'C:\ecl\2010.1\bin\pc\eclipse_ilmpi.exe', Chip: '', ExeMPI: 'ilmpi'.
+2021-07-23 23:04:14	Debug   	yusuf-dell	State key version=2010.1
+2021-07-23 23:04:14	Debug   	yusuf-dell	Determining full parallel command...
+2021-07-23 23:04:14	Debug   	yusuf-dell	System type is 'pc'; install path is 'C:\ecl'; comm is 'ilmpi'
+2021-07-23 23:04:14	Debug   	yusuf-dell	Detecting Intel MPI installation folder.
+2021-07-23 23:04:14	Debug   	yusuf-dell	Examining Windows registry.
+2021-07-23 23:04:14	Debug   	yusuf-dell	Getting a default Intel MPI installation dir.
+2021-07-23 23:04:14	Debug   	yusuf-dell	Intel MPI versions detected: []
+2021-07-23 23:04:14	Debug   	yusuf-dell	The latest Intel MPI installation dir: C:\Program Files\Intel\MPI-RT\ia32\bin
+2021-07-23 23:04:14	Debug   	yusuf-dell	Default Intel MPI installation dir: C:\Program Files\Intel\MPI-RT\ia32\bin
+2021-07-23 23:04:14	Debug   	yusuf-dell	Examining configuration variable: IntelMpiWinDir.
+2021-07-23 23:04:14	Debug   	yusuf-dell	Intel MPI installation dir detected: 
+2021-07-23 23:04:14	Error   	yusuf-dell	Unable to locate Intel MPI installation folder on this machine (chip='default', system='pc', --arch='auto'). See troubleshooting section of the ECLRUN manual for more details.
+2021-07-23 23:04:14	Debug   	yusuf-dell	Traceback is 
+2021-07-23 23:04:14	Debug   	yusuf-dell	State key simulation_status=Aborted
+2021-07-23 23:04:14	Debug   	yusuf-dell	File "eclrun.py", line 9898, in <module>
+2021-07-23 23:04:14	Debug   	yusuf-dell	File "eclrun.py", line 8956, in main
+2021-07-23 23:04:14	Debug   	yusuf-dell	File "eclrun.py", line 9423, in submit_to_local_queue
+2021-07-23 23:04:14	Debug   	yusuf-dell	File "eclrun.py", line 6712, in submit
+2021-07-23 23:04:14	Debug   	yusuf-dell	File "eclrun.py", line 4106, in run
+2021-07-23 23:04:14	Debug   	yusuf-dell	File "eclrun.py", line 4052, in command_line
+2021-07-23 23:04:14	Debug   	yusuf-dell	File "eclrun.py", line 2465, in GetParallelCommand
+2021-07-23 23:04:14	Debug   	yusuf-dell	File "eclrun.py", line 1581, in __determineIntelMpiPathWin
+2021-07-23 23:04:14	Debug   	yusuf-dell	Found Z:\home\archie-work\Documents\eclipse_proj\MAIN.MSG

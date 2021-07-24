@@ -246,7 +246,7 @@ COMPDAT
 WCONPROD
 --  WELL    OPEN/  CNTL   OIL   WATER  GAS   LIQU  VOID  BHP
 --  NAME    SHUT   MODE   RATE  RATE   RATE  RATE  RATE
-  'YP1-???'   'OPEN' 'ORAT'  1000  4*                       1000 /
+  'YP1-???'   'OPEN' 'ORAT'  1000  4*                       3000 /
   /
 
 
@@ -256,7 +256,7 @@ TSTEP
 WCONPROD
 --  WELL    OPEN/  CNTL   OIL   WATER  GAS   LIQU  VOID  BHP
 --  NAME    SHUT   MODE   RATE  RATE   RATE  RATE  RATE
-  'YP1-???'   'OPEN' 'ORAT'  1000  4*                       1000 /
+  'YP1-???'   'OPEN' 'ORAT'  1000  4*                       3000 /
   /
 
 END
